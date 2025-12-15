@@ -1,0 +1,149 @@
+[ {
+        "home":{
+            "name":"Sathish Kumar R",
+            "role":"Full Stack Developer",
+            "description":"I build reliable, user-friendly web applications as a full-stack developer, combining strong engineering with thoughtful design. I also bring a growing understanding of AI, allowing me to create smarter and more efficient digital solutions."
+        },
+        "links":[
+            {
+                
+                "url":"https://github.com/Sathishkumar-290705",
+                "icon":"github"
+            },
+            {
+                "name":"Linkedin",
+                "url":"https://www.linkedin.com/in/sathishkumar290207/"
+               
+            },
+            {
+                "name":"Instagram",
+                "url":"https://www.instagram.com/sathishkumar_2907/"
+            },
+            {
+                "name":"X",
+                "url":"https://x.com/Sathish290705"
+            },
+            {
+                "name":"Facebook",
+                "url":"https://www.facebook.com/profile.php?id=100094046093102"
+            }
+        ],
+    
+        "resume":{
+            "name":"Resume",
+            "url":""
+        },
+    
+        "aboutMe":{
+            "content":[
+                "I am a passionate full-stack developer who loves building exceptional and accessible digital experiences for the web. I focus on creating intuitive and high-performance applications that deliver smooth, reliable, and meaningful interactions for users.",
+                "I am currently pursuing a Bachelor of Engineering in Artificial Intelligence and Data Science at Velammal Engineering College, Chennai (2023 – 2027). My academic journey has strengthened my understanding of AI concepts, machine learning fundamentals, and data-driven problem solving, all of which fuel my interest in integrating AI into real-world applications.",
+                "With a deep curiosity for emerging technologies, I am patiently working toward becoming an AI full-stack developer—combining strong web development skills with advanced AI capabilities to build smarter and more impactful solutions.",
+                "As a full-stack developer, I have hands-on experience with the MERN stack—MongoDB, Express.js, React.js, and Node.js—enabling me to design and develop complete web applications from front to back. I also have expertise in working with both SQL and NoSQL databases, applying these skills in real projects that involve efficient data storage, retrieval, and management.",
+                "I enjoy transforming ideas into functional products, continuously improving my technical abilities, and staying updated with modern development practices. My long-term goal is to create intelligent systems that combine robust engineering with advanced AI, delivering solutions that are impactful, scalable, and meaningful."
+            ],
+            "about":{
+                "name":"Sathish Kumar R",
+                "email":"sathishkumar290705@gmail.com",
+                "phone":"+91 8056663585",
+                "role":"Full Stack Developer",
+                "location":"Chennai, Tamil Nadu, India",
+                "college":"Velammal Engineering College , Chennai (2023 - 2027)",
+                "academicQualification":"B.Tech (Artificial Intelligence and Data Science)",
+                "availability":"Intern/Open to work"
+            }
+        },
+    
+        "skills":[
+            {
+                "id":1,
+                "title":"Frontend",
+                "items":["HTML","CSS","JavaScript","TypeScript","React JS","Angular JS","Tailwind CSS"]
+            },
+            {
+                "id":2,
+                "title":"Backend",
+                "items":["Flask","Django","Node JS","Express Js"]
+            },
+            {
+                "id":3,
+                "title":"Database",
+                "items":["MongoDB","MySQL","Firebase","OracleDB"]
+            },
+            {
+                "id":4,
+                "title":"DevOps and Tools",
+                "items":["Git","Github","Github Desktop","Postman","Docker","VS Code", "Chrome DevTools"]
+            },
+            {
+                "id":5,
+                "title":"Soft Skills",
+                "items":["Problem Solving","Critical Thinking","Time Management","Collaboration","Clean Code"]
+            },
+            {
+                "id":6,
+                "title":"Other Skills",
+                "items":["UI Designing", "Testing", "Machine Learning","Web Scrapping","Data Cleaning"]
+            }
+        ],
+
+        "experience":{
+            "work":[
+                "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex eos eius facere minima a? Dolorem voluptatibus fugiat nostrum! Recusandae eos earum, placeat non mollitia doloribus natus laborum. Deserunt repudiandae harum labore esse suscipit. Numquam modi quis voluptates harum aut provident excepturi quidem maiores iusto. Omnis optio culpa aliquid molestias vitae eligendi sunt odit vero beatae repudiandae exercitationem est ducimus nemo ut eius id molestiae, aspernatur consequuntur quo. Voluptatum nisi molestiae odio itaque dolorem asperiores atque quam, rem esse similique sit? Maiores odit ad at suscipit sed? Quod veniam repudiandae amet tenetur tempore alias, molestiae quibusdam culpa ducimus consequatur sequi at repellendus illo ex, qui minima temporibus vero sit, ratione exercitationem aut eligendi! Enim dolore est, consequatur fugit ipsam voluptatem quo perspiciatis sit autem voluptatibus id consequuntur tenetur unde sequi eligendi amet quis alias in! Quaerat eius ab omnis, possimus nemo aspernatur ipsa, laboriosam ea cupiditate aperiam dolores assumenda enim magni. Molestias facere voluptatem quae officia eius repudiandae delectus vero voluptas. Provident blanditiis illo iure, assumenda, cum corporis harum quibusdam repudiandae distinctio nemo necessitatibus nesciunt. Quos at, repellendus distinctio laudantium impedit ducimus. Quas optio expedita rem possimus quis aperiam. Similique facere, blanditiis sed quaerat veritatis facilis ipsum iusto sequi. Sit, repellat."
+            ],
+            "learningPath":[
+                "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex eos eius facere minima a? Dolorem voluptatibus fugiat nostrum! Recusandae eos earum, placeat non mollitia doloribus natus laborum. Deserunt repudiandae harum labore esse suscipit. Numquam modi quis voluptates harum aut provident excepturi quidem maiores iusto. Omnis optio culpa aliquid molestias vitae eligendi sunt odit vero beatae repudiandae exercitationem est ducimus nemo ut eius id molestiae, aspernatur consequuntur quo. Voluptatum nisi molestiae odio itaque dolorem asperiores atque quam, rem esse similique sit? Maiores odit ad at suscipit sed? Quod veniam repudiandae amet tenetur tempore alias, molestiae quibusdam culpa ducimus consequatur sequi at repellendus illo ex, qui minima temporibus vero sit, ratione exercitationem aut eligendi! Enim dolore est, consequatur fugit ipsam voluptatem quo perspiciatis sit autem voluptatibus id consequuntur tenetur unde sequi eligendi amet quis alias in! Quaerat eius ab omnis, possimus nemo aspernatur ipsa, laboriosam ea cupiditate aperiam dolores assumenda enim magni. Molestias facere voluptatem quae officia eius repudiandae delectus vero voluptas. Provident blanditiis illo iure, assumenda, cum corporis harum quibusdam repudiandae distinctio nemo necessitatibus nesciunt. Quos at, repellendus distinctio laudantium impedit ducimus. Quas optio expedita rem possimus quis aperiam. Similique facere, blanditiis sed quaerat veritatis facilis ipsum iusto sequi. Sit, repellat."
+            ]
+        },
+    
+        "projects":[
+            {
+                "id":1,
+                "image":"",
+                "title":"Project One",
+                "description":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+                "technologies":["React","Node.js","MongoDB"],
+                "url":""
+            },
+            {
+                "id":2,
+                "image":"",
+                "title":"Project Two",
+                "description":"Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+                "technologies":["Angular","Express.js","MySQL"],
+                "url":""   
+            },
+            {
+                "id":3,
+                "image":"",
+                "title":"Project Two",
+                "description":"Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+                "technologies":["Angular","Express.js","MySQL"],
+                "url":""   
+            }
+        ],
+    
+        "contactMe":{
+            "title":"Get in Touch",
+            "content":"I’m open for freelance projects, internships, and part-time opportunities right now. If you’re planning a project or need help taking an existing one further, feel free to get in touch.",
+            "about":[
+                {
+                  
+                    "label":"Email",
+                    "value":"sathishkumar290705@gmail.com"
+                },
+                {
+                
+                    "label":"Phone",
+                    "value":"+91 8056663585"
+                },
+                {
+                   
+                    "label":"Location",
+                    "value":"Chennai, Tamil Nadu, India"
+                }
+            ]
+        }
+             
+    
+}]

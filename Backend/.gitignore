@@ -1,0 +1,12 @@
+
+# backend
+node_modules/
+Backend/node_modules/
+
+# env files
+.env
+
+
+# logs & editor
+*.log
+.vscode/

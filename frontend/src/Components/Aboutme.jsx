@@ -10,7 +10,7 @@ const Aboutme = ({ data }) => {
   }, [data]);
 
   const about = userData[0]?.aboutMe?.about;
-  return  <div>
+  return  <div id='aboutme'>
   <h3> About Me  </h3>
  
   <div className='flex flex-row mt-8'>

@@ -1,10 +1,10 @@
 const express = require("express")
 const router = express.Router()
 
-const dataController = require("../Controllers/dataController")
+const {uploads , getAll} = require("../Controllers/dataController")
 
-router.post("/upload_json", dataController.uploads);
-router.get("/get_all", dataController.getAll);
+router.post("/upload_json", uploads);
+router.get("/get_all", getAll);
 
 module.exports = router;    
 

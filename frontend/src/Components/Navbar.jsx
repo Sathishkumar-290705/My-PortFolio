@@ -10,11 +10,11 @@ const Navbar = () => {
     <div className='flex w-[38%] justify-between '>  
         <ul className='list-none  flex flex-row gap-4 items-center '>
             <li className='no-underline'><a href="" >Home</a></li>
-            <li><a href="" className='no-underline'>About </a></li>
-            <li><a href="" className='no-underline'>Skills</a></li>
-            <li><a href="" className='no-underline'>Projects</a></li>
-            <li><a href="" className='no-underline'>Experience</a></li>
-            <li><a href="" className='no-underline'>Contact </a></li>
+            <li><a href="#home" className='no-underline'>About </a></li>
+            <li><a href="#skills" className='no-underline'>Skills</a></li>
+            <li><a href="#projects" className='no-underline'>Projects</a></li>
+            <li><a href="#experience" className='no-underline'>Experience</a></li>
+            <li><a href="#contactme" className='no-underline'>Contact </a></li>
         </ul>
         <div className='border-l-2 w-2 h-[3.5rem] border-text '>
 

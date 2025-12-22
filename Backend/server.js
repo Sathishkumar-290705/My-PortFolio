@@ -3,9 +3,9 @@ const express=require('express');
 const connectToDB = require('./Config/DB');
 const dotenv = require('dotenv');
 
-const dataRoutes = require("./Routes/dataRoutes");
+
 // const dataController = require('./Controllers/dataController');
-const router = require('./Routes/dataRoutes');
+const router = require('./Routes/index_routes');
 
 
 const app = express();
@@ -25,8 +25,8 @@ app.use(cors());
 app.use(express.json());
 connectToDB();
 
-app.use("/api", dataRoutes);
-
+app.use("/api", router);
+    
 
 app.listen(PORT , ()=>{
     console.log(`Server is running on ${PORT}`);

@@ -2,14 +2,14 @@ import { Book, BookAlert, Briefcase, Calendar, LocateIcon, Map, MapPin, Workflow
 import React from 'react'
 
 const Experience = () => {
-  return <div className='mt-24'>
+  return <div id='experience' className='mt-24'>
     <h3> Work Experience & Learning Path </h3>
     <div className='w-[90%] h-auto flex flex-col gap-12 items-center mx-auto mt-12'>
       {/* LEARNING PATH */}
       <div className='flex flex-col gap-8'>
         <h4 className='text-center  flex flex-row gap-2'><Book/> Learning Path</h4>
         <div className='text-justify flex flex-row gap-8 w-full border-2 border-text p-12'>
-          <div className='flex flex-col gap-4 w-[25rem] '>
+          <div className='flex flex-col gap-4 w-[25rem] my-auto'>
               <div>
                 <h2 className='text-4xl  font-bold text-start'> Bachelors of Technology in Artificial Intelligence and data science </h2>
               <p> Velammal enginnering college </p>

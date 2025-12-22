@@ -23,7 +23,7 @@ const Skills = ({ data }) => {
       
 
 
-  return <div className='mt-12 '>
+  return <div id='skills' className='mt-12 '>
     <h3>My Skills </h3>
     <div className=' flex flex-wrap justify-center  gap-y-8 gap-x-20 mt-8 w-fit mx-auto ' >
         {/* skills  */}

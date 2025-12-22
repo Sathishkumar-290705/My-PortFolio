@@ -1,8 +1,8 @@
 const dataService = require("../Services/dataServices")
 
 
-module.exports = {
-    async uploads(req,res){
+
+  const uploads = async (req,res) =>{
     try {
       const jsonData = req.body;   // JSON file parsed as body
      
@@ -17,9 +17,10 @@ module.exports = {
     } catch (error) {
       res.status(500).json({ error: error.message });
     }
-    } , 
+    } 
 
-     async getAll(req , res) {
+
+  const  getAll= async (req , res) => {
     try {
       
       const data = await dataService.getAll();
@@ -29,4 +30,6 @@ module.exports = {
       res.status(500).json({ error: error.message });
     }
   }
-};
+
+
+module.exports = {uploads , getAll};

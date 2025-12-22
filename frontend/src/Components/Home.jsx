@@ -1,18 +1,21 @@
 import React, { useEffect , useState } from 'react'
-import pass_photo from '../Assets/pass_photo.jpg';
+// import pass_photo from '../Assets/pass_photo.jpg';
 import pass_photo3 from '../Assets/pass_photo3.jpg';
-import {Facebook, Github, Instagram, Linkedin, Phone, Twitter, X} from 'lucide-react'
-import axios from 'axios';
+import {Facebook, Github, Instagram, Linkedin, Phone, Twitter,} from 'lucide-react'
+// import axios from 'axios';
+// import { useRef } from 'react';
 // import Resume from './Resume.pdf'
+// import {useFrame , Canvas, useLoader } from '@react-three/fiber';
+// import { TextureLoader } from 'three';
+// import { Loader } from 'three';
 
 
-const Home = ({ data }) => {
+
+export default function Home({data}) {
 
     const [userData , setUserData] = useState([]);
 
     
-    
-
     useEffect(() => {
       setUserData(data);
       // console.log(userData);
@@ -31,10 +34,16 @@ const Home = ({ data }) => {
    
 
   return <>
-  <div className='w-[98%] h-[700px] flex mx-auto mt-20  flex justify-evenly items-center gap-12 '>
-    <div>
-         <img src={pass_photo3} alt="my_photo"    className=' w-full h-[20rem] border border-2 rounded-full '/>
+  <div id='home' className='w-[98%] h-[700px] flex mx-auto mt-20  flex justify-evenly items-center gap-12 '>
+
+    {/* <Canvas style={{ width: "1200px", height: "1200px" , border : "50%"  }}>
+     <ambientLight intensity={3} />
+     <Logo />
+    </Canvas> */}
+    <div >
+    <img src={pass_photo3} alt="my image "  width={400} height={400} className=' rounded-full  '/>
     </div>
+    
     <div className='flex flex-col gap-4 max-w-[40rem] '>
         <h1>Hi, I'm <br /> {userData[0]?.home?.name} </h1>
         <h2 className='text-gray' > {userData[0]?.home?.role} </h2>
@@ -63,4 +72,24 @@ const Home = ({ data }) => {
   </>
 }
 
-export default Home;
+
+
+
+// const Logo = () => {
+
+//   const meshref = useRef();
+//   const texture = useLoader(TextureLoader, pass_photo3)
+
+//     useFrame(()=>{
+      
+//     })
+
+//   return(
+//     <mesh ref={meshref} >
+//        <planeGeometry args={[3, 3]} />
+//       <meshStandardMaterial map={texture} transparent />
+//     </mesh>
+//   )
+
+// }
+

@@ -11,7 +11,7 @@ React.useEffect(() => {
  
 }, [data]);
 
-  return <div className='mt-20'>
+  return <div id='projects' className='mt-20'>
     <h3> My Projects </h3>
     <div className='mt-16 flex flex-wrap gap-12 justify-center ' >
       {/* PROJECT LIST  */}

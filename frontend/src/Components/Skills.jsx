@@ -1,5 +1,5 @@
 import { Brain,  Cpu,  Database,  Handshake, Monitor,  Server, Sparkles, } from 'lucide-react'
-import React, { use } from 'react'
+import React from 'react'
 
 const Skills = ({ data }) => {
 
@@ -59,4 +59,4 @@ const Skills = ({ data }) => {
   
 }
 
-export default Skills
+export default Skills; 

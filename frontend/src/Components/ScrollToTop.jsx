@@ -1,6 +1,6 @@
-import { ArrowBigUp, Scroll } from 'lucide-react'
+import { ArrowBigUp, } from 'lucide-react'
 import React from 'react'
-import RevealToScroll from './RevealToScroll'
+// import RevealToScroll from './RevealToScroll'
 
 const ScrollToTop = () => {
 

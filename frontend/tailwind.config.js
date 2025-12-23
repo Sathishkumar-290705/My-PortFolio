@@ -17,12 +17,21 @@ module.exports = {
       },
       colors:{
         'text':'#000000',
-        'blk':"hsl(0 0% 10%)",
-        'mblk':"hsl(0 0% 16%)",
+        'm_text':"hsl(0 0% 10%)",
         'prim':'#ffffff',
-        'wht':'hsl(0 0% 92%)',
-        'mwht':'hsl(0 0% 70%)',
-         'gray':'hsl(0 0% 40%)',
+        'm_prim':'hsl(0 0% 80%)',
+        'gray':'hsl(0 0% 40%)',
+
+        'pale_sand' : "#D8C9AE",
+        "coal_gray" : "#575757",
+
+        "m_green" : "#a2d0b3",
+        "s_green": "#1c252a",
+
+
+        'affair':"#6f4685",
+        'matple' : "#392a3b", 
+        "eb": ' #d0a4fe',
 
       },
     },

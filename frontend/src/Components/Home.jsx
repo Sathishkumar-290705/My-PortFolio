@@ -34,7 +34,7 @@ export default function Home({data}) {
    
 
   return <>
-  <div id='home' className='w-[98%] h-[700px] flex mx-auto mt-20  flex justify-evenly items-center gap-12 '>
+  <div id='home' className='w-[98%] h-[700px] flex mx-auto mt-20  flex justify-evenly items-center gap-12  '>
 
     {/* <Canvas style={{ width: "1200px", height: "1200px" , border : "50%"  }}>
      <ambientLight intensity={3} />
@@ -51,7 +51,7 @@ export default function Home({data}) {
 
         <div className='flex flex-col gap-12' >
         <div className='flex flex-row gap-4 mt-4 w-full' >
-          <button className='border-2 px-2 py-2 rounded border-text w-full'><a href="/Resume.pdf" target='_blank'> <p> Resume </p></a> </button>
+          <button className='border-2 px-2 py-2 rounded border-coal_gray w-full bg-coal_gray text-prim'><a href="/Resume.pdf" target='_blank'> <p> Resume </p></a> </button>
           <button className='border-2 px-2 py-2 rounded border-text w-full'> <a href="/"> <p>Contact Me </p></a></button>
         </div>
         <div>
@@ -61,7 +61,7 @@ export default function Home({data}) {
             {userData[0]?.links?.map((links,index)=>{
               const IconComponent = link_icons[links.name];
               return (
-                <li  key={index} ><a href={links.url} target='_blank'> { IconComponent && <IconComponent/>} </a></li>
+                <li  key={index} ><a href={links.url} rel='noreferrer' target='_blank'> { IconComponent && <IconComponent/>} </a></li>
               )
             })}
                 </ul>

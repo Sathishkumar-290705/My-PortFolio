@@ -1,6 +1,6 @@
 import React from 'react'
 import { useEffect ,  useState } from 'react'
-import axios from 'axios'
+// import axios from 'axios'
 import Home from './Components/Home.jsx'
 import Navbar from './Components/Navbar.jsx'
 import styled from 'styled-components'
@@ -17,6 +17,8 @@ import ScrollToTop from './Components/ScrollToTop.jsx'
   const AppContainer = styled.div`
   display: flex;
   flex-direction: column;
+  background-color: #D8C9AE;
+  color:black;
   min-height: 100vh;`
 
 
@@ -24,8 +26,6 @@ import ScrollToTop from './Components/ScrollToTop.jsx'
   display: flex;
   flex-direction: column;
   flex: 1;
-  background-color: #ffffff;
-  color: black;
   padding: 0 2% 0 2%;`
 
 const App = () => {
@@ -52,8 +52,8 @@ useEffect(() => {
 
   return (
     
-    <>
-   <AppContainer>
+    <div className='bg-eb'>
+   <AppContainer  >
     <Navbar />
     <MainWrapperContainer>
       <Home data = {data}/>
@@ -66,7 +66,7 @@ useEffect(() => {
     <Footer />
     <ScrollToTop/>
    </AppContainer>
-    </>
+    </div>
   )
 }
 

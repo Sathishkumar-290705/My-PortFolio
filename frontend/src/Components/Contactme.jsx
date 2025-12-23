@@ -1,6 +1,7 @@
-import { Facebook, FileSliders, Github, Instagram, Linkedin, LocateIcon, LocationEdit, LucideFileSliders, Mail, MailIcon, MailOpen, Map, MapPinIcon, Phone, Twitter, TwitterIcon } from 'lucide-react'
+import { Facebook, Github, Instagram, Linkedin,  LucideFileSliders,  MailIcon,  MapPinIcon, Phone, Twitter, } from 'lucide-react'
 // import { set } from 'mongoose';
 import React from 'react'
+// import { log } from 'three';
 // import { post } from '../../../Backend/Routes/dataRoutes';
 
 const Contactme = ({ data }) => {
@@ -21,8 +22,9 @@ const Contactme = ({ data }) => {
   })
 
   const [error , setError] = React.useState({});
-
-  const handleValidation =  (e) => {
+  console.log(error);
+  
+  const handleValidation =  (e) => {  
 
     const {name , value } = e.target;
 
@@ -179,7 +181,7 @@ const validateField = (name, value) => {
                                    const Icon = link_icons[item.name]
                           return(
 
-                            <li key={index}><a href={item.url} target='_blank'> {Icon && <Icon/>}</a></li>
+                            <li key={index}><a href={item.url} rel='noreferrer' target='_blank'> {Icon && <Icon/>}</a></li>
                           )
                         })}
                       
@@ -200,7 +202,7 @@ const validateField = (name, value) => {
                     name = "name"
                     value={getData.name}
                     onChange={handleValidation}
-                    className='border-2 border-text w-full h-[2.4rem]' 
+                    className='border-2 text-prim bg-coal_gray border-text w-full h-[2.4rem]' 
                     placeholder='Your Name '/>
                   </div>
                   <div>
@@ -212,7 +214,7 @@ const validateField = (name, value) => {
                     value={getData.email} 
                    
                     onChange={handleValidation}
-                    className='border-2 border-text w-full h-[2.4rem]' 
+                    className='border-2 text-prim bg-coal_gray border-text w-full h-[2.4rem]' 
                     placeholder=' Your E-Mail' />
                   </div>
                   <div>
@@ -223,7 +225,7 @@ const validateField = (name, value) => {
                     name = "contactNumber"
                     value={getData.contactNumber}
                     onChange={handleValidation}
-                    className='border-2 border-text w-full h-[2.4rem]' 
+                    className='border-2 text-prim bg-coal_gray border-text w-full h-[2.4rem]' 
                     placeholder='Your Contact Number ' />
                   </div>
                   <div>
@@ -234,7 +236,7 @@ const validateField = (name, value) => {
                     name = "subject"
                     value={getData.subject}
                     onChange={handleValidation}
-                    className='border-2 border-text w-full h-[2.4rem]' 
+                    className='border-2 text-prim bg-coal_gray border-text w-full h-[2.4rem]' 
                     placeholder='Subject' />
                   </div>
                   
@@ -242,7 +244,7 @@ const validateField = (name, value) => {
                     <textarea  
                     id="contactmessage " 
                     name = "message"
-                    className='border-2 border-text w-full h-36' 
+                    className='border-2 text-prim bg-coal_gray border-text w-full h-36' 
                     placeholder='Enter your message...' value={getData.message}
                     onChange={handleValidation}/>
 

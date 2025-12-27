@@ -45,14 +45,14 @@ export default function Home({data}) {
     </div>
     
     <div className='flex flex-col gap-4 max-w-[40rem] '>
-        <h1>Hi, I'm <br /> {userData[0]?.home?.name} </h1>
-        <h2 className='text-gray' > {userData[0]?.home?.role} </h2>
-        <p>{userData[0]?.home?.description}</p>
+        <h1 className='text-soft_coal '>Hi, I'm <br /> {userData[0]?.home?.name} </h1>
+        <h5 className='text-gray text-4xl font-bold' > {userData[0]?.home?.role} </h5>
+        <p className='text-soft_coal text-lg text-justify '>{userData[0]?.home?.description}</p>
 
         <div className='flex flex-col gap-12' >
         <div className='flex flex-row gap-4 mt-4 w-full' >
-          <button className='border-2 px-2 py-2 rounded border-coal_gray w-full bg-coal_gray text-prim'><a href="/Resume.pdf" target='_blank'> <p> Resume </p></a> </button>
-          <button className='border-2 px-2 py-2 rounded border-text w-full'> <a href="/"> <p>Contact Me </p></a></button>
+          <button className='border-2 px-2 py-2 rounded border-coal_gray w-full bg-softened text-prim font-bold '><a href="/Resume.pdf" target='_blank'> <p> Resume </p></a> </button>
+          <button className='border-2 px-2 py-2 rounded border-text w-full font-bold text-soft_coal'> <a href="/"> <p>Contact Me </p></a></button>
         </div>
         <div>
           

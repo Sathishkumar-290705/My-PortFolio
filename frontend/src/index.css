@@ -8,13 +8,13 @@ h1{
   @apply text-h1 font-inter ;
 }
 
-h2{
-  @apply text-h2 font-inter  ;
+h3{
+  @apply text-h3 font-inter  ;
 }
 
 
-h3{
-  @apply text-h3 font-inter text-center ;
+h2{
+  @apply text-h2 font-inter text-center ;
 }
 
 h4{
@@ -33,4 +33,17 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+
+@layer components {
+  .nav-item{
+    @apply no-underline py-2 px-4
+  }
+
+  .nav-item:hover{
+    @apply bg-coal_gray rounded-full transition-all duration-300 ease-in-out
+  }
+
+  
 }

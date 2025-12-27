@@ -17,7 +17,7 @@ import ScrollToTop from './Components/ScrollToTop.jsx'
   const AppContainer = styled.div`
   display: flex;
   flex-direction: column;
-  background-color: #D8C9AE;
+  background-color: #D8C9AE ;
   color:black;
   min-height: 100vh;`
 
@@ -52,7 +52,7 @@ useEffect(() => {
 
   return (
     
-    <div className='bg-eb'>
+    
    <AppContainer  >
     <Navbar />
     <MainWrapperContainer>
@@ -66,7 +66,7 @@ useEffect(() => {
     <Footer />
     <ScrollToTop/>
    </AppContainer>
-    </div>
+
   )
 }
 

@@ -3,28 +3,26 @@ import React from 'react'
 const Navbar = () => {
   return (
    <div className=''>
-   <nav className=' fixed top-0 flex flex-row justify-between px-20 h-20 mt-0  text-text w-full  items-center border-b-2 border-b-text/90 '>
+   <nav className=' fixed top-0 flex flex-row justify-around px-0 h-24 mt-0  text-text w-full  items-center z-[1000] '>
     <div className='flex flex-row'>
-        <h2 className='text-text font-bold text-center'> Sathish </h2> &nbsp; <h2 className='text-coal_gray font-bold ' > Kumar </h2>
+        <h2 className='text-soft_coal font-bold text-center'> Sathish Kumar </h2>
     </div>
-    <div className='flex w-[38%] justify-between '>  
-        <ul className='list-none  flex flex-row gap-4 items-center '>
-            <li className='no-underline'><a href="home" >Home</a></li>
-            <li><a href="#aboutme" className='no-underline'>About </a></li>
-            <li><a href="#skills" className='no-underline'>Skills</a></li>
-            <li><a href="#projects" className='no-underline'>Projects</a></li>
-            <li><a href="#experience" className='no-underline'>Experience</a></li>
-            <li><a href="#contactme" className='no-underline'>Contact </a></li>
+    <div className='flex  gap-8   justify-between border-2 px-4 py-2 rounded-full '>  
+        <ul className='nav-icons list-none flex flex-row gap-4 items-center  '>
+            <li className=' nav-item group  '><a href="home" >Home</a>  </li>
+            <li className=' nav-item group'><a href="#aboutme" >About </a>  </li>
+            <li className=' nav-item group  '><a href="#skills"  >Skills</a>  </li>
+            <li className=' nav-item group  '><a href="#projects" >Projects</a>  </li>
+            <li className=' nav-item group'><a href="#experience" >Experience</a>  </li>
+            <li className=' nav-item group'><a href="#contactme" >Contact </a>  </li>
         </ul>
-        <div className='border-l-2 w-2 h-[3.5rem] border-text '>
-
-        </div>
-        <div className=''>
-            <button className='px-4 py-4 bg-m_text rounded-lg text-prim hover:bg-text items-center  '> Download Resume </button>
-        </div>
+        {/* <div className='border-l-2 w-2 h-[3.5rem] border-text '/> */}
     </div>
+        <div className=''>
+            <button className='px-4 py-4 bg-m_text rounded-full text-prim hover:bg-text items-center  '> Download Resume </button>
+        </div>
    </nav>
-   </div>
+   </div>  
   )
 }
 

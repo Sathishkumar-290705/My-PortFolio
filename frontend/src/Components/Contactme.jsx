@@ -144,12 +144,12 @@ const validateField = (name, value) => {
 
   return <div id='contactme' className='mt-20 '>
           {/* heading */}
-          <h3>Contactme</h3>
+          <h2 className='text-soft_coal'>Contactme</h2>
           <div className='flex flex-row justify-evenly w-[98%] mx-auto mt-12 h-full'>
 
             {/* contact information box  */}
-            <div className='border-2 border-mblk w-[50%]  p-4 min-h-80 max-h-96' >
-                <h4 className='py-2'> {contactMeData?.title1}</h4>
+            <div className='border-2 border-mblk w-[50%] bg-muted_pale  p-4 min-h-80 max-h-96' >
+                <h4 className='py-2 font-bold'> {contactMeData?.title1}</h4>
                 <div className='flex flex-col justify-around h-[90%]' >
                     {/* about me message */}
                     <div className='mt-2 font-italic ' >
@@ -160,11 +160,11 @@ const validateField = (name, value) => {
 
                   const Icon = Icons[value.label]
                   return(
-                      <div className='border-2 basis-full pl-2  flex flex-row gap-2 ' key={index}>
-                        <div className='my-auto'>
+                      <div className='border-2 basis-full pl-2  flex flex-row gap-2 bg-softened' key={index}>
+                        <div className='my-auto text-text2'>
                         { Icon && <Icon/>}
                         </div>
-                        <div className='flex flex-col '>
+                        <div className='flex flex-col text-text2'>
                           <h5> {value.label}</h5>
                           <p> {value.value}</p>
                         </div>
@@ -191,22 +191,22 @@ const validateField = (name, value) => {
 
             </div>
             {/* message box via whatsapp */}
-            <div className='flex justify-start flex-col w-[40%] border-2 min-h-96 p-4'>
-               <h4>{contactMeData?.title2}</h4>
-               <form onSubmit={handleSubmit} className='w-full flex flex-col gap-2 mt-2 '>
+            <div className='flex justify-start flex-col w-[40%] border-2 min-h-96 p-4 bg-muted_pale border-coal_gray '>
+               <h4 className='text-text font-bold '>{contactMeData?.title2}</h4>
+               <form onSubmit={handleSubmit} className='w-full flex flex-col gap-2 mt-4 '>
                   <div className='w-full'>
-                    <label htmlFor="name" className='font-bold' >Name : </label>
+                    <label htmlFor="name" className='font-bold text-text' >Name : </label>
                     <input
                     id='name' 
                     type="text" 
                     name = "name"
                     value={getData.name}
                     onChange={handleValidation}
-                    className='border-2 text-prim bg-coal_gray border-text w-full h-[2.4rem]' 
-                    placeholder='Your Name '/>
+                    className='border-2 text-prim bg-muted_pale border-text w-full h-[2.4rem]' 
+                    />
                   </div>
                   <div>
-                    <label htmlFor="email" className='font-bold '>E-Mail :</label>
+                    <label htmlFor="email" className='font-bold text-text'>E-Mail :</label>
                     <input 
                     id='email' 
                     type="email"
@@ -214,43 +214,43 @@ const validateField = (name, value) => {
                     value={getData.email} 
                    
                     onChange={handleValidation}
-                    className='border-2 text-prim bg-coal_gray border-text w-full h-[2.4rem]' 
-                    placeholder=' Your E-Mail' />
+                    className='border-2 text-prim bg-muted_pale border-text w-full h-[2.4rem]' 
+                    />
                   </div>
                   <div>
-                    <label htmlFor="contactnumber" className='font-bold '>Contact Number :</label>
+                    <label htmlFor="contactnumber" className='font-bold text-text '>Contact Number :</label>
                     <input 
                     id='contactNumber' 
                     type="number"
                     name = "contactNumber"
                     value={getData.contactNumber}
                     onChange={handleValidation}
-                    className='border-2 text-prim bg-coal_gray border-text w-full h-[2.4rem]' 
-                    placeholder='Your Contact Number ' />
+                    className='border-2 text-prim bg-muted_pale border-text w-full h-[2.4rem]' 
+                    />
                   </div>
                   <div>
-                    <label htmlFor="subject" className='font-bold'>Subject :</label>
+                    <label htmlFor="subject" className='font-bold text-text'>Subject :</label>
                     <input 
                     id='subject' 
                     type="text" 
                     name = "subject"
                     value={getData.subject}
                     onChange={handleValidation}
-                    className='border-2 text-prim bg-coal_gray border-text w-full h-[2.4rem]' 
-                    placeholder='Subject' />
+                    className='border-2 text-prim bg-muted_pale border-text w-full h-[2.4rem]' 
+                     />
                   </div>
                   
                   <div>
                     <textarea  
                     id="contactmessage " 
                     name = "message"
-                    className='border-2 text-prim bg-coal_gray border-text w-full h-36' 
-                    placeholder='Enter your message...' value={getData.message}
+                    className='border-2 text-prim bg-muted_pale border-text w-full h-36' 
+                    value={getData.message}
                     onChange={handleValidation}/>
 
                   </div>
                   <div>
-                    <button className=' border-2 border-mblk w-full bg-mblk text-prim hover:bg-prim hover:text-mblk h-10 rounded-lg ' >
+                    <button className='   w-full hover:bg-text  bg-softened text-text2 hover:text-prim  h-10 rounded-lg ' >
                       Send Message 
                     </button>
                   </div>

@@ -19,14 +19,15 @@ import ScrollToTop from './Components/ScrollToTop.jsx'
   flex-direction: column;
   background-color: #D8C9AE ;
   color:black;
-  min-height: 100vh;`
+  max-width:100vw;
+  min-height:100vh;`
 
 
   const MainWrapperContainer = styled.div`
   display: flex;
   flex-direction: column;
   flex: 1;
-  padding: 0 2% 0 2%;`
+   padding: 0`
 
 const App = () => {
 

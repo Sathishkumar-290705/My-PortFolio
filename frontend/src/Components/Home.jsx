@@ -34,7 +34,7 @@ export default function Home({data}) {
    
 
   return <>
-  <div id='home' className='w-[98%] h-[700px] flex mx-auto mt-20  flex justify-evenly items-center gap-12  '>
+  <div id='home' className='w-[100%] h-[700px] flex flex-col mt:flex-row  mt-20  justify-evenly items-center gap-8  '>
 
     {/* <Canvas style={{ width: "1200px", height: "1200px" , border : "50%"  }}>
      <ambientLight intensity={3} />
@@ -44,14 +44,14 @@ export default function Home({data}) {
     <img src={pass_photo3} alt="my image "  width={400} height={400} className=' rounded-full  '/>
     </div>
     
-    <div className='flex flex-col gap-4 max-w-[40rem] '>
-        <h1 className='text-soft_coal '>Hi, I'm <br /> {userData[0]?.home?.name} </h1>
+    <div className='flex flex-col  gap-4 max-w-[40rem] '>
+        <h1 className='text-soft_coal text-[clamp(1.5rem,4rem,4.1rem)]'>Hi, I'm <br /> {userData[0]?.home?.name} </h1>
         <h5 className='text-gray text-4xl font-bold' > {userData[0]?.home?.role} </h5>
         <p className='text-soft_coal text-lg text-justify '>{userData[0]?.home?.description}</p>
 
-        <div className='flex flex-col gap-12' >
+        <div className='flex flex-col gap-12' > 
         <div className='flex flex-row gap-4 mt-4 w-full' >
-          <button className='border-2 px-2 py-2 rounded border-coal_gray w-full bg-softened text-prim font-bold '><a href="/Resume.pdf" target='_blank'> <p> Resume </p></a> </button>
+          <button className='border-2 px-2 py-2 rounded border-coal_gray w-full bg-softened text-prim font-bold '><a href="/Resume.pdf" target='_blank'> <p> Open CV </p></a> </button>
           <button className='border-2 px-2 py-2 rounded border-text w-full font-bold text-soft_coal'> <a href="/"> <p>Contact Me </p></a></button>
         </div>
         <div>

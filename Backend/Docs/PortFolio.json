@@ -1,149 +1,274 @@
-[ {
-        "home":{
-            "name":"Sathish Kumar R",
-            "role":"Full Stack Developer",
-            "description":"I build reliable, user-friendly web applications as a full-stack developer, combining strong engineering with thoughtful design. I also bring a growing understanding of AI, allowing me to create smarter and more efficient digital solutions."
+[
+    {
+        "_id": "693fc2e01f4d53caf0a3fb39",
+        "home": {
+            "name": "Sathish Kumar R",
+            "role": " Machine Learning | Full Stack Developer",
+            "description": "I develop intelligent, AI-powered solutions by leveraging my growing expertise in machine learning, creating smarter and more efficient digital applications. I am passionate about building reliable, user-friendly web applications with thoughtful design."
         },
-        "links":[
+        "links": [
             {
-                
-                "url":"https://github.com/Sathishkumar-290705",
-                "icon":"github"
+                "name": "Github",
+                "url": "https://github.com/Sathishkumar-290705"
             },
             {
-                "name":"Linkedin",
-                "url":"https://www.linkedin.com/in/sathishkumar290207/"
-               
+                "name": "Linkedin",
+                "url": "https://www.linkedin.com/in/sathishkumar290207/"
             },
             {
-                "name":"Instagram",
-                "url":"https://www.instagram.com/sathishkumar_2907/"
+                "name": "X",
+                "url": "https://x.com/Sathish290705"
             },
             {
-                "name":"X",
-                "url":"https://x.com/Sathish290705"
+                "name": "Facebook",
+                "url": "https://www.facebook.com/profile.php?id=100094046093102"
             },
             {
-                "name":"Facebook",
-                "url":"https://www.facebook.com/profile.php?id=100094046093102"
+                "name": "Phone",
+                "url": "https://wa.me/918056663585"
             }
         ],
-    
-        "resume":{
-            "name":"Resume",
-            "url":""
+        "resume": {
+            "name": "Resume",
+            "url": ""
         },
-    
-        "aboutMe":{
-            "content":[
-                "I am a passionate full-stack developer who loves building exceptional and accessible digital experiences for the web. I focus on creating intuitive and high-performance applications that deliver smooth, reliable, and meaningful interactions for users.",
-                "I am currently pursuing a Bachelor of Engineering in Artificial Intelligence and Data Science at Velammal Engineering College, Chennai (2023 – 2027). My academic journey has strengthened my understanding of AI concepts, machine learning fundamentals, and data-driven problem solving, all of which fuel my interest in integrating AI into real-world applications.",
-                "With a deep curiosity for emerging technologies, I am patiently working toward becoming an AI full-stack developer—combining strong web development skills with advanced AI capabilities to build smarter and more impactful solutions.",
-                "As a full-stack developer, I have hands-on experience with the MERN stack—MongoDB, Express.js, React.js, and Node.js—enabling me to design and develop complete web applications from front to back. I also have expertise in working with both SQL and NoSQL databases, applying these skills in real projects that involve efficient data storage, retrieval, and management.",
-                "I enjoy transforming ideas into functional products, continuously improving my technical abilities, and staying updated with modern development practices. My long-term goal is to create intelligent systems that combine robust engineering with advanced AI, delivering solutions that are impactful, scalable, and meaningful."
-            ],
-            "about":{
-                "name":"Sathish Kumar R",
-                "email":"sathishkumar290705@gmail.com",
-                "phone":"+91 8056663585",
-                "role":"Full Stack Developer",
-                "location":"Chennai, Tamil Nadu, India",
-                "college":"Velammal Engineering College , Chennai (2023 - 2027)",
-                "academicQualification":"B.Tech (Artificial Intelligence and Data Science)",
-                "availability":"Intern/Open to work"
+        "aboutMe": {
+            "title": "know more about me ",
+            "content": [
+                "I am a passionate Machine Learning Engineer with experience in developing intelligent systems using Large Language Models (LLMs), Natural Language Processing, and Computer Vision with OpenCV. I specialize in designing data-driven, scalable AI solutions that address real-world challenges with efficiency, reliability, and precision.",
+                "I build responsive, user-centric full web applications using modern frameworks such as React and Angular, delivering high-performance front-end interfaces and robust back-end integrations that ensure seamless user experiences across devices.",
+                "I am currently pursuing a Bachelor of Engineering in Artificial Intelligence and Data Science at Velammal Engineering College, Chennai (2023 – 2027). My academic journey has strengthened my foundation in machine learning, AI fundamentals, and data-driven problem solving.",
+                "I am actively growing in the New-Generation AI domain, continuously enhancing my technical expertise and staying updated with modern AI and software development practices. My long-term goal is to build scalable and impactful systems that combine strong engineering principles with advanced machine learning technologies."
+                ]
+,
+            "about": {
+                "Name": "Sathish Kumar R",
+                "Email": "sathishkumar290705@gmail.com",
+                "Phone": "+91 8056663585",
+                "Role": "Full Stack Developer",
+                "Location": "Chennai, Tamil Nadu, India",
+                "College": "Velammal Engineering College , Chennai (2023 - 2027)",
+                "Academic Qualification": "B.Tech (Artificial Intelligence and Data Science)",
+                "Availability": "Intern/Open to work"
             }
         },
-    
-        "skills":[
+        "skills": [
             {
-                "id":1,
-                "title":"Frontend",
-                "items":["HTML","CSS","JavaScript","TypeScript","React JS","Angular JS","Tailwind CSS"]
+                "_id": 1,
+                "title": "Frontend",
+                "items": [
+                    "HTML",
+                    "CSS",
+                    "JavaScript",
+                    "TypeScript",
+                    "React JS",
+                    "Angular JS",
+                    "Tailwind CSS"
+                ]
             },
             {
-                "id":2,
-                "title":"Backend",
-                "items":["Flask","Django","Node JS","Express Js"]
+                "_id": 2,
+                "title": "Backend",
+                "items": [
+                    "Flask",
+                    "Django",
+                    "Node JS",
+                    "Express Js"
+                ]
             },
             {
-                "id":3,
-                "title":"Database",
-                "items":["MongoDB","MySQL","Firebase","OracleDB"]
+                "_id": 3,
+                "title": "AI/ML",
+                "items": [
+                    "Machine Learning",
+                    "Deep Leaning",
+                    "Natural Language Processing",
+                    "Computer Vision",
+                    "Speech Technologies"
+                ]
             },
             {
-                "id":4,
-                "title":"DevOps and Tools",
-                "items":["Git","Github","Github Desktop","Postman","Docker","VS Code", "Chrome DevTools"]
+                "_id": 4,
+                "title": "Database",
+                "items": [
+                    "MongoDB",
+                    "MySQL",
+                    "Firebase",
+                    "OracleDB"
+                ]
             },
             {
-                "id":5,
-                "title":"Soft Skills",
-                "items":["Problem Solving","Critical Thinking","Time Management","Collaboration","Clean Code"]
+                "_id": 5,
+                "title": "DevOps and Tools",
+                "items": [
+                    "Git",
+                    "Github",
+                    "Github Desktop",
+                    "Postman",
+                    "Docker",
+                    "VS Code",
+                    "Chrome DevTools"
+                ]
             },
             {
-                "id":6,
-                "title":"Other Skills",
-                "items":["UI Designing", "Testing", "Machine Learning","Web Scrapping","Data Cleaning"]
+                "_id": 6,
+                "title": "Soft Skills",
+                "items": [
+                    "Problem Solving",
+                    "Critical Thinking",
+                    "Time Management",
+                    "Collaboration",
+                    "Clean Code"
+                ]
+            },
+            {
+                "_id": 7,
+                "title": "Other Skills",
+                "items": [
+                    "UI Designing",
+                    "Testing",
+                    "Web Scrapping",
+                    "Data Cleaning"
+                ]
             }
         ],
-
-        "experience":{
-            "work":[
-                "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex eos eius facere minima a? Dolorem voluptatibus fugiat nostrum! Recusandae eos earum, placeat non mollitia doloribus natus laborum. Deserunt repudiandae harum labore esse suscipit. Numquam modi quis voluptates harum aut provident excepturi quidem maiores iusto. Omnis optio culpa aliquid molestias vitae eligendi sunt odit vero beatae repudiandae exercitationem est ducimus nemo ut eius id molestiae, aspernatur consequuntur quo. Voluptatum nisi molestiae odio itaque dolorem asperiores atque quam, rem esse similique sit? Maiores odit ad at suscipit sed? Quod veniam repudiandae amet tenetur tempore alias, molestiae quibusdam culpa ducimus consequatur sequi at repellendus illo ex, qui minima temporibus vero sit, ratione exercitationem aut eligendi! Enim dolore est, consequatur fugit ipsam voluptatem quo perspiciatis sit autem voluptatibus id consequuntur tenetur unde sequi eligendi amet quis alias in! Quaerat eius ab omnis, possimus nemo aspernatur ipsa, laboriosam ea cupiditate aperiam dolores assumenda enim magni. Molestias facere voluptatem quae officia eius repudiandae delectus vero voluptas. Provident blanditiis illo iure, assumenda, cum corporis harum quibusdam repudiandae distinctio nemo necessitatibus nesciunt. Quos at, repellendus distinctio laudantium impedit ducimus. Quas optio expedita rem possimus quis aperiam. Similique facere, blanditiis sed quaerat veritatis facilis ipsum iusto sequi. Sit, repellat."
+        "experience": {
+            "work": [
+                "I contributed to the successful launch of my college website by designing and implementing the frontend as a Frontend Developer, collaborating closely to integrate backend functionality, and leveraging the MERN stack to build a responsive and efficient web application."
             ],
-            "learningPath":[
-                "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex eos eius facere minima a? Dolorem voluptatibus fugiat nostrum! Recusandae eos earum, placeat non mollitia doloribus natus laborum. Deserunt repudiandae harum labore esse suscipit. Numquam modi quis voluptates harum aut provident excepturi quidem maiores iusto. Omnis optio culpa aliquid molestias vitae eligendi sunt odit vero beatae repudiandae exercitationem est ducimus nemo ut eius id molestiae, aspernatur consequuntur quo. Voluptatum nisi molestiae odio itaque dolorem asperiores atque quam, rem esse similique sit? Maiores odit ad at suscipit sed? Quod veniam repudiandae amet tenetur tempore alias, molestiae quibusdam culpa ducimus consequatur sequi at repellendus illo ex, qui minima temporibus vero sit, ratione exercitationem aut eligendi! Enim dolore est, consequatur fugit ipsam voluptatem quo perspiciatis sit autem voluptatibus id consequuntur tenetur unde sequi eligendi amet quis alias in! Quaerat eius ab omnis, possimus nemo aspernatur ipsa, laboriosam ea cupiditate aperiam dolores assumenda enim magni. Molestias facere voluptatem quae officia eius repudiandae delectus vero voluptas. Provident blanditiis illo iure, assumenda, cum corporis harum quibusdam repudiandae distinctio nemo necessitatibus nesciunt. Quos at, repellendus distinctio laudantium impedit ducimus. Quas optio expedita rem possimus quis aperiam. Similique facere, blanditiis sed quaerat veritatis facilis ipsum iusto sequi. Sit, repellat."
+            "learningPath": [
+                "Pursuing a Bachelor of Technology in Artificial Intelligence and Data Science at Velammal Engineering College, with a strong focus on emerging technologies and innovative solutions. Actively engaged in hackathons and collaborative projects, honing problem-solving and critical-thinking skills. Gained hands-on experience in machine learning, data analytics, and full-stack development, applying theoretical knowledge to real-world challenges. Committed to continuous learning and exploring the frontiers of AI and data-driven technologies."
             ]
         },
-    
-        "projects":[
+        "projects": [
             {
-                "id":1,
-                "image":"",
-                "title":"Project One",
-                "description":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-                "technologies":["React","Node.js","MongoDB"],
-                "url":""
+                "_id": 1,
+                "title": "Iris Classification",
+                "description": "A machine learning project that classifies iris flowers into three species using flower measurement data.",
+                "technologies": [
+                    "Python" , "Scikit-Learn", "Numpy" , "Decision Tree Classifier" , ""
+                ],
+                "url": ""
             },
             {
-                "id":2,
-                "image":"",
-                "title":"Project Two",
-                "description":"Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-                "technologies":["Angular","Express.js","MySQL"],
-                "url":""   
+                "_id": 2,
+                "title": "Task Tracker",
+                "description": "A simple To-Do List application that helps users organize daily tasks.Users can add and delete tasks easily for better productivity.",
+                "technologies": [
+                    "Angular",
+                    "Node.js",
+                    "Express.js",
+                    "MySQL"
+                ],
+                "url": ""   
             },
             {
-                "id":3,
-                "image":"",
-                "title":"Project Two",
-                "description":"Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-                "technologies":["Angular","Express.js","MySQL"],
-                "url":""   
+                "_id": 3,
+                "title": "Age Calculator",
+                "description": "A simple Age Calculator that computes your age based on your birth date.Enter your date of birth, and it instantly shows your exact age in years, months, and days.",
+                "technologies": [
+                    "React",
+                    "Node.js",
+                    "Express.js",
+                    "MongoDB"
+                ],
+                "url": ""
+            },
+            {
+                "_id": 4,
+                "title": "Chat Server",
+                "description": "A backend chat system that enables real-time communication between connected clients.",
+                "technologies": [
+                    "Socket.IO",
+                    "Python",
+                    "MySQL"
+                ],
+                "url": ""
+            },
+            {
+                "_id": 5,
+                "title": "Job recommendation system",
+                "description": "A Job Recommendation System is an application that suggests suitable job opportunities to users based on their criteria such as skills, qualifications, experience, and preferences. It helps job seekers quickly find relevant jobs by matching their profiles with appropriate job listings",
+                "technologies": [
+                    "Html",
+                    "Python",
+                    "CSS"
+                ],
+                "url": ""
+            },
+            {
+                "_id": 6,
+                "title": "Learn mate AI ",
+                "description": "An AI-powered intelligent tutor system designed to support personalized learning.The platform generates structured notes, adaptive question banks, and detailed feedback using NLP and deep learning techniques.",
+                "technologies": [
+                    "React",
+                    "Express.js",
+                    "Node.js",
+                    "MongoDB",
+                    "Python",
+                    "LLM",
+                    "NLP",
+                    "scikit-learn",
+                    "Fast API"
+                ],
+                "url": ""
+            },
+            {
+                "_id": 7,
+                "title": "Personal Chatbot",
+                "description": "A personal AI chatbot designed to communicate in a user-defined style using custom training dataIt supports natural, contextual conversations and adapts responses based on personalized inputs.Built using NLP techniques for flexible and intelligent interaction.",
+                "technologies": [
+                    "React",
+                    "Express.js",
+                    "Node.js",
+                    "Python",
+                    "NLP",
+                    "LLM"
+                ],
+                "url": ""
+            },
+            {
+                "_id": 8,
+                "title": "Personal TNPC trainer ",
+                "description": "A personal AI-based TNPC trainer designed to assist students in preparing for aptitude, technical, and interview rounds. The system provides adaptive practice questions, performance analysis, and personalized feedback based on individual progress. It focuses on identifying weak areas and improving overall placement readiness through targeted training.",
+                "technologies": [
+                    "Angular",
+                    "Node.js",
+                    "Express.js",
+                    "LLM",
+                    "MongoDB"
+                ],
+                "url": ""
             }
         ],
-    
-        "contactMe":{
-            "title":"Get in Touch",
-            "content":"I’m open for freelance projects, internships, and part-time opportunities right now. If you’re planning a project or need help taking an existing one further, feel free to get in touch.",
-            "about":[
+        "contactMe": {
+            "title1": "Get in Touch",
+            "title2": "Send Me a Message",
+            "content": "I’m open for freelance projects, internships, and part-time opportunities right now. If you’re planning a project or need help taking an existing one further, feel free to get in touch.",
+            "about": [
                 {
-                  
-                    "label":"Email",
-                    "value":"sathishkumar290705@gmail.com"
+                    "label": "Email",
+                    "value": "sathishkumar290705@gmail.com"
                 },
                 {
-                
-                    "label":"Phone",
-                    "value":"+91 8056663585"
+                    "label": "Phone",
+                    "value": "+91 8056663585"
                 },
                 {
-                   
-                    "label":"Location",
-                    "value":"Chennai, Tamil Nadu, India"
+                    "label": "Location",
+                    "value": "Chennai, Tamil Nadu, India"
+                },
+                {
+                    "label": "Field",
+                    "value": "Machine Learning / Full stack "
                 }
-            ]
+            ],
+            "message_lables": {
+                "Name": "Name",
+                "Email": "Email",
+                "Contact": "Contact Number",
+                "Subject": "Subject"
+            }
         }
-             
-    
-}]
+    }
+]

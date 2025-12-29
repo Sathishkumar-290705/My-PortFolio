@@ -5,12 +5,16 @@ import React from 'react'
 // import { post } from '../../../Backend/Routes/dataRoutes';
 
 const Contactme = ({ data }) => {
-
+  
   // backend data hooks 
+  
   const [userData , setUserData ] = React.useState([])
   const contactMeData = userData[0]?.contactMe;
   const linkData = userData[0]?.links;
-
+  
+  React.useEffect(()=>{
+     setUserData(data);
+  },[data]);
   // user data collection hooks 
 
   const [getData , setGetData] = React.useState({
@@ -121,10 +125,6 @@ const validateField = (name, value) => {
   
   
 
-  React.useEffect(()=>{
-     setUserData(data);
-  },[data]);
-
   const Icons = {
     Email : MailIcon ,
     Phone : Phone ,
@@ -145,37 +145,38 @@ const validateField = (name, value) => {
   return <div id='contactme' className='mt-20 '>
           {/* heading */}
           <h2 className='text-soft_coal'>Contactme</h2>
-          <div className='flex flex-row justify-evenly w-[98%] mx-auto mt-12 h-full'>
+          <div className='flex flex-col gap-2  mt:flex-row justify-evenly w-[98%] mx-auto mt-12 '>
 
             {/* contact information box  */}
-            <div className='border-2 border-mblk w-[50%] bg-muted_pale  p-4 min-h-80 max-h-96' >
+            <div className='border-2 border-mblk mx-auto w-[95%] mt:w-[50%]  bg-muted_pale  p-4 h-fit ' >
                 <h4 className='py-2 font-bold'> {contactMeData?.title1}</h4>
-                <div className='flex flex-col justify-around h-[90%]' >
+                <div className='flex flex-col gap-8 justify-between h-[100%] ' >
+
                     {/* about me message */}
                     <div className='mt-2 font-italic ' >
                       {contactMeData?.content}
                     </div>
-             <div className='grid grid-cols-2  w-[99%] gap-2 mx-auto   '>
-                {contactMeData?.about?.map((value , index )=>{
+                
+                    <div className='grid mt:grid-cols-2 grid-cols-1 w-[99%] gap-2 mx-auto   '>
+                        {contactMeData?.about?.map((value , index )=>{
 
-                  const Icon = Icons[value.label]
-                  return(
-                      <div className='border-2 basis-full pl-2  flex flex-row gap-2 bg-softened' key={index}>
-                        <div className='my-auto text-text2'>
-                        { Icon && <Icon/>}
-                        </div>
-                        <div className='flex flex-col text-text2'>
-                          <h5> {value.label}</h5>
-                          <p> {value.value}</p>
-                        </div>
-                      </div>
-                  )
-                })}
+                          const Icon = Icons[value.label]
+                          return(
+                              <div className='border-2 basis-full pl-2  flex flex-row gap-2 bg-softened' key={index}>
+                                <div className='my-auto text-text2'>
+                                { Icon && <Icon/>}
+                                </div>
+                                <div className='flex flex-col text-text2'>
+                                  <h5> {value.label}</h5>
+                                  <p> {value.value}</p>
+                                </div>
+                              </div>
+                          )
+                        })}
                     </div>
-                    {/* contact information   */}
                    
                     {/* social media link session */}
-                      <div >
+                  
                         <ul className='flex flex-row gap-[4rem] ml-2'>
                         {linkData && linkData.map((item , index)=>{
                                    const Icon = link_icons[item.name]
@@ -186,12 +187,12 @@ const validateField = (name, value) => {
                         })}
                       
                         </ul>
-                      </div>
+                     
                   </div>
 
             </div>
             {/* message box via whatsapp */}
-            <div className='flex justify-start flex-col w-[40%] border-2 min-h-96 p-4 bg-muted_pale border-coal_gray '>
+            <div className='flex justify-start mx-auto flex-col w-[95%] mt:w-[40%] border-2   p-4 bg-muted_pale border-coal_gray '>
                <h4 className='text-text font-bold '>{contactMeData?.title2}</h4>
                <form onSubmit={handleSubmit} className='w-full flex flex-col gap-2 mt-4 '>
                   <div className='w-full'>
@@ -202,7 +203,7 @@ const validateField = (name, value) => {
                     name = "name"
                     value={getData.name}
                     onChange={handleValidation}
-                    className='border-2 text-prim bg-muted_pale border-text w-full h-[2.4rem]' 
+                    className='border-2 text-text bg-muted_pale border-text w-full h-[2.4rem]' 
                     />
                   </div>
                   <div>
@@ -214,7 +215,7 @@ const validateField = (name, value) => {
                     value={getData.email} 
                    
                     onChange={handleValidation}
-                    className='border-2 text-prim bg-muted_pale border-text w-full h-[2.4rem]' 
+                    className='border-2 text-text bg-muted_pale border-text w-full h-[2.4rem]' 
                     />
                   </div>
                   <div>
@@ -225,7 +226,7 @@ const validateField = (name, value) => {
                     name = "contactNumber"
                     value={getData.contactNumber}
                     onChange={handleValidation}
-                    className='border-2 text-prim bg-muted_pale border-text w-full h-[2.4rem]' 
+                    className='border-2 text-text bg-muted_pale border-text w-full h-[2.4rem]' 
                     />
                   </div>
                   <div>
@@ -236,7 +237,7 @@ const validateField = (name, value) => {
                     name = "subject"
                     value={getData.subject}
                     onChange={handleValidation}
-                    className='border-2 text-prim bg-muted_pale border-text w-full h-[2.4rem]' 
+                    className='border-2 text-text bg-muted_pale border-text w-full h-[2.4rem]' 
                      />
                   </div>
                   
@@ -244,7 +245,7 @@ const validateField = (name, value) => {
                     <textarea  
                     id="contactmessage " 
                     name = "message"
-                    className='border-2 text-prim bg-muted_pale border-text w-full h-36' 
+                    className='border-2 text-text font-bold text-md bg-muted_pale border-text w-full h-36' 
                     value={getData.message}
                     onChange={handleValidation}/>
 

@@ -13,8 +13,8 @@ const Aboutme = ({ data }) => {
   return  <div id='aboutme px-8'>
   <h2 className='text-soft_coal'> About Me  </h2>
  
-  <div className='flex flex-row mt-8 gap-2 px-12'>
-    <div className='w-[60%]'>
+  <div className='flex flex-col mt:flex-row w-full mt-8 gap-2 px-12'>
+    <div className='mt:w-[60%] w-full'>
      <h3 className='font-semibold  text-muted_soft pl-4'> Know More About Me </h3>
    <div className='  p-4 text-justify border-2 rounded-xl bg-muted_pale mt-4'>
     <br/>
@@ -29,17 +29,17 @@ const Aboutme = ({ data }) => {
     })}
    </div>
     </div>
-   <div className=' w-[40%] flex flex-col '>
+   <div className=' mt:w-[40%] w-full flex flex-col '>
    <div className='h-[460px] h-auto p-4 border-2 rounded-xl mt-12 bg-softened' >
   
-     <div className='grid grid-rows-4 grid-cols-2 gap-8 '>
+     <div className='grid lp:grid-rows-4 lp:grid-cols-2 grid-rows-8 grid-cols-1 lp:gap-8 gap-y-2  gap-0 '>
 
       {
         about && Object.entries(about).map(([key,value])=>{
           return (
-            <div className='bg-softened p-1'>
-        <h5 className='font-bold text-prim '> {key}</h5>
-        <p className='text-text2 '>{value}</p>
+            <div className='bg-softened p-1 '>
+        <h5 className='font-bold text-prim mt:text-base text-xs w-24 '> {key}</h5>
+        <p className='text-text2  mt:text-base text-xs'>{value}</p>
       </div>
           )
         })

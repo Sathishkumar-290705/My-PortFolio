@@ -144,31 +144,31 @@ const validateField = (name, value) => {
 
   return <div id='contactme' className='mt-20 '>
           {/* heading */}
-          <h2 className='text-soft_coal'>Contactme</h2>
-          <div className='flex flex-col gap-0  mt:flex-row justify-evenly w-[92%] mx-auto mt-12 '>
+          <h2 className='text-soft_coal mini:text-2xl '>Contactme</h2>
+          <div className='flex flex-col mini:gap-4  mt:flex-row justify-evenly w-[92%] mx-auto mt-12 '>
 
             {/* contact information box  */}
             <div className='border-2 border-mblk mx-auto w-[95%] mt:w-[50%]  bg-muted_pale  p-4 h-fit ' >
-                <h4 className='py-2 font-bold'> {contactMeData?.title1}</h4>
+                <h4 className='py-2 font-bold mini:text-xl '> {contactMeData?.title1}</h4>
                 <div className='flex flex-col gap-8 justify-between h-[100%] ' >
 
                     {/* about me message */}
-                    <div className='mt-2 font-italic ' >
+                    <div className='mt-2 font-italic mini:text-sm text-justify  ' >
                       {contactMeData?.content}
                     </div>
                 
-                    <div className='grid mt:grid-cols-2 grid-cols-1 w-[99%] gap-2 mx-auto   '>
+                    <div className='grid mt:grid-cols-2 grid-cols-1 w-[99%] gap-2 mx-auto  '>
                         {contactMeData?.about?.map((value , index )=>{
 
                           const Icon = Icons[value.label]
                           return(
-                              <div className='border-2 basis-full pl-2  flex flex-row gap-2 bg-softened' key={index}>
+                              <div className='  mini:py-1 border-2 basis-full pl-2  flex flex-row gap-2 bg-softened' key={index}>
                                 <div className='my-auto text-text2'>
                                 { Icon && <Icon/>}
                                 </div>
                                 <div className='flex flex-col text-text2'>
-                                  <h5> {value.label}</h5>
-                                  <p> {value.value}</p>
+                                  <h5 className='mini:text-xs'> {value.label}</h5>
+                                  <p className='mini:text-xs'> {value.value}</p>
                                 </div>
                               </div>
                           )
@@ -177,7 +177,7 @@ const validateField = (name, value) => {
                    
                     {/* social media link session */}
                   
-                        <ul className='flex flex-row gap-[4rem] ml-2'>
+                        <ul className='flex flex-row mini:gap-8 ml-2'>
                         {linkData && linkData.map((item , index)=>{
                                    const Icon = link_icons[item.name]
                           return(
@@ -193,10 +193,10 @@ const validateField = (name, value) => {
             </div>
             {/* message box via whatsapp */}
             <div className='flex justify-start mx-auto flex-col w-[95%] mt:w-[40%] border-2   p-4 bg-muted_pale border-coal_gray '>
-               <h4 className='text-text font-bold '>{contactMeData?.title2}</h4>
+               <h4 className='text-text font-semibold  mini:text-xl  '>{contactMeData?.title2}</h4>
                <form onSubmit={handleSubmit} className='w-full flex flex-col gap-2 mt-4 '>
                   <div className='w-full'>
-                    <label htmlFor="name" className='font-bold text-text' >Name : </label>
+                    <label htmlFor="name" className='mini:font-medium mini:text-sm  text-text' >Name : </label>
                     <input
                     id='name' 
                     type="text" 
@@ -207,7 +207,7 @@ const validateField = (name, value) => {
                     />
                   </div>
                   <div>
-                    <label htmlFor="email" className='font-bold text-text'>E-Mail :</label>
+                    <label htmlFor="email" className='mini:font-medium mini:text-sm text-text'>E-Mail :</label>
                     <input 
                     id='email' 
                     type="email"
@@ -219,7 +219,7 @@ const validateField = (name, value) => {
                     />
                   </div>
                   <div>
-                    <label htmlFor="contactnumber" className='font-bold text-text '>Contact Number :</label>
+                    <label htmlFor="contactnumber" className='mini:font-medium mini:text-sm text-text '>Contact Number :</label>
                     <input 
                     id='contactNumber' 
                     type="number"
@@ -230,7 +230,7 @@ const validateField = (name, value) => {
                     />
                   </div>
                   <div>
-                    <label htmlFor="subject" className='font-bold text-text'>Subject :</label>
+                    <label htmlFor="subject" className='mini:font-medium mini:text-sm text-text'>Subject :</label>
                     <input 
                     id='subject' 
                     type="text" 
@@ -251,7 +251,7 @@ const validateField = (name, value) => {
 
                   </div>
                   <div>
-                    <button className='   w-full hover:bg-text  bg-softened text-text2 hover:text-prim  h-10 rounded-lg ' >
+                    <button className=' mini:text-sm w-full hover:bg-text  bg-softened text-text2 hover:text-prim  h-10 rounded-lg ' >
                       Send Message 
                     </button>
                   </div>

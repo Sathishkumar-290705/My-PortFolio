@@ -12,23 +12,23 @@ React.useEffect(() => {
 }, [data]);
 
   return <div id='projects' className='mt-20'>
-    <h2 className='text-soft_coal'> My Projects </h2>
+    <h2 className='text-soft_coal mini:text-2xl '> My Projects </h2>
     <div className='mt-16 w-[96%] flex flex-wrap gap-12 justify-center mx-auto' >
       {/* PROJECT LIST  */}
       {
         projectData && projectData?.map((project,index)=>{
           return(
-       <div className='mt:w-[24rem] max-w-[24rem] w-[80%] h-auto min-h-72 max-h-80  overflow-hidden border-2 border-text flex flex-col justify-between item-center bg-muted_pale p-4 '>
+       <div className='mt:w-[24rem] max-w-[24rem] mini:w-[92%] h-fit  min-h-80 max-h-88  overflow-hidden border-2 border-text flex flex-col justify-between item-center bg-muted_pale p-4 '>
     
-          <h4 className='text-text h-12 font-bold my-auto flex  items-center'> {project.title}</h4>
+          <h4 className=' mini:text-xl text-text h-12 font-bold my-auto flex  items-center'> {project.title}</h4>
          <div className='flex flex-col justify-between flex-1 mt-4 '>
-          <p className='text-text min-h-20'>{project.description} </p>
+          <p className=' mini:text-sm text-text min-h-20'>{project.description} </p>
          
-            <ul className='flex flex-row flex-1  flex-wrap gap-4 items-start h-auto'>
+            <ul className='flex flex-row flex-1  flex-wrap gap-2 items-start h-auto'>
             {
               project.technologies && project.technologies.map((tech,index)=>{
                 return (
-                  <li  key={index} className='text-text text-sm bg-softened w-fit px-4 py-2 rounded-full text-text2  hover:bg-text hover:text'>{tech}</li>
+                  <li  key={index} className=' mini:text-xs text-text   bg-softened w-fit px-4 mini:px-2 mini:py-2 rounded-full text-text2  hover:bg-text hover:text'>{tech}</li>
                 )
               })
             }

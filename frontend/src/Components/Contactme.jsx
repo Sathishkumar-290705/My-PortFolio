@@ -145,7 +145,7 @@ const validateField = (name, value) => {
   return <div id='contactme' className='mt-20 '>
           {/* heading */}
           <h2 className='text-soft_coal'>Contactme</h2>
-          <div className='flex flex-col gap-2  mt:flex-row justify-evenly w-[98%] mx-auto mt-12 '>
+          <div className='flex flex-col gap-0  mt:flex-row justify-evenly w-[92%] mx-auto mt-12 '>
 
             {/* contact information box  */}
             <div className='border-2 border-mblk mx-auto w-[95%] mt:w-[50%]  bg-muted_pale  p-4 h-fit ' >

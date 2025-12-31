@@ -45,9 +45,32 @@ module.exports = {
         'mt':'991px',
         'nl':'1024',
         'sl': '1199px',
-        'desk':'1399px',
+        'desk':'1450px',
+        
       }
   },
-  plugins: [],
+  plugins: [
+      function ({ addVariant }) {
+      const states = [
+        'hover',
+        'focus',
+        'active',
+        'visited',
+        'focus-within',
+        'focus-visible',
+        'disabled',
+        'checked',
+      ];
+
+      states.forEach(state => {
+        addVariant(`nav-link-${state}`, ({ modifySelectors, separator }) => {
+          modifySelectors(({ className }) => {
+            return `.my-parent:${state} .${className}`;
+          });
+        });
+      });
+    }
+  
+  ],
 }
 

@@ -4,9 +4,9 @@
 
 
 
-h1{
+/* h1{
   @apply text-h1 font-inter ;
-}
+} */
 
 h3{
   @apply text-h3 font-inter  ;
@@ -43,6 +43,9 @@ code {
 
   .nav-item:hover{
     @apply bg-coal_gray rounded-full transition-all duration-300 ease-in-out text-prim
+  }
+  .nav-icon{
+    @apply nav-link-hover:text-text2
   }
 
   

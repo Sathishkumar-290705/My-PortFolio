@@ -25,14 +25,14 @@ const Skills = ({ data }) => {
 
   return <div id='skills' className='mt-12 '>
     <h2 className='text-soft_coal'>My Skills </h2>
-    <div className=' flex flex-wrap justify-center  gap-y-8 gap-x-20 mt-8 w-fit mx-auto' >
+    <div className=' flex flex-wrap justify-center w-[90%] px-12 gap-y-8 gap-x-20 mt-8 w-fit mx-auto' >
         {/* skills  */}
 
         {
           skills && skills?.map((skill,index)=>{
             const Icon = icons[skill.title]
             return (
-        <div  className='relative flex flex-col p-4 bg-muted_pale w-[90%]  min-h-72 w-[26rem] border-2 border-text'key={skill._id} >
+        <div  className='relative flex flex-col p-4 bg-muted_pale w-[90%]  min-h-72 np:w-[24rem] border-2 border-text'key={skill._id} >
          
             <h4 className="flex flex-row  gap-2 items-center mx-auto text-text font-bold ">{Icon && <Icon/>} {skill.title} </h4>
             <div className='mt-4'>

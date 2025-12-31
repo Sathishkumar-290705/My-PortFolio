@@ -13,12 +13,12 @@ React.useEffect(() => {
 
   return <div id='projects' className='mt-20'>
     <h2 className='text-soft_coal'> My Projects </h2>
-    <div className='mt-16 flex flex-wrap gap-12 justify-center ' >
+    <div className='mt-16 w-[96%] flex flex-wrap gap-12 justify-center mx-auto' >
       {/* PROJECT LIST  */}
       {
         projectData && projectData?.map((project,index)=>{
           return(
-       <div className='mt:w-[26rem] max-w-[26rem] w-[80%] h-auto min-h-72 max-h-80  overflow-hidden border-2 border-text flex flex-col justify-between item-center bg-muted_pale p-4 '>
+       <div className='mt:w-[24rem] max-w-[24rem] w-[80%] h-auto min-h-72 max-h-80  overflow-hidden border-2 border-text flex flex-col justify-between item-center bg-muted_pale p-4 '>
     
           <h4 className='text-text h-12 font-bold my-auto flex  items-center'> {project.title}</h4>
          <div className='flex flex-col justify-between flex-1 mt-4 '>

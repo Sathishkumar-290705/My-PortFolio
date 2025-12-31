@@ -34,20 +34,20 @@ export default function Home({data}) {
    
 
   return <>
-  <div id='home' className='w-[100%] h-[700px] flex flex-col mt:flex-row  mt-20  justify-evenly items-center gap-8  '>
+  <div id='home' className='w-[92%] h-[700px] flex flex-col mt:flex-row  desk:mt-20 mt-24 mx-auto  justify-evenly items-center gap-8  '>
 
     {/* <Canvas style={{ width: "1200px", height: "1200px" , border : "50%"  }}>
      <ambientLight intensity={3} />
      <Logo />
     </Canvas> */}
-    <div >
-    <img src={pass_photo3} alt="my image "  width={400} height={400} className=' rounded-full  '/>
+    <div className='min-w-[25rem]' >
+    <img src={pass_photo3} alt="my image "   className=' rounded-full w-[24rem]  sl:w[20rem] h-[24rem] sl:w-[20rem] '/>
     </div>
     
-    <div className='flex flex-col  gap-4 max-w-[40rem] '>
-        <h1 className='text-soft_coal text-[clamp(1.5rem,4rem,4.1rem)]'>Hi, I'm <br /> {userData[0]?.home?.name} </h1>
-        <h5 className='text-gray text-4xl font-bold' > {userData[0]?.home?.role} </h5>
-        <p className='text-soft_coal text-lg text-justify '>{userData[0]?.home?.description}</p>
+    <div className='flex flex-col  gap-4 max-w-[35rem]  mt-8'>
+        <h1 className='text-soft_coal text-7xl text-[clamp(2.5rem,4vw,3.8rem)] font-bold leading-tight'>Hi, I'm <br /> {userData[0]?.home?.name} </h1>
+        <h5 className='text-gray text-[clamp(1.5rem,4vw,2rem)] font-bold' > {userData[0]?.home?.role} </h5>
+        <p className='text-soft_coal desk:text-lg sl:text-base text-justify '>{userData[0]?.home?.description}</p>
 
         <div className='flex flex-col gap-12' > 
         <div className='flex flex-row gap-4 mt-4 w-full' >

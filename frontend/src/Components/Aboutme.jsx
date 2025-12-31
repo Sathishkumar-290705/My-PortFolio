@@ -10,35 +10,35 @@ const Aboutme = ({ data }) => {
   }, [data]);
 
   const about = userData[0]?.aboutMe?.about;
-  return  <div id='aboutme px-8'>
-  <h2 className='text-soft_coal'> About Me  </h2>
+  return  <div id='aboutme  '>
+  <h2 className='text-soft_coal lp:mt-80  mt:mt-12'> About Me  </h2>
  
-  <div className='flex flex-col mt:flex-row w-full mt-8 gap-2 px-12'>
-    <div className='mt:w-[60%] w-full'>
-     <h3 className='font-semibold  text-muted_soft pl-4'> Know More About Me </h3>
+  <div className='flex flex-col desk:flex-row w-[92%] mx-auto mt-8 gap-2 px-12 '>
+    <div className='desk:w-[1700px] w-full'>
+     <h3 className='font-semibold  text-muted_soft pl-4 text-center mt:text-start'> Know More About Me </h3>
    <div className='  p-4 text-justify border-2 rounded-xl bg-muted_pale mt-4'>
     <br/>
     
     {userData[0]?.aboutMe?.content?.map((item,index)=>{
       return (
         <div key={index}>
-              <p  className='mb-4 text-text  text-lg'> {item} </p>
+              <p  className='mb-4 text-text  text-base'> {item} </p>
               <br />
         </div>
       )
-    })}
+    })} 
    </div>
     </div>
-   <div className=' mt:w-[40%] w-full flex flex-col '>
+   <div className=' desk:w-flex-1 w-full flex flex-col '>
    <div className='h-[460px] h-auto p-4 border-2 rounded-xl mt-12 bg-softened' >
   
-     <div className='grid lp:grid-rows-4 lp:grid-cols-2 grid-rows-8 grid-cols-1 lp:gap-8 gap-y-2  gap-0 '>
+     <div className='grid lp:grid-rows-4 lp:grid-cols-2 grid-rows-8 grid-cols-1 lp:gap-y-2 gap-y-2  '>
 
       {
         about && Object.entries(about).map(([key,value])=>{
           return (
-            <div className='bg-softened p-1 '>
-        <h5 className='font-bold text-prim mt:text-base text-xs w-24 '> {key}</h5>
+      <div className='bg-softened p-0  w-40'>
+        <h5 className='font-bold text-prim mt:text-base text-xs  '> {key}</h5>
         <p className='text-text2  mt:text-base text-xs'>{value}</p>
       </div>
           )

@@ -58,7 +58,7 @@ useEffect(() => {
     <Navbar />
     <MainWrapperContainer>
       <Home data = {data}/>
-      <Aboutme data= {data}/>
+      <Aboutme data= {data} />
       <Skills data = {data}/>
       <Experience data = {data}/>
       <Project data={data}/>

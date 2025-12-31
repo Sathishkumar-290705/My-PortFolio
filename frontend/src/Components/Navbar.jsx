@@ -1,4 +1,4 @@
-import { Briefcase, Cog, Download, DownloadIcon, FolderKanban, Home, Phone, User } from 'lucide-react';
+import { Briefcase, Cog,  DownloadIcon, FolderKanban, Home, Phone, User } from 'lucide-react';
 import React from 'react'
 
 const Navbar = () => {
@@ -12,7 +12,7 @@ const Navbar = () => {
         <ul className='nav-icons flex sm:hidden max-w-fit w-[min(53%,44.5rem)] max-w-[47rem] border-2 border-gray shadow-4xl z-1000 px-2 py-1 rounded-full bg-muted_pale hover:bg-softened backdrop-blur-lg   hover:scale-105 transition duration-300 group list-none flex flex-row items-center  '>    
 
 
-            <li className=' nav-item  '> <a href="home" className='flex flex-row gap-1' ><Home className='text-text'/><span className='hidden mt:inline'> Home </span></a>  </li>
+            <li className=' nav-item  '> <a href="home" className=' nav-link flex flex-row gap-1' ><Home className='text-text nav-icon'/><span className='hidden mt:inline'> Home </span></a>  </li>
 
 
             <li className=' nav-item '><a href="#aboutme" className='flex flex-row gap-1' ><User className='text-text' /> <span className='hidden mt:inline'> Aboutme </span> </a>  </li>

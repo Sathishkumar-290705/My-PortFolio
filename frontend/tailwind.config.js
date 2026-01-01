@@ -41,7 +41,7 @@ module.exports = {
         'sp':'374px',
         'np':'414px',
         'lp':'575px',
-        'st':'767px', 
+        'st':'820px',   
         'mt':'991px',
         'nl':'1024',
         'sl': '1199px',

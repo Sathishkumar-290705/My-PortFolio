@@ -32,7 +32,7 @@ const Skills = ({ data }) => {
           skills && skills?.map((skill,index)=>{
             const Icon = icons[skill.title]
             return (
-        <div  className='relative flex flex-col p-4 bg-muted_pale w-[90%]  mini:min-h-68 mini:w-[80%] np:w-[24rem] border-2 border-text'key={skill._id} >
+        <div  className='relative flex flex-col p-4 bg-muted_pale w-[90%] mini:min-h-72 mini:w-[80%] np:w-[72%] np:min-h-64 lp:w-[20rem] border-2 border-text'key={skill._id} >
          
             <h4 className="flex flex-row mini:text-base   gap-2 items-center mx-auto text-text mini:font-bold ">{Icon && <Icon/>} {skill.title} </h4>
             <div className='mt-4'>

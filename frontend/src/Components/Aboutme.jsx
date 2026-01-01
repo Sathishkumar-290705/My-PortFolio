@@ -11,7 +11,7 @@ const Aboutme = ({ data }) => {
 
   const about = userData[0]?.aboutMe?.about;
   return  <div id='aboutme  '> 
-  <h2 className='text-soft_coal mini:text-2xl np:mt-[10rem]   mini:mt-12  mt:mt-12'> About Me  </h2>
+  <h2 className='text-soft_coal mini:text-2xl mini:mt-12  mt:mt-12 np:mt-20 lp:mt-12'> About Me  </h2>
  
   <div className='flex flex-col desk:flex-row  w-[92%] mx-auto mt-8 gap-2 mini:px-2 px-12 '>
     <div className='desk:w-[1700px] w-full'>

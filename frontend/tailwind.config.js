@@ -42,10 +42,10 @@ module.exports = {
         'np':'414px',
         'lp':'575px',
         'st':'820px',   
-        'mt':'991px',
-        'nl':'1024',
+        'mt':'990px',
+        'nl':'1024px',
         'sl': '1199px',
-        'desk':'1450px',
+        'desk':'1400px',
         
       }
   },

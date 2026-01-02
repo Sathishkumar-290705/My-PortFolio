@@ -34,7 +34,7 @@ React.useEffect(() => {
             }
             </ul>
          
-            <button  className='flex items-center font-semibold h-12'>
+            <button  className='flex justify-start items-center font-semibold h-12'>
                View Project 
             </button>
         </div>

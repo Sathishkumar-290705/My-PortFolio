@@ -39,7 +39,7 @@ const Skills = ({ data }) => {
                   {skill.items && skill.items?.map((item,index)=>{  
                     return (
                   <ul className='flex flex-col gap-2' key={index}>
-                    <li className='mt-2 text-text mini:text-xs nl:text-base '> <span> ➤ </span> {item}</li>
+                    <li className='mt-2 text-text mini:text-sm nl:text-base '> <span> ➤ </span> {item}</li>
                   
                   </ul>
                     )

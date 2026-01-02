@@ -37,7 +37,7 @@ useEffect(() => {
 
   async function fetchData() {
     try {
-      const res = await fetch("http://localhost:5000/api/get_all");
+      const res = await fetch("http://10.142.112.59:5000/api/get_all");
       const data = await res.json();
       
       // console.log(data);

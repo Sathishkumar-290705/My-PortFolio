@@ -144,11 +144,11 @@ const validateField = (name, value) => {
 
   return <div id='contactme' className='mt-20 '>
           {/* heading */}
-          <h2 className='text-soft_coal mini:text-2xl '>Contactme</h2>
-          <div className='flex flex-col mini:gap-4  mt:flex-row justify-evenly w-[92%] mx-auto mt-12 '>
+          <h2 className='text-soft_coal mini:text-2xl nl:text-3xl '>Contactme</h2>
+          <div className='flex flex-col mini:gap-4  nl:flex-row justify-evenly w-[94%] nl:w-[86%] mx-auto mt-12 '>
 
             {/* contact information box  */}
-            <div className='border-2 border-mblk mx-auto w-[95%] mt:w-[50%]  bg-muted_pale  p-4 h-fit ' >
+            <div className='border-2 border-mblk mx-auto w-[85%] lp:w-[80%] nl:w-[45%]  bg-muted_pale  p-4 h-fit ' >
                 <h4 className='py-2 font-bold mini:text-xl '> {contactMeData?.title1}</h4>
                 <div className='flex flex-col gap-8 justify-between h-[100%] ' >
 
@@ -157,12 +157,12 @@ const validateField = (name, value) => {
                       {contactMeData?.content}
                     </div>
                 
-                    <div className='grid mt:grid-cols-2 grid-cols-1 w-[99%] gap-2 mx-auto  '>
+                    <div className='grid lp:grid-cols-2 nl:grid-cols-1  grid-cols-1 w-[100%] mt:w-[94%]  gap-2 mx-auto lp:mx-0  '>
                         {contactMeData?.about?.map((value , index )=>{
 
                           const Icon = Icons[value.label]
                           return(
-                              <div className='  mini:py-1 border-2 basis-full pl-2  flex flex-row gap-2 bg-softened' key={index}>
+                              <div className='  mini:py-1 border-2 basis-full pl-2 lp:w-full lp:min-w-[16rem] mt:w-full flex flex-row gap-2 bg-softened rounded-lg ' key={index}>
                                 <div className='my-auto text-text2'>
                                 { Icon && <Icon/>}
                                 </div>
@@ -177,7 +177,7 @@ const validateField = (name, value) => {
                    
                     {/* social media link session */}
                   
-                        <ul className='flex flex-row mini:gap-8 ml-2'>
+                        <ul className='flex flex-row mini:gap-8 nl:gap-8 lp:gap-16 ml-2'>
                         {linkData && linkData.map((item , index)=>{
                                    const Icon = link_icons[item.name]
                           return(
@@ -192,7 +192,7 @@ const validateField = (name, value) => {
 
             </div>
             {/* message box via whatsapp */}
-            <div className='flex justify-start mx-auto flex-col w-[95%] mt:w-[40%] border-2   p-4 bg-muted_pale border-coal_gray '>
+            <div className='flex justify-start mx-auto flex-col w-[85%] lp:w-[80%] nl:w-[55%] border-2   p-4 bg-muted_pale border-coal_gray '>
                <h4 className='text-text font-semibold  mini:text-xl  '>{contactMeData?.title2}</h4>
                <form onSubmit={handleSubmit} className='w-full flex flex-col gap-2 mt-4 '>
                   <div className='w-full'>

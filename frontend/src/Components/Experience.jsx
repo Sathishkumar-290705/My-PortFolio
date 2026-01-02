@@ -14,11 +14,11 @@ const Experience = ({data}) => {
     setUserData(data)
   },[data])
   return <div id='experience' className='mt-24'>
-    <h2 className='text-soft_coal mini:text-2xl '> Work Experience & Learning Path </h2>
+    <h2 className='text-soft_coal mini:text-2xl nl:text-3xl '> Work Experience & Learning Path </h2>
     <div className='w-[86%] h-auto flex flex-col gap-12 items-center mx-auto mt-12'>
       {/* LEARNING PATH */}
       <div className='flex flex-col  gap-8'>
-        <h4 className='text-center  w-fit  gap-2 flex flex-row mini:text-xl font-bold   '><Book/> Learning Path</h4>
+        <h4 className='text-center  mini:ml-2 sp:ml-2 np:ml-[1.5rem] lp:ml-[1.8rem] gap-2 flex flex-row mini:text-xl font-bold   '><Book className='' /> Learning Path</h4>
         <div className='text-justify flex flex-col   mt:flex-row gap-8 mini:w-[92%]  mx-auto mt:w-full border-2 bg-muted_pale border-text mini:p-4'>
           <div className='flex flex-row mini:flex-col mt:flex-col gap-4 mini:w-[90%] my-auto'>
               <div>
@@ -47,7 +47,7 @@ const Experience = ({data}) => {
       </div>
       {/* EXPERIENCE */}
       <div className='flex flex-col gap-8'>
-        <h4 className='flex flex-row  gap-2 text-center  w-fit   mini:gap-2  mini:text-xl font-semibold  '><Briefcase/> Experience</h4>
+        <h4 className='flex flex-row  gap-2 text-center ml-2 sp:mt-4 np:ml-[1.5rem] lp:ml-[1.8rem] w-fit   mini:gap-2  mini:text-xl font-semibold  '><Briefcase/> Experience</h4>
         <div className='text-justify bg-muted_pale flex  flex-col mt:flex-row-reverse gap-8  mini:w-[92%]  mx-auto mt:w-full border-2 border-text mini:p-4'>
           <div className='flex flex-row mini:flex-col  mt:flex-col gap-4 mini:w-[90%] my-auto'>
               <div>

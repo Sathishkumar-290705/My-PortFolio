@@ -34,19 +34,19 @@ export default function Home({data}) {
    
 
   return <>
-  <div id='home' className=' w-[92%] np:w-[86%] max-h-[700px] lp:h-[550px] lp:w-[92%] st:w-[98%] flex flex-col st:flex-row st:justify-center mini:mt-28  st:mt-12 lp:mt-28 desk:mt-20 mt-24 mx-auto mini:justify-start  justify-evenly items-center  mini:gap-0 lp:gap-0 st:gap-12  '>
+  <div id='home' className=' w-[92%] np:w-[86%] max-h-[700px] lp:h-[550px] lp:w-[92%] st:w-[98%] nl-w-[92%] flex flex-col st:flex-row st:justify-center mini:mt-28  st:mt-12 lp:mt-28 desk:mt-20 mt-24 mx-auto mini:justify-start  justify-evenly items-center  mini:gap-0 lp:gap-0 st:gap-12 desk:gap-20 '>
 
     {/* <Canvas style={{ width: "1200px", height: "1200px" , border : "50%"  }}>
      <ambientLight intensity={3} />
      <Logo />
     </Canvas> */}
     <div className='max-w-[30rem]' >
-    <img src={pass_photo3} alt="my image "   className=' rounded-full mini:w-[10rem] mini:h-[10rem] st:w-[16rem] st:h-[16rem] lp:w-[12rem] lp:h-[12rem] desk:w-[30rem] desk:h-[30rem] nl:w-[28rem] nl:h-[28rem]    '/>
+    <img src={pass_photo3} alt="my image "   className=' rounded-full mini:w-[10rem] mini:h-[10rem] st:w-[16rem] st:h-[16rem] lp:w-[12rem] lp:h-[12rem]  nl:w-[21rem] nl:h-[21rem]  desk:w-[24rem] desk:h-[24rem]    '/>
     </div>
     
-    <div className='flex flex-col  mini:gap-2  lp:gap-2 mini:w-90%  st:w-[50%] nl:w-[30rem] sl:w-[35rem] lp:w-[80%] desk:w-[40rem]  mini:mt-0 np:mt-4 lp:mt-4 st:mt-12'>
-        <h1 className='text-soft_coal  text-[clamp(2.5rem,4vw,3.8rem)] mini:text-2xl lp:text-3xl st:text-4xl font-bold leading-tight'>Hello, <br /> I'm  {userData[0]?.home?.name} </h1>
-        <h5 className='text-gray text-[clamp(1.2rem,3vw,2.2rem)] mini:text-xl lp:text-xl st:text-2xl font-bold  ' > {userData[0]?.home?.role} </h5>
+    <div className='flex flex-col  mini:gap-2  lp:gap-2 mini:w-90%  st:w-[50%] nl:w-[32rem] sl:w-[35rem] lp:w-[80%] desk:w-[40rem]  mini:mt-0 np:mt-4 lp:mt-4 st:mt-12 desk:mt-4'>
+        <h1 className='text-soft_coal  mini:text-2xl lp:text-3xl st:text-4xl nl:text-5xl font-bold leading-tight desk:leading-tight'>Hii, <br /> I'm  {userData[0]?.home?.name} </h1>
+        <h5 className='text-gray text-[clamp(1.2rem,3vw,2.2rem)] mini:text-xl lp:text-xl st:text-2xl nl:text-[26px] desk:text-3xl font-bold desk:leading-normal ' > {userData[0]?.home?.role} </h5>
         <p className='text-soft_coal mini:text-xs desk:text-lg  sl:text-base st:text-base lp:text-xs text-justify '>{userData[0]?.home?.description}</p>
 
         <div className='flex flex-col gap-12 mini:gap-8' > 
@@ -57,14 +57,14 @@ export default function Home({data}) {
         
           
 
-          <ul className='flex flex-row mini:gap-12 gap-16 ml-4' >
+        <ul className='flex flex-row mini:gap-12 lp:gap-12 desk:gap-20 gap-16 ml-4 desk:ml-1' >
             {userData[0]?.links?.map((links,index)=>{
               const IconComponent = link_icons[links.name];
               return (
                 <li  key={index} ><a href={links.url} rel='noreferrer' target='_blank' > { IconComponent && <IconComponent className='lp:text-xs' />} </a></li>
               )
             })}
-                </ul>
+        </ul>
       
         </div>
     </div>

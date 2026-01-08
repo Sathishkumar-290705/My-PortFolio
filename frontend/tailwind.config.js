@@ -10,14 +10,14 @@ module.exports = {
         'inter':['Inter', 'sans-serif'],
       },
       fontSize:{
-        'h1':['4rem',{lineHeight:'1.1',fontWeight:'700'}] ,
-        'h3':['1.8rem',{lineHeight:'1.1',fontWeight:'400'}],
-        'h2':['2.2rem',{lineHeight:'1.1',fontWeight:'600'}],
-        'h4':['1.4rem',{lineHeight:'1',fontWeight:'400'}]
+        // 'h1':['4rem',{lineHeight:'1.1',fontWeight:'700'}] ,
+        // 'h3':['1.8rem',{lineHeight:'1.1',fontWeight:'400'}],
+        // 'h2':['2.2rem',{lineHeight:'1.1',fontWeight:'600'}],
+        // 'h4':['1.4rem',{lineHeight:'1',fontWeight:'400'}]  
       },
       colors:{
         //universal color code (My way )
-        'text':'#000000',
+        // 'text':'#000000',
         'm_text':"hsl(0 0% 20%)",
         'prim':'#ffffff',
         'm_prim':'hsl(0 0% 80%)',
@@ -33,7 +33,10 @@ module.exports = {
         "coal_gray" : "#575757", // meta text 
         "text1" : "#575757", // text for light background 
         "text2" : "#DEDEDE", // text for dark background
-        'brwn ' : "#625454ff",
+        // 'brwn ' : "#625454ff"
+         'brwn' : "#800000",
+         'secd':"#fdcc03"
+        ,
       },
     },
     screens:{
@@ -46,6 +49,7 @@ module.exports = {
         'nl':'1024px',
         'sl': '1199px',
         'desk':'1400px',
+        'short':{'raw': '(max-height: 500px)'}
         
       }
   },

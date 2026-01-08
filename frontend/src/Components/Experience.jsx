@@ -1,81 +1,103 @@
-import { Book, Briefcase, Calendar,  MapPin,} from 'lucide-react';
-import React, { useEffect, useState } from 'react'
+import { Book, Briefcase, Calendar, MapPin } from "lucide-react";
+import React, { useEffect, useState } from "react";
 
-const Experience = ({data}) => {
+const Experience = ({ data }) => {
 
-  const [userdata , setUserData] = useState([]);
+  const[experience , setExperience ] = useState([])
 
+  useEffect(()=> {
+     const experience = data[0]?.experience;
+     setExperience(experience)
+  })
+  return (
+    <section
+      id="experience"
+      className="max-w-6xl mx-auto py-24 px-6 text-white"
+    >
+      {/* Section Title */}
+      <h2 className="text-4xl font-semibold mb-12">
+        Experience & <span className="text-indigo-400">Learning</span>
+      </h2>
 
-  const experience = userdata[0]?.experience;
-  console.log(experience);
-  
-  console.log(userdata);
-    useEffect(()=>{
-    setUserData(data)
-  },[data])
-  return <div id='experience' className='mt-24'>
-    <h2 className='text-soft_coal mini:text-2xl nl:text-3xl '> Work Experience & Learning Path </h2>
-    <div className='w-[86%] h-auto flex flex-col gap-12 items-center mx-auto mt-12'>
-      {/* LEARNING PATH */}
-      <div className='flex flex-col  gap-8'>
-        <h4 className='text-center  mini:ml-[3rem]  sp:ml-2 np:ml-[1rem] lp:ml-[1.8rem] gap-2 flex flex-row mini:text-xl font-bold   '><Book className='' /> Learning Path</h4>
-        <div className='text-justify flex flex-col   mt:flex-row gap-8 mini:w-[92%]  mx-auto mt:w-full border-2 bg-muted_pale border-text mini:p-4'>
-          <div className='flex flex-row mini:flex-col mt:flex-col gap-4 mini:w-[90%] my-auto'>
-              <div>
-                <h2 className='mini:text-xl text-4xl  font-bold text-start '> {experience?.Academic_qualification} </h2>
-              <p className='mini:text-sm '> {experience?.college} </p>
-              </div>
-              <div className='flex flex-col gap-2 w-fit '>
-                  <div className='flex flex-row gap-2 items-center'>
-                    <MapPin className='my-auto'/> 
-                    <div>
-                        <p className='mini:text-sm '>{experience?.education_place}</p>
-                    </div>
-                  </div>
-                  <div className='flex flex-row gap-2  items-center'>
-                        <Calendar/> 
-                        <p className='mini:text-sm'> {experience?.education_time} </p> 
-                  </div>
-              </div>
+      <div className="space-y-16">
+        {/* Learning Path */}
+        <div>
+          <div className="flex items-center gap-3 mb-6">
+            <Book className="text-indigo-400" />
+            <h3 className="text-2xl font-semibold">Learning Path</h3>
           </div>
-          <div className='flex-1 bg-softened p-2 rounded-xl '>
-              <p className='text-text2 mini:text-sm mini:p-2 '>
-                {experience?.learningPath}
-              </p>
+
+          <div className="bg-[#141418] border border-white/10 rounded-2xl p-8 grid md:grid-cols-3 gap-8">
+            {/* Left */}
+            <div className="space-y-4">
+              <div>
+                <h4 className="text-xl font-semibold">
+                  {experience?.Academic_qualification}
+                </h4>
+                <p className="text-gray-400">
+                  {experience?.college}
+                </p>
+              </div>
+
+              <div className="space-y-2 text-gray-400 text-sm">
+                <div className="flex items-center gap-2">
+                  <MapPin size={16} />
+                  <span>{experience?.education_place}</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <Calendar size={16} />
+                  <span>{experience?.education_time}</span>
+                </div>
+              </div>
+            </div>
+
+            {/* Right */}
+            <div className="md:col-span-2 bg-white/5 border border-white/10 rounded-xl p-5 text-gray-300 leading-relaxed">
+              {experience?.learningPath}
+            </div>
+          </div>
+        </div>
+
+        {/* Work Experience */}
+        <div>
+          <div className="flex items-center gap-3 mb-6">
+            <Briefcase className="text-indigo-400" />
+            <h3 className="text-2xl font-semibold">Experience</h3>
+          </div>
+
+          <div className="bg-[#141418] border border-white/10 rounded-2xl p-8 grid md:grid-cols-3 gap-8">
+            {/* Left */}
+            <div className="space-y-4">
+              <div>
+                <h4 className="text-xl font-semibold">
+                  {experience?.working_role}
+                </h4>
+                <p className="text-gray-400">
+                  {experience?.company || experience?.college}
+                </p>
+              </div>
+
+              <div className="space-y-2 text-gray-400 text-sm">
+                <div className="flex items-center gap-2">
+                  <MapPin size={16} />
+                  <span>{experience?.work_place}</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <Calendar size={16} />
+                  <span>{experience?.working_time}</span>
+                </div>
+              </div>
+            </div>
+
+            {/* Right */}
+            <div className="md:col-span-2 bg-white/5 border border-white/10 rounded-xl p-5 text-gray-300 leading-relaxed">
+              {experience?.work}
+            </div>
           </div>
         </div>
       </div>
-      {/* EXPERIENCE */}
-      <div className='flex flex-col gap-8'>
-        <h4 className='flex flex-row  gap-2 text-center ml-2 sp:mt-4 np:ml-[1.5rem] lp:ml-[1.8rem] w-fit   mini:gap-2  mini:text-xl font-semibold  '><Briefcase/> Experience</h4>
-        <div className='text-justify bg-muted_pale flex  flex-col mt:flex-row-reverse gap-8  mini:w-[92%]  mx-auto mt:w-full border-2 border-text mini:p-4'>
-          <div className='flex flex-row mini:flex-col  mt:flex-col gap-4 mini:w-[90%] my-auto'>
-              <div>
-                <h2 className='text-4xl  font-semibold text-start mini:text-xl '> {experience?.working_role} </h2>
-              <p className='mini:text-sm items-center'> {experience?.college} </p>
-              </div>
-              <div className='flex flex-col gap-2 '>
-                  <div className='flex flex-row gap-2 items-center'>
-                    <MapPin className='my-auto'/> 
-                    <div>
-                        <p className='mini:text-sm '> {experience?.work_place} </p>
-                    </div>
-                  </div>
-                  <div className='flex flex-row gap-2 items-center '>
-                        <Calendar/> 
-                        <p className='mini:text-sm '> {experience?.working_time}</p> 
-                  </div>
-              </div>
-          </div>
-          <div className='flex-1 bg-softened p-2 rounded-xl'>
-              <p className='text-text2 mini:text-sm mini:p-2'>
-                {experience?.work}
-              </p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-}
+    </section>
+  );
+};
 
 export default Experience;

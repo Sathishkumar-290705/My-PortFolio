@@ -1,74 +1,64 @@
-import React from 'react'
-import { useEffect ,  useState } from 'react'
-// import axios from 'axios'
-import Home from './Components/Home.jsx'
-import Navbar from './Components/Navbar.jsx'
-import styled from 'styled-components'
-import Footer from './Components/Footer.jsx'
-import Skills from './Components/Skills.jsx'
-import Aboutme from './Components/Aboutme.jsx'
-import Experience from './Components/Experience.jsx'
-import Project from './Components/Project.jsx'
-import Contactme from './Components/Contactme.jsx'
-import ScrollToTop from './Components/ScrollToTop.jsx'
+import Navbar from "./Components/Navbar";
+import Home from "./Components/Home";
+import Aboutme from "./Components/Aboutme";
+import Skills from "./Components/Skills";
+import Project from "./Components/Project";
+import Experience from "./Components/Experience";
+import Contactme from "./Components/Contactme";
+import Footer from "./Components/Footer";
+import Skeleton from './Components/skeleton/Skeleton';
 
-
-
-  const AppContainer = styled.div`
-  display: flex;
-  flex-direction: column;
-  background-color: #D8C9AE ;
-  color:black;
-  max-width:100vw;
-  min-height:100vh;`
-
-
-  const MainWrapperContainer = styled.div`
-  display: flex;
-  flex-direction: column;
-  flex: 1;
-   padding: 0`
+import { useEffect, useState } from "react";
+import axios from "axios";
 
 const App = () => {
+  const [data, setData] = useState(null); // store backend data
+  const [loading, setLoading] = useState(true);
 
-  const [data , setData] = useState([]);
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const response = await axios.get(
+          "http://localhost:5000/api/get_all"
+        );
 
-useEffect(() => {
-
-  async function fetchData() {
-    try {
-      const res = await fetch("http://10.142.112.59:5000/api/get_all");
-      const data = await res.json();
+        setData(response.data); // ✅ axios data
+        setLoading(false);
+      } catch (error) {
+        console.error("fetch failed error", error);
       
-      // console.log(data);
-      setData(data)
-    
-    } catch (error) {
-      console.error("Fetch failed:", error); 
-    }
+      }
+    };
+
+    fetchData(); // ✅ IMPORTANT
+  }, []); // ✅ run once
+
+  if (loading) {
+    return <p className="text-center mt-10">Loading...</p>;
   }
-  
-  fetchData();
-},[]);
 
   return (
-    
-    
-   <AppContainer  >
-    <Navbar />
-    <MainWrapperContainer>
-      <Home data = {data}/>
-      <Aboutme data= {data} />
-      <Skills data = {data}/>
-      <Experience data = {data}/>
-      <Project data={data}/>
-      <Contactme data={data}/>
-    </MainWrapperContainer>
-    <Footer />
-    <ScrollToTop/>
-   </AppContainer>
+    <div className="bg-black text-[#EAEAEA] min-h-screen flex">
+      <Navbar data={data} />
 
-  )
-}
+      <main className="flex-1 ml-[280px] max-lg:ml-0">
+        {loading ? (
+          <>
+          <Skeleton/>
+          </>
+        ):(
+          <>
+          <Home data={data} />
+        <Aboutme data={data} />
+        <Skills data={data} />
+        <Project data={data} />
+        <Experience data={data} />
+        <Contactme data={data} />
+        <Footer data={data} /></>
+        )}
+      </main>
+    </div>
+  );
+};
 
-export default App
+export default App;

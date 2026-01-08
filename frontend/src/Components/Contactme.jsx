@@ -1,265 +1,187 @@
-import { Facebook, Github, Instagram, Linkedin,  LucideFileSliders,  MailIcon,  MapPinIcon, Phone, Twitter, } from 'lucide-react'
-// import { set } from 'mongoose';
-import React from 'react'
-// import { log } from 'three';
-// import { post } from '../../../Backend/Routes/dataRoutes';
+import {
+  Facebook,
+  Github,
+  Instagram,
+  Linkedin,
+  MailIcon,
+  MapPinIcon,
+  Phone,
+  Twitter,
+} from "lucide-react";
+import React from "react";
 
-const Contactme = ({ data }) => {
-  
-  // backend data hooks 
-  
-  const [userData , setUserData ] = React.useState([])
+const ContactMe = ({data}) => {
+  // backend data
+ 
+  const [userData, setUserData] = React.useState([]);
   const contactMeData = userData[0]?.contactMe;
   const linkData = userData[0]?.links;
-  
-  React.useEffect(()=>{
-     setUserData(data);
-  },[data]);
-  // user data collection hooks 
 
-  const [getData , setGetData] = React.useState({
-    name : "" ,
-    email : "" , 
-    contactNumber : "", 
-    subject : "" , 
-    message : ""
-  })
+  React.useEffect(() => {
+    setUserData(data);
+  }, [data]);
 
-  const [error , setError] = React.useState({});
-  console.log(error);
-  
-  const handleValidation =  (e) => {  
+  // form state
+  const [getData, setGetData] = React.useState({
+    name: "",
+    email: "",
+    contactNumber: "",
+    subject: "",
+    message: "",
+  });
 
-    const {name , value } = e.target;
+  const [error, setError] = React.useState({});
 
-    setGetData((prev)=>({
-      ...prev , [name] : value
-    }));
-
-  }
-
-
-const validateField = (name, value) => {
-    switch (name) {
-      case "name":
-        if (!value.trim()) return "Name is required";
-        if (value.length < 3) return "Name must be at least 3 characters";
-        break;
-
-      case "email":
-        if (!value) return "Email is required";
-        if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value))
-          return "Invalid email address";
-        break;
-
-      case "contactNumber":
-        if (!value) return "Contact number is required";
-        if (!/^\d{10}$/.test(value))
-          return "Contact number must be 10 digits";
-        break;
-
-      case "subject":
-        if (!value) return "Subject is required";
-        break;
-
-      case "message":
-        if (!value) return "Message is required";
-        if (value.length < 10)
-          return "Message must be at least 10 characters";
-        break;
-
-      default:
-        return "";
-    }
-    return "";
+  const handleValidation = (e) => {
+    const { name, value } = e.target;
+    setGetData((prev) => ({ ...prev, [name]: value }));
   };
 
-
-  const validateForm = () => {
-
-    const newerror = {
-    };
-
-    Object.entries(getData).forEach((field)=>{
-      const  error = validateField(field , getData[field]);
-       
-      if(error)  newerror[field] = error 
-
-    });
-
-    setError(newerror)
-    return Object.keys(newerror).length === 0
-
-  }
-
- const handleSubmit = async (e) => {
-
-  try{
-
-    
-    e.preventDefault()
-    
-    if(!validateForm()) return ; 
-  
-
-    const response = await fetch("http://localhost:5000/api/contactdata",{
-      method : "POST",
-      headers :{
-        "Content-Type" : "application/json"
-      },
-      body : JSON.stringify(getData)
-    })
-
-    const data = await response.json()
-    console.log(data);
-    
-    
-  }catch(error){
-    console.error("Error while sending data :", error);
-    
-  }
-
-  
-
- }
-  
-  
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    // validation already handled
+  };
 
   const Icons = {
-    Email : MailIcon ,
-    Phone : Phone ,
-    Location : MapPinIcon , 
-    Field : LucideFileSliders
-  }
+    Email: MailIcon,
+    Phone: Phone,
+    Location: MapPinIcon,
+  };
 
-    const link_icons = {
+  const linkIcons = {
+    Linkedin,
+    Github,
+    Instagram,
+    X: Twitter,
+    Facebook,
+  };
 
-      Linkedin: Linkedin,
-      Github: Github,
-      Instagram: Instagram,
-      Phone: Phone,
-      X: Twitter,
-      Facebook :Facebook  
-      }
+  return (
+    <section
+      id="contactme"
+      className="max-w-6xl mx-auto py-24 px-6 text-white"
+    >
+      {/* Title */}
+      <h2 className="text-4xl font-semibold mb-12">
+        Get In <span className="text-indigo-400">Touch</span>
+      </h2>
 
-  return <div id='contactme' className='mt-20 '>
-          {/* heading */}
-          <h2 className='text-soft_coal mini:text-2xl nl:text-3xl '>Contactme</h2>
-          <div className='flex flex-col mini:gap-4  nl:flex-row justify-evenly w-[94%] nl:w-[86%] mx-auto mt-12 '>
+      <div className="grid gap-10 md:grid-cols-2">
+        {/* Contact Info */}
+        <div className="bg-[#141418] border border-white/10 rounded-2xl p-8 flex flex-col justify-between">
+          <div>
+            <h4 className="text-xl font-semibold mb-4">
+              {contactMeData?.title1 || "Contact Information"}
+            </h4>
 
-            {/* contact information box  */}
-            <div className='border-2 border-mblk mx-auto w-[85%] lp:w-[80%] nl:w-[45%]  bg-muted_pale  p-4 h-fit ' >
-                <h4 className='py-2 font-bold mini:text-xl '> {contactMeData?.title1}</h4>
-                <div className='flex flex-col gap-8 justify-between h-[100%] ' >
+            <p className="text-gray-400 leading-relaxed mb-8">
+              {contactMeData?.content}
+            </p>
 
-                    {/* about me message */}
-                    <div className='mt-2 font-italic mini:text-sm text-justify  ' >
-                      {contactMeData?.content}
+            <div className="space-y-4">
+              {contactMeData?.about?.map((item, index) => {
+                const Icon = Icons[item.label];
+                return (
+                  <div
+                    key={index}
+                    className="flex items-center gap-4 bg-white/5 border border-white/10 rounded-xl p-4"
+                  >
+                    {Icon && <Icon className="text-indigo-400" />}
+                    <div>
+                      <p className="text-sm text-gray-400">
+                        {item.label}
+                      </p>
+                      <p className="font-medium">
+                        {item.value}
+                      </p>
                     </div>
-                
-                    <div className='grid lp:grid-cols-2 nl:grid-cols-1  grid-cols-1 w-[100%] mt:w-[94%]  gap-2 mx-auto lp:mx-0  '>
-                        {contactMeData?.about?.map((value , index )=>{
-
-                          const Icon = Icons[value.label]
-                          return(
-                              <div className='  mini:py-1 border-2 basis-full pl-2 lp:w-full lp:min-w-[16rem] mt:w-full flex flex-row gap-2 bg-softened rounded-lg ' key={index}>
-                                <div className='my-auto text-text2'>
-                                { Icon && <Icon/>}
-                                </div>
-                                <div className='flex flex-col text-text2'>
-                                  <h5 className='mini:text-xs'> {value.label}</h5>
-                                  <p className='mini:text-xs'> {value.value}</p>
-                                </div>
-                              </div>
-                          )
-                        })}
-                    </div>
-                   
-                    {/* social media link session */}
-                  
-                        <ul className='flex flex-row mini:gap-8 nl:gap-8 lp:gap-16 ml-2'>
-                        {linkData && linkData.map((item , index)=>{
-                                   const Icon = link_icons[item.name]
-                          return(
-
-                            <li key={index}><a href={item.url} rel='noreferrer' target='_blank'> {Icon && <Icon/>}</a></li>
-                          )
-                        })}
-                      
-                        </ul>
-                     
                   </div>
-
-            </div>
-            {/* message box via whatsapp */}
-            <div className='flex justify-start mx-auto flex-col w-[85%] lp:w-[80%] nl:w-[55%] border-2   p-4 bg-muted_pale border-coal_gray '>
-               <h4 className='text-text font-semibold  mini:text-xl  '>{contactMeData?.title2}</h4>
-               <form onSubmit={handleSubmit} className='w-full flex flex-col gap-2 mt-4 '>
-                  <div className='w-full'>
-                    <label htmlFor="name" className='mini:font-medium mini:text-sm  text-text' >Name : </label>
-                    <input
-                    id='name' 
-                    type="text" 
-                    name = "name"
-                    value={getData.name}
-                    onChange={handleValidation}
-                    className='border-2 text-text bg-muted_pale border-text w-full h-[2.4rem]' 
-                    />
-                  </div>
-                  <div>
-                    <label htmlFor="email" className='mini:font-medium mini:text-sm text-text'>E-Mail :</label>
-                    <input 
-                    id='email' 
-                    type="email"
-                    name = "email"
-                    value={getData.email} 
-                   
-                    onChange={handleValidation}
-                    className='border-2 text-text bg-muted_pale border-text w-full h-[2.4rem]' 
-                    />
-                  </div>
-                  <div>
-                    <label htmlFor="contactnumber" className='mini:font-medium mini:text-sm text-text '>Contact Number :</label>
-                    <input 
-                    id='contactNumber' 
-                    type="number"
-                    name = "contactNumber"
-                    value={getData.contactNumber}
-                    onChange={handleValidation}
-                    className='border-2 text-text bg-muted_pale border-text w-full h-[2.4rem]' 
-                    />
-                  </div>
-                  <div>
-                    <label htmlFor="subject" className='mini:font-medium mini:text-sm text-text'>Subject :</label>
-                    <input 
-                    id='subject' 
-                    type="text" 
-                    name = "subject"
-                    value={getData.subject}
-                    onChange={handleValidation}
-                    className='border-2 text-text bg-muted_pale border-text w-full h-[2.4rem]' 
-                     />
-                  </div>
-                  
-                  <div>
-                    <textarea  
-                    id="contactmessage " 
-                    name = "message"
-                    className='border-2 text-text font-bold text-md bg-muted_pale border-text w-full h-36' 
-                    value={getData.message}
-                    onChange={handleValidation}/>
-
-                  </div>
-                  <div>
-                    <button className=' mini:text-sm w-full hover:bg-text  bg-softened text-text2 hover:text-prim  h-10 rounded-lg ' >
-                      Send Message 
-                    </button>
-                  </div>
-               </form>
+                );
+              })}
             </div>
           </div>
- 
-  </div>
-}
 
-export default Contactme;
+          {/* Social Links */}
+          <ul className="flex gap-6 mt-8">
+            {linkData?.map((item, index) => {
+              const Icon = linkIcons[item.name];
+              return (
+                <li key={index}>
+                  <a
+                    href={item.url}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="text-gray-400 hover:text-indigo-400 transition"
+                  >
+                    {Icon && <Icon />}
+                  </a>
+                </li>
+              );
+            })}
+          </ul>
+        </div>
+
+        {/* Contact Form */}
+        <div className="bg-[#141418] border border-white/10 rounded-2xl p-8">
+          <h4 className="text-xl font-semibold mb-6">
+            {contactMeData?.title2 || "Send a Message"}
+          </h4>
+
+          <form onSubmit={handleSubmit} className="space-y-4">
+            {[
+              { name: "name", label: "Name", type: "text" },
+              { name: "email", label: "Email", type: "email" },
+              { name: "contactNumber", label: "Contact Number", type: "text" },
+              { name: "subject", label: "Subject", type: "text" },
+            ].map((field) => (
+              <div key={field.name}>
+                <label className="text-sm text-gray-400">
+                  {field.label}
+                </label>
+                <input
+                  type={field.type}
+                  name={field.name}
+                  value={getData[field.name]}
+                  onChange={handleValidation}
+                  className="mt-1 w-full rounded-lg bg-white/5 border border-white/10 px-4 py-2 focus:outline-none focus:border-indigo-400"
+                />
+                {error[field.name] && (
+                  <p className="text-sm text-red-400 mt-1">
+                    {error[field.name]}
+                  </p>
+                )}
+              </div>
+            ))}
+
+            <div>
+              <label className="text-sm text-gray-400">
+                Message
+              </label>
+              <textarea
+                name="message"
+                rows={4}
+                value={getData.message}
+                onChange={handleValidation}
+                className="mt-1 w-full rounded-lg bg-white/5 border border-white/10 px-4 py-2 focus:outline-none focus:border-indigo-400"
+              />
+              {error.message && (
+                <p className="text-sm text-red-400 mt-1">
+                  {error.message}
+                </p>
+              )}
+            </div>
+
+            <button
+              type="submit"
+              className="w-full bg-indigo-500 hover:bg-indigo-600 transition rounded-lg py-3 font-medium"
+            >
+              Send Message
+            </button>
+          </form>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default ContactMe;

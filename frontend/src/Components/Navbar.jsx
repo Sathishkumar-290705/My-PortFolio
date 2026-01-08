@@ -1,41 +1,82 @@
-import { Briefcase, Cog,  DownloadIcon, FolderKanban, Home, Phone, User } from 'lucide-react';
-import React from 'react'
+import {
+  Home,
+  Briefcase,
+  Folder,
+  Paintbrush,
+  ShoppingBag,
+  Mail,
+  Linkedin,
+  Instagram,
+  X,
+  Dribbble,
+  MapPin,
+} from "lucide-react";
+import s_letter from '../Assets/s_letter.jpeg'
+
+const NavItem = ({ icon: Icon, label, active }) => (
+  <div
+    className={`flex items-center gap-4 px-5 py-3 rounded-xl cursor-pointer transition
+      ${
+        active
+          ? "bg-white/10 text-white"
+          : "text-gray-400 hover:bg-white/5 hover:text-white"
+      }`}
+  >
+    <Icon size={20} />
+    <span className="text-base font-medium">{label}</span>
+  </div>
+);
 
 const Navbar = () => {
   return (
- 
-   <nav className=' fixed top-0 flex   nl:px-0  h-24 mt-0   justify-center   text-text w-full  items-center z-[1000] '>
-    {/* <div className='flex flex-row'>
-        <h2 className='text-soft_coal font-bold text-center text-[clamp(0.8rem,2.0rem,2.4rem)] hidden lp:inline'> Sathish Kumar </h2>
-    </div> */}
- 
-        <ul className='nav-icons  w-fit gap-4 st:gap-2 np:flex np:w-fit lp:gap-12  st:gap-4   border-2 border-gray shadow-4xl z-1000 px-2 py-1 rounded-full bg-muted_pale hover:bg-softened backdrop-blur-lg   hover:scale-105 transition duration-300 group list-none flex flex-row items-center mx-auto justify-center '>    
+    <aside className="fixed left-0 top-0 h-screen w-[360px] bg-[#000000] px-8 py-8">
+      
+      {/* Profile */}
+      <div className="flex items-center gap-3 mb-10">
+        <img
+          src={s_letter}
+          className="w-10 h-10 rounded-full object-cover"
+          alt="avatar"
+        />
+        <div>
+          <h2 className="font-bold text-lg text-white">Sathish Kumar R </h2>
+          <p className="text-sm text-green-400">ML Engineer</p>
+        </div>
+      </div>
 
+      {/* Creations */}
+      <p className="text-xs text-gray-500 tracking-widest mb-4">
+        CREATIONS
+      </p>
 
-            <li className=' nav-item  '> <a href="home" className=' nav-link flex flex-row gap-1' ><Home className='text-text nav-icon'/><span className='icon-text  hidden st:inline'> Home </span></a>  </li>
+    <nav className="space-y-3">
+    <NavItem icon={Home} label="About Me" active />
+    <NavItem icon={Paintbrush} label="Skills" />
+    <NavItem icon={Briefcase} label="Experience" />
+    <NavItem icon={Folder} label="Projects" />  
+    <NavItem icon={Mail} label="Contact" />
+    </nav>
 
+      {/* Socials */}
+      <div className="mt-10">
+        <p className="text-sm font-semibold text-gray-500 tracking-widest mb-4">
+          SOCIALS
+        </p>
+        <div className="flex gap-6 text-gray-400">
+          <Mail size={24} />
+          <Dribbble size={24} />
+          <Linkedin size={24} />
+          <X size={24} />
+          <Instagram size={24} />
+        </div>
+      </div>
 
-            <li className=' nav-item '><a href="#aboutme" className='nav-link  flex flex-row gap-1' ><User className='text-text' /> <span className='icon-text hidden st:inline'> Aboutme </span> </a>  </li>
-
-
-            <li className=' nav-item  '><a href="#skills" className='nav-link flex flex-row gap-1'><Cog className='text-text' /> <span className='icon-text hidden st:inline'>Skills</span></a>  </li>
-
-
-            <li className=' nav-item  '><a href="#projects" className='nav-link flex flex-row gap-1' ><FolderKanban className='text-text'/> <span className='icon-text hidden st:inline'>Projects</span></a>  </li>
-
-
-            <li className=' nav-item '><a href="#experience" className='nav-link flex flex-row gap-1'><Briefcase className='text-text'/> <span className='icon-text hidden st:inline'>Experience</span></a>  </li>
-
-
-            <li className=' nav-item '><a href="#contactme" className='nav-link flex flex-row gap-1' ><Phone className='text-text' /> <span className='icon-text hidden st:inline'>Contact</span> </a>  </li>
-        </ul>
-   
-        {/* <div className=''>
-            <button className='px-4 py-4 bg-m_text rounded-2xl text-prim hover:bg-text items-center  flex mr-2 '> <DownloadIcon/> <span className='hidden mt:inline'> Download CV </span></button>
-        </div> */}
-   </nav>
-    
-  ) 
-}
+      {/* Location */}
+      <p className="absolute bottom-6 left-6 text-sm text-gray-500 flex flex-row gap-2">
+        <MapPin/>  Chennai , Tamil Nadu , India 
+      </p>
+    </aside>
+  );
+};
 
 export default Navbar;

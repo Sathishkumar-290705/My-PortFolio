@@ -1,95 +1,99 @@
-import React, { useEffect , useState } from 'react'
-// import pass_photo from '../Assets/pass_photo.jpg';
-import pass_photo3 from '../Assets/pass_photo3.jpg';
-import {Facebook, Github, Instagram, Linkedin, Phone, Twitter,} from 'lucide-react'
-// import axios from 'axios';
-// import { useRef } from 'react';
-// import Resume from './Resume.pdf'
-// import {useFrame , Canvas, useLoader } from '@react-three/fiber';
-// import { TextureLoader } from 'three';
-// import { Loader } from 'three';
+import { useEffect, useState } from 'react';
+import sathish_profile_image_2 from '../Assets/sathish_profile_image_2.jpg'
 
 
 
-export default function Home({data}) {
 
-    const [userData , setUserData] = useState([]);
+const Home = ({data}) => {
 
-    
-    useEffect(() => {
-      setUserData(data);
-      // console.log(userData);
-    }, [data]);
-
-      const link_icons = {
-
-      Linkedin: Linkedin,
-      Github: Github,
-      Instagram: Instagram,
-      Phone: Phone,
-      X: Twitter,
-      Facebook :Facebook  
-      }
-
-   
-
-  return <>
-  <div id='home' className=' w-[92%] np:w-[86%] mini:h-[670px] lp:h-[550px] lp:w-[92%] st:w-[98%] nl-w-[92%] flex flex-col st:flex-row st:justify-center mini:mt-40  st:mt-12 lp:mt-28 desk:mt-20 mt-24 mx-auto mini:justify-start  justify-evenly items-center  mini:gap-2 lp:gap-0 st:gap-12 desk:gap-20 '>
-
-    {/* <Canvas style={{ width: "1200px", height: "1200px" , border : "50%"  }}>
-     <ambientLight intensity={3} />
-     <Logo />
-    </Canvas> */}
-    <div className='max-w-[30rem]' >
-    <img src={pass_photo3} alt="my image "   className=' rounded-full mini:w-[13rem] mini:h-[13rem] st:w-[16rem] st:h-[16rem] lp:w-[12rem] lp:h-[12rem]  nl:w-[21rem] nl:h-[21rem]  desk:w-[24rem] desk:h-[24rem]    '/>
-    </div>
-    
-    <div className='flex flex-col  mini:gap-4  lp:gap-2 mini:w-90%  st:w-[50%] nl:w-[32rem] sl:w-[35rem] lp:w-[80%] desk:w-[40rem]  np:mt-4 lp:mt-4 st:mt-12 desk:mt-4'>
-        <h1 className='text-soft_coal  mini:text-3xl lp:text-3xl st:text-4xl nl:text-5xl font-bold leading-tight desk:leading-tight'>Hii, <br /> I'm  {userData[0]?.home?.name} </h1>
-        <h5 className='text-gray  mini:text-2xl lp:text-xl st:text-2xl nl:text-[26px] desk:text-3xl font-bold desk:leading-normal ' > {userData[0]?.home?.role} </h5>
-        <p className='text-soft_coal mini:text-sm desk:text-lg  sl:text-base st:text-base lp:text-xs text-justify '>{userData[0]?.home?.description}</p>
-
-        <div className='flex flex-col gap-12 mini:gap-8' > 
-        <div className='flex flex-row gap-4 mt-4 w-full' >
-          <button className='border-2 px-2 py-2 rounded border-coal_gray w-full bg-softened text-prim font-bold '><a href="/Resume.pdf" target='_blank'> <p className=' mini:text-xs lp:text-xs' > Open CV </p></a> </button>
-          <button className='border-2 px-2 py-2 rounded border-text w-full font-bold text-soft_coal'> <a href="/"> <p className=' mini:text-xs lp:text-xs'>Contact Me </p></a></button>
-        </div>
-        
+  const [home,setHome]=useState([])
+  useEffect(()=>{
+    const home = data[0]?.home;
+    setHome(home)
+  })
+  return (
+    <section
+      id="home"
+      className=" min-h-screen px-10 py-12 bg-black"
+    >
+      <div className="mx-auto max-w-[90%] h-[85vh] rounded-3xl bg-gradient-to-br from-[#1b1b1b] to-[#0e0e0e] p-14 shadow-2xl">
+        <div className="flex flex-row  justify-evenly  gap-12 items-center h-full">
           
+          {/* LEFT */}
+          <div className='mt-12'>
+             <h1 className="text-5xl font-bold mb-6 text-white " > Hi , I am </h1>
+            <h1 className="text-5xl font-bold mb-6 text-white ">
+              {home?.name}
+            </h1>
+            <div className="flex items-center gap-3 mb-6">
+              <span className="text-green-400 text-sm tracking-widest">
+                {home?.role1}
+              </span>
+              <span className="text-gray-500 text-xs">|</span>
+              <span className="text-gray-400 text-sm tracking-widest">
+               {home?.role2}
+              </span>
+            </div>
 
-        <ul className='flex flex-row mini:gap-12 lp:gap-12 desk:gap-20 gap-16 ml-4 desk:ml-1' >
-            {userData[0]?.links?.map((links,index)=>{
-              const IconComponent = link_icons[links.name];
-              return (
-                <li  key={index} ><a href={links.url} rel='noreferrer' target='_blank' > { IconComponent && <IconComponent className='lp:text-xs' />} </a></li>
-              )
-            })}
-        </ul>
-      
+            <p className="text-gray-400 leading-relaxed max-w-lg">
+              {home?.description}
+            </p>
+
+            <div className="mt-10">
+              {/* <p className="text-xs text-gray-500 tracking-widest mb-4">
+                COMPANIES I'VE WORKED WITH
+              </p> */}
+                 <button
+      className="
+        px-8 py-3
+        rounded-full
+        text-indigo-400 font-medium
+        bg-white/10
+        border border-white/20
+        backdrop-blur-md
+        shadow-lg
+        hover:bg-white/20
+        hover:scale-105
+        active:scale-95
+        transition-all duration-300
+      "
+    >
+       More 
+    </button>
+
+              {/* <div className="flex flex-wrap gap-6 text-gray-400 font-medium">
+                <span>zepto</span>
+                <span>Newton School</span>
+                <span>meesho</span>
+                <span>Procol</span>
+                <span>skit.ai</span>
+                <span>WheelsEye</span>
+              </div> */}
+            </div>
+          </div>
+
+          {/* RIGHT IMAGE */}
+          <div className="flex justify-end">
+            <div className="relative rounded-2xl overflow-hidden border border-white/10">
+              <img
+                src={sathish_profile_image_2}
+                alt="profile"
+                className="w-[300px] h-[420px] object-cover"
+              />
+
+              {/* <div className="absolute bottom-3 left-3 text-xs text-gray-300">
+                WINDY HAIR
+              </div> */}
+              {/* <div className="absolute bottom-3 right-3 text-xs text-gray-300 border border-white/20 px-2 py-0.5 rounded">
+                IMG
+              </div> */}
+            </div>
+          </div>
+
         </div>
-    </div>
-  </div>
-  </>
-}
+      </div>
+    </section>
+  );
+};
 
-
-
-
-// const Logo = () => {
-
-//   const meshref = useRef();
-//   const texture = useLoader(TextureLoader, pass_photo3)
-
-//     useFrame(()=>{
-      
-//     })
-
-//   return(
-//     <mesh ref={meshref} >
-//        <planeGeometry args={[3, 3]} />
-//       <meshStandardMaterial map={texture} transparent />
-//     </mesh>
-//   )
-
-// }
-
+export default Home;

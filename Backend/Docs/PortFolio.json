@@ -3,8 +3,10 @@
         "_id": "693fc2e01f4d53caf0a3fb39",
         "home": {
             "name": "Sathish Kumar R",
-            "role": " Machine Learning | Full Stack Developer",
-            "description": "I develop intelligent, AI-powered solutions by leveraging my growing expertise in machine learning, creating smarter and more efficient digital applications. I am passionate about building reliable, user-friendly web applications with thoughtful design."
+            "role1": " Machine Learning ",
+            "role2":"Full Stack Developer",
+            "description": "I develop intelligent, AI-powered solutions by leveraging my growing expertise in machine learning, creating smarter and more efficient digital applications. I am passionate about building reliable, user-friendly web applications with thoughtful design.",
+            "contactme": "https://wa.me/918056663585"
         },
         "links": [
             {
@@ -22,10 +24,6 @@
             {
                 "name": "Facebook",
                 "url": "https://www.facebook.com/profile.php?id=100094046093102"
-            },
-            {
-                "name": "Phone",
-                "url": "https://wa.me/918056663585"
             }
         ],
         "resume": {
@@ -45,10 +43,10 @@
                 "Name": "Sathish Kumar R",
                 "Email": "sathishkumar290705@gmail.com",
                 "Phone": "+91 8056663585",
-                "Role": "Full Stack Developer",
+                "Role": "Machine Learning Developer",
                 "Location": "Chennai, Tamil Nadu, India",
-                "College": "Velammal Engineering College , Chennai (2023 - 2027)",
-                "Academic Qualification": "B.Tech (Artificial Intelligence and Data Science)",
+                "College": "Velammal Engineering College, Chennai",
+                "Academic Qualification": "B.Tech (AI & DS)",
                 "Availability": "Intern/Open to work"
             }
         },
@@ -62,7 +60,6 @@
                     "JavaScript",
                     "TypeScript",
                     "React JS",
-                    "Angular JS",
                     "Tailwind CSS"
                 ]
             },
@@ -133,11 +130,18 @@
             }
         ],
         "experience": {
-            "work": [
-                "I contributed to the successful launch of my college website by designing and implementing the frontend as a Frontend Developer, collaborating closely to integrate backend functionality, and leveraging the MERN stack to build a responsive and efficient web application."
+            "college":"Velammal Engineering College",
+            "education_place":"Chennai, TamilNadu, India",
+            "Academic_qualification":"Bachelors of Technology in Artificial Intelligence and data science",
+            "work_place":"Chennai, TamilNadu, India",
+            "working_time":"March 2025 - Present",
+            "education_time":"September 2023 - Present",
+            "working_role":"Frontend Developer",
+            "work": [   
+                 "I contributed to the successful launch of my college website by designing and implementing the frontend as a Frontend Developer, collaborating closely to integrate backend functionality, and leveraging the MERN stack to build a responsive and efficient web application."
             ],
             "learningPath": [
-                "Pursuing a Bachelor of Technology in Artificial Intelligence and Data Science at Velammal Engineering College, with a strong focus on emerging technologies and innovative solutions. Actively engaged in hackathons and collaborative projects, honing problem-solving and critical-thinking skills. Gained hands-on experience in machine learning, data analytics, and full-stack development, applying theoretical knowledge to real-world challenges. Committed to continuous learning and exploring the frontiers of AI and data-driven technologies."
+                " Pursuing a Bachelor of Technology in Artificial Intelligence and Data Science at Velammal Engineering College, with a strong focus on emerging technologies and innovative solutions. Actively engaged in hackathons and collaborative projects. Gained hands-on experience in machine learning, data analytics, and full-stack development"
             ]
         },
         "projects": [
@@ -146,7 +150,7 @@
                 "title": "Iris Classification",
                 "description": "A machine learning project that classifies iris flowers into three species using flower measurement data.",
                 "technologies": [
-                    "Python" , "Scikit-Learn", "Numpy" , "Decision Tree Classifier" , ""
+                    "Python" , "Scikit-Learn", "Numpy" , "Decision Tree Classifier" 
                 ],
                 "url": ""
             },
@@ -188,7 +192,7 @@
             {
                 "_id": 5,
                 "title": "Job recommendation system",
-                "description": "A Job Recommendation System is an application that suggests suitable job opportunities to users based on their criteria such as skills, qualifications, experience, and preferences. It helps job seekers quickly find relevant jobs by matching their profiles with appropriate job listings",
+                "description": "A Job Recommendation System is an application that suggests suitable job opportunities to users based on their criteria such as skills .",
                 "technologies": [
                     "Html",
                     "Python",
@@ -199,28 +203,22 @@
             {
                 "_id": 6,
                 "title": "Learn mate AI ",
-                "description": "An AI-powered intelligent tutor system designed to support personalized learning.The platform generates structured notes, adaptive question banks, and detailed feedback using NLP and deep learning techniques.",
+                "description": "An AI-powered intelligent tutor system designed to support personalized learning.",
                 "technologies": [
                     "React",
                     "Express.js",
-                    "Node.js",
-                    "MongoDB",
-                    "Python",
-                    "LLM",
                     "NLP",
-                    "scikit-learn",
-                    "Fast API"
+                    "scikit-learn"
                 ],
                 "url": ""
             },
             {
                 "_id": 7,
                 "title": "Personal Chatbot",
-                "description": "A personal AI chatbot designed to communicate in a user-defined style using custom training dataIt supports natural, contextual conversations and adapts responses based on personalized inputs.Built using NLP techniques for flexible and intelligent interaction.",
+                "description": "A personal AI chatbot designed to communicate in a user-defined style using custom training dataIt supports natural and adapts responses based on personalized inputs.",
                 "technologies": [
                     "React",
                     "Express.js",
-                    "Node.js",
                     "Python",
                     "NLP",
                     "LLM"
@@ -230,12 +228,11 @@
             {
                 "_id": 8,
                 "title": "Personal TNPC trainer ",
-                "description": "A personal AI-based TNPC trainer designed to assist students in preparing for aptitude, technical, and interview rounds. The system provides adaptive practice questions, performance analysis, and personalized feedback based on individual progress. It focuses on identifying weak areas and improving overall placement readiness through targeted training.",
+                "description": "A personal AI-based TNPC trainer designed to assist students in preparing for TNPC exam.",
                 "technologies": [
                     "Angular",
-                    "Node.js",
                     "Express.js",
-                    "LLM",
+                    "NLP",
                     "MongoDB"
                 ],
                 "url": ""

@@ -24,10 +24,9 @@ const dataService = require("../Services/dataServices")
     try {
       
       const data = await dataService.getAll();
-      res.send("API OK");
+      // res.send("API OK");
       res.status(200).json(data);
     } catch (error) {
-   
       res.status(500).json({ error: error.message });
     }
   }

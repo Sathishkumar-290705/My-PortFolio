@@ -1,50 +1,69 @@
-import React from 'react'
+import { ExternalLink } from "lucide-react";
+import { useEffect, useState } from "react";
 
-const Project = ({data }) => {
+const Projects = ({ data }) => {
 
-const [userData , setUserData] = React.useState([]);
+  const[projects,setProjects] = useState([]);
 
-const projectData = userData[0]?.projects;
+  useEffect(()=> {
+    const project = data[0]?.projects;
+    setProjects(project)
+  })
+  return (
+    <section
+      id="projects"
+      className="max-w-6xl mx-auto py-24 px-6 text-white"
+    >
+      {/* Section Title */}
+      <h2 className="text-4xl font-semibold mb-12">
+        Featured <span className="text-indigo-400">Projects</span>
+      </h2>
 
-React.useEffect(() => {
-  setUserData(data);
- 
-}, [data]);
+      {/* Projects Grid */}
+      <div className="grid gap-10 md:grid-cols-2">
+        {projects.map(
+          ({ _id, title, description, technologies, url }) => (
+            <div
+              key={_id}
+              className="bg-[#141418] border border-white/10 rounded-2xl p-6 hover:border-indigo-400/40 transition flex flex-col"
+            >
+              {/* Title */}
+              <h4 className="text-xl font-semibold mb-3">{title}</h4>
 
-  return <div id='projects' className='mt-20'>
-    <h2 className='text-soft_coal mini:text-2xl nl:text-3xl'> My Projects </h2>
-    <div className='mt-16 mini:w-[96%] np:w-[90%] flex flex-wrap gap-12 justify-center mx-auto' >
-      {/* PROJECT LIST  */}
-      {
-        projectData && projectData?.map((project,index)=>{
-          return(
-       <div className='mt:w-[24rem]  min-h-80 max-h-88  max-w-[24rem] mini:w-[90%] sp:w-[88%] sp:min-h-[18rem] np:w-[80%] mini:min-h-72 h-fit lp:w-[20rem] overflow-hidden border-2 border-text flex flex-col justify-between item-center bg-muted_pale p-4 '>
-    
-          <h4 className=' mini:text-xl text-text h-12 font-bold my-auto flex  items-center'> {project.title}</h4>
-         <div className='flex flex-col justify-between flex-1 mt-4 '>
-          <p className=' mini:text-xs nl:text-sm  text-text min-h-20'>{project.description} </p>
-         
-            <ul className='flex flex-row flex-1  flex-wrap gap-2 items-start h-auto'>
-            {
-              project.technologies && project.technologies.map((tech,index)=>{
-                return (
-                  <li  key={index} className=' mini:text-xs text-text   bg-softened w-fit px-4 mini:px-2 mini:py-2 rounded-full text-text2  hover:bg-text hover:text'>{tech}</li>
-                )
-              })
-            }
-            </ul>
-         
-            <button  className='flex justify-start items-center font-semibold h-12'>
-               View Project 
-            </button>
-        </div>
-        </div>
-   
+              {/* Description */}
+              <p className="text-gray-400 mb-5 leading-relaxed">
+                {description}
+              </p>
+
+              {/* Technologies */}
+              <div className="flex flex-wrap gap-2 mb-6">
+                {technologies.map((tech) => (
+                  <span
+                    key={tech}
+                    className="px-3 py-1 text-sm rounded-full bg-white/5 border border-white/10 text-gray-300"
+                  >
+                    {tech}
+                  </span>
+                ))}
+              </div>
+
+              {/* Action */}
+              {url && (
+                <a
+                  href={url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="mt-auto inline-flex items-center gap-2 text-indigo-400 hover:text-indigo-300 transition text-sm font-medium"
+                >
+                  View Project <ExternalLink size={16} />
+                </a>
+              )}
+            </div>
           )
-        })
-      }
-    </div>
-  </div>
-}
+        )}
+      </div>
+    </section>
+  );
+};
 
-export default Project;
+export default Projects;

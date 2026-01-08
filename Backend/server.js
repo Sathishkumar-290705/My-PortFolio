@@ -16,8 +16,7 @@ dotenv.config({silent:true});
 const PORT = process.env.PORT || 5000;
 
 
-// const allowed = ['http://localhost:3000'];
-
+const allowed = ['http://localhost:3000'];
 
 app.use(cors({
   origin: "*"
@@ -29,6 +28,6 @@ connectToDB();
 app.use("/api", router);
     
 
-app.listen(PORT, "0.0.0.0", () => {
+app.listen(PORT,  () => {
   console.log(`Server is running on port ${PORT}`);
 });

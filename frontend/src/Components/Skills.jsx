@@ -1,62 +1,79 @@
-import { Brain,  Cpu,  Database,  Handshake, Monitor,  Server, Sparkles, } from 'lucide-react'
-import React from 'react'
+import {
+  Monitor,
+  Server,
+  Brain,
+  Database,
+  Wrench,
+  Users,
+  Layers,
+} from "lucide-react";
+import { useEffect, useState } from "react";
+
+/**
+ * Icon mapper (based on skill title)
+ * Backend sends only title + items
+ */
+const iconMap = {
+  Frontend: Monitor,
+  Backend: Server,
+  "AI/ML": Brain,
+  Database: Database,
+  "DevOps and Tools": Wrench,
+  "Soft Skills": Users,
+  "Other Skills": Layers,
+};
 
 const Skills = ({ data }) => {
 
-   const [userData , setUserData] = React.useState([]);
-   const skills = userData[0]?.skills;
+  const [skills,setSkills]=useState([])
 
-   React.useEffect(() => {
-     setUserData(data); 
+  useEffect(()=>{
+    const skills = data[0]?.skills;
+    setSkills(skills)
+  })
+  return (
+    <section
+      id="skills"
+      className="max-w-6xl mx-auto py-24 px-6 text-white"
+    >
+      {/* Section Title */}
+      <h2 className="text-4xl font-semibold mb-12">
+        Technical <span className="text-indigo-400">Skills</span>
+      </h2>
 
-      },[data]);
+      {/* Skills Grid */}
+      <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+        {skills.map(({ _id, title, items }) => {
+          const Icon = iconMap[title] || Layers;
 
-     const icons = {
-        "Frontend" : Monitor,
-        "Backend" : Server,
-        "AI/ML" : Brain, 
-        "Database" : Database,  
-        "DevOps and Tools" : Cpu,
-        "Soft Skills" : Handshake,
-        "Other Skills" : Sparkles 
-     }
-      
+          return (
+            <div
+              key={_id}
+              className="bg-[#141418] border border-white/10 rounded-2xl p-6 hover:border-indigo-400/40 transition"
+            >
+              {/* Icon + Title */}
+              <div className="flex items-center gap-3 mb-4">
+                <Icon className="text-indigo-400" size={22} />
+                <h4 className="text-lg font-semibold">{title}</h4>
+              </div>
 
-
-  return <div id='skills' className='mt-24 '>
-    <h2 className='text-soft_coal mini:text-2xl nl:text-3xl'>My Skills </h2>
-    <div className=' flex flex-wrap justify-center mini:w-[92%]    mini:px-0 px-12 gap-y-8 gap-x-20 mt-8  mx-auto' >
-        {/* skills  */}
-
-        {
-          skills && skills?.map((skill,index)=>{
-            const Icon = icons[skill.title]
-            return (
-        <div  className='relative flex flex-col p-4 bg-muted_pale w-[90%] max-w-[24rem] mini:min-h-[16rem] mini:w-[88%] sp:w-[18rem] lp:w-[18rem] np:min-h-64 nl:w-[24rem] nl:min-h-[20rem] border-2 border-text'key={skill._id} >
-         
-            <h4 className="flex flex-row mini:text-base  np:text-xl   gap-2 items-center mx-auto text-text mini:font-bold ">{Icon && <Icon/>} {skill.title} </h4>
-            <div className='mt-4'>
-                  {skill.items && skill.items?.map((item,index)=>{  
-                    return (
-                  <ul className='flex flex-col gap-2' key={index}>
-                    <li className='mt-2 text-text mini:text-sm nl:text-base '> <span> ➤ </span> {item}</li>
-                  
-                  </ul>
-                    )
-                  })}
+              {/* Skill Items */}
+              <ul className="flex flex-wrap gap-2 text-sm">
+                {items.map((skill) => (
+                  <li
+                    key={skill}
+                    className="px-3 py-1 rounded-full bg-white/5 border border-white/10 text-gray-300"
+                  >
+                    {skill}
+                  </li>
+                ))}
+              </ul>
             </div>
-         
-        </div>
-            )
-          })
-        }
-        
-    
-       
-       
-    </div>
-  </div>
-  
-}
+          );
+        })}
+      </div>
+    </section>
+  );
+};
 
-export default Skills; 
+export default Skills;

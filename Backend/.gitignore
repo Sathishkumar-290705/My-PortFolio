@@ -3,8 +3,7 @@ node_modules/
 Backend/node_modules/
 
 # env files
-.env
-
+Backend/.env
 
 # logs & editor
 *.log

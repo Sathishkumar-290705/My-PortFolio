@@ -24,6 +24,19 @@ module.exports = {
         "off_prim" : "#bcbcb4ff", 
         'gray':'hsl(0 0% 40%)',
 
+
+
+
+
+
+        "ivo": "#f7f3eb",
+        'tan':"#f0e7da",
+        "Mossy": "#342815",
+
+
+
+        
+
         // only use on this project color palate 
         'pale_sand' : "#D8C9AE", //Main background color
         'muted_pale' : '#bbae96ff' , // section container #b3a793ff . #baae99ff . #c3b8a4ff
@@ -33,10 +46,8 @@ module.exports = {
         "coal_gray" : "#575757", // meta text 
         "text1" : "#575757", // text for light background 
         "text2" : "#DEDEDE", // text for dark background
-        // 'brwn ' : "#625454ff"
-         'brwn' : "#800000",
-         'secd':"#fdcc03"
-        ,
+    
+  
       },
     },
     screens:{

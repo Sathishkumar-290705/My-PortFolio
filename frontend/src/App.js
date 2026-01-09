@@ -1,15 +1,16 @@
-import Navbar from "./Components/Navbar";
-import Home from "./Components/Home";
-import Aboutme from "./Components/Aboutme";
-import Skills from "./Components/Skills";
-import Project from "./Components/Project";
-import Experience from "./Components/Experience";
-import Contactme from "./Components/Contactme";
-import Footer from "./Components/Footer";
-import Skeleton from './Components/skeleton/Skeleton';
-
+import Home from "./Components/Home/Home";
 import { useEffect, useState } from "react";
 import axios from "axios";
+import About from "./Components/About/About";
+import Services from "./Components/Services/Services";
+import Experience from "./Components/Experience/Experience";
+import Skills from "./Components/Skills/Skills";
+import Projects from "./Components/Projects/Project";
+import EmailContact from "./Components/Contact/EmailContact";
+import ContactMe from "./Components/Contact/Contactme";
+import Footer from "./Components/Footer/Footer";
+import Navbar from "./Components/Navbar/Navbar";
+import ScrollToTop from "./Components/ScrollToTop";
 
 const App = () => {
   const [data, setData] = useState(null); // store backend data
@@ -32,31 +33,28 @@ const App = () => {
 
     fetchData(); // ✅ IMPORTANT
   }, []); // ✅ run once
-
+  console.log(data);
+  
   if (loading) {
     return <p className="text-center mt-10">Loading...</p>;
   }
 
   return (
-    <div className="bg-black text-[#EAEAEA] min-h-screen flex">
-      <Navbar data={data} />
-
-      <main className="flex-1 ml-[280px] max-lg:ml-0">
-        {loading ? (
-          <>
-          <Skeleton/>
-          </>
-        ):(
-          <>
-          <Home data={data} />
-        <Aboutme data={data} />
-        <Skills data={data} />
-        <Project data={data} />
-        <Experience data={data} />
-        <Contactme data={data} />
-        <Footer data={data} /></>
-        )}
+    <div className="flex flex-col  bg-ivo ">
+       <Navbar/>
+      <main className="flex-1  ">
+          <Home  />
+          <About/>
+          <Services/>
+          <Experience/>
+          <Skills data={data}/>
+          <Projects data={data}/>
+          <EmailContact/>
+          <ContactMe data={data}/>
+          <ScrollToTop/>
       </main>
+          <Footer/>
+  
     </div>
   );
 };

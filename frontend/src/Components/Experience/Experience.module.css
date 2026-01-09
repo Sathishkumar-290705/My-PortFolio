@@ -1,0 +1,60 @@
+.container {
+
+  padding: 120px 140px;
+  font-family: "Inter", sans-serif;
+}
+
+/* HEADING */
+.heading {
+  font-family: "Playfair Display", serif;
+  font-size: 48px;
+  font-weight: 500;
+  color: #111111;
+  margin-bottom: 80px;
+}
+
+/* LIST */
+.list {
+  display: flex;
+  flex-direction: column;
+}
+
+/* ITEM */
+.item {
+  display: flex;
+  justify-content: space-between;
+  gap: 60px;
+  padding: 40px 0;
+  border-bottom: 1px solid #e6e6e6;
+}
+
+/* LEFT CONTENT */
+.left {
+  max-width: 720px;
+}
+
+.left h3 {
+  font-size: 20px;
+  font-weight: 500;
+  color: #111111;
+  margin-bottom: 10px;
+}
+
+.left h3 span {
+  color: #3b6eea;
+  font-weight: 500;
+}
+
+.left p {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #555555;
+}
+
+/* RIGHT DATE */
+.right {
+  font-size: 15px;
+  color: #777777;
+  white-space: nowrap;
+  margin-top: 4px;
+}

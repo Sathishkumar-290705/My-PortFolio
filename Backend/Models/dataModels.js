@@ -6,14 +6,14 @@ module.exports = {
     async insertMany(data){
         const db = await databaseconnection();
       
-        const collectionName = db.collection("testCollection");
+        const collectionName = db.collection("User_data");
         
         return collectionName.insertMany(data)
 
     },
     async getAll(){
         const db = await databaseconnection();
-        const collectionName = db.collection("testCollection");
+        const collectionName = db.collection("User_data");
         return collectionName.find().toArray();
 
     }

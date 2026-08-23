@@ -1,4 +1,5 @@
 import {
+  Briefcase,
   Facebook,
   Github,
   Instagram,
@@ -8,35 +9,43 @@ import {
   Phone,
   Twitter,
 } from "lucide-react";
-import React from "react";
+import React, { useState } from "react";
 import EmailContact from "./EmailContact";
 
 const ContactMe = ({ data }) => {
-  const [userData, setUserData] = React.useState([]);
-  const contactMeData = userData[0]?.contactMe;
-  const linkData = userData[0]?.links;
-
+  
+  
+  const [contactMeData , setContactMeData] = React.useState();
+  const [linkData , setLinkData]= React.useState();
+//  console.log("sathish",linkData);
+ 
+  
   React.useEffect(() => {
-    setUserData(data);
+    if(data){
+      setLinkData(data[0]?.links || []);
+      setContactMeData(data[0]?.contactMe || []);
+    }
+    // console.log(data);
   }, [data]);
 
-  const [getData, setGetData] = React.useState({
-    name: "",
-    email: "",
-    contactNumber: "",
-    subject: "",
-    message: "",
-  });
+  // const [getData, setGetData] = React.useState({
+  //   name: "",
+  //   email: "",
+  //   contactNumber: "",
+  //   subject: "",
+  //   message: "",
+  // });
 
-  const handleValidation = (e) => {
-    const { name, value } = e.target;
-    setGetData((prev) => ({ ...prev, [name]: value }));
-  };
+  // const handleValidation = (e) => {
+  //   const { name, value } = e.target;
+  //   setGetData((prev) => ({ ...prev, [name]: value }));
+  // };
 
   const Icons = {
     Email: MailIcon,
     Phone: Phone,
     Location: MapPinIcon,
+    Field : Briefcase
   };
 
   const linkIcons = {
@@ -49,35 +58,38 @@ const ContactMe = ({ data }) => {
 
   return (
     <section
-      id="contactme"
-      className="max-w-6xl mx-auto py-24 px-6 text-slate-100 bg-[#0f0f14]"
+      id="Contact"
+      className="max-w-screen  py-24 px-6 text-slate-100 flex  justify-between min-h-[850px]"
     >
       {/* Title */}
-      <h2 className="text-4xl font-semibold mb-14">
-        Let’s <span className="text-indigo-400">Connect</span>
+      <div className="w-[600px] h-auto  ">
+      <h2 className="text-4xl font-semibold  text-tan">
+        {/* Let’s <span className="text-mossy">Connect</span> */}
       </h2>
+      <EmailContact/>
+      </div>
 
-      <div className="grid gap-12 md:grid-cols-2">
+      <div className="w-[800px] gap-12 mt-auto">
         {/* Contact Info */}
-        <div className="bg-[#15151c] border border-white/5 rounded-2xl p-8 flex flex-col justify-between">
+        <div className=" border border-white/5 rounded-2xl p-8 flex flex-col justify-between">
           <div>
-            <h4 className="text-xl font-semibold mb-4 text-white">
-              {contactMeData?.title1 || "Contact Information"}
+            <h4 className="text-2xl font-bold mb-4 text-[#35332f]">
+              {contactMeData && contactMeData?.title1 }
             </h4>
 
-            <p className="text-slate-400 leading-relaxed mb-8">
-              {contactMeData?.content}
+            <p className="text-text leading-relaxed mb-8">
+              {contactMeData && contactMeData?.content}
             </p>
 
-            <div className="space-y-4">
-              {contactMeData?.about?.map((item, index) => {
+            <div className=" flex flex-row flex-wrap gap-4 items-start ">
+              {contactMeData && contactMeData?.about?.map((item, index) => {
                 const Icon = Icons[item.label];
                 return (
                   <div
                     key={index}
                     className="
-                      flex items-center gap-4
-                      bg-white/5
+                      flex  w-80  h-20 items-center gap-4
+                      bg-[#efe9df]
                       border border-white/10
                       rounded-xl
                       p-4
@@ -86,13 +98,13 @@ const ContactMe = ({ data }) => {
                     "
                   >
                     {Icon && (
-                      <Icon className="text-indigo-400" size={20} />
+                      <Icon className="text-mossy" size={20} />
                     )}
-                    <div>
-                      <p className="text-sm text-slate-400">
+                    <div className="">
+                      <p className="text-sm text-mossy">
                         {item.label}
                       </p>
-                      <p className="font-medium text-slate-200">
+                      <p className="font-medium text-text">
                         {item.value}
                       </p>
                     </div>
@@ -103,8 +115,8 @@ const ContactMe = ({ data }) => {
           </div>
 
           {/* Social Links */}
-          <ul className="flex gap-6 mt-10">
-            {linkData?.map((item, index) => {
+          <ul className="flex gap-16 mt-10 ml-4">
+            {linkData && linkData?.map((item, index) => {
               const Icon = linkIcons[item.name];
               return (
                 <li key={index}>
@@ -113,7 +125,7 @@ const ContactMe = ({ data }) => {
                     target="_blank"
                     rel="noreferrer"
                     className="
-                      text-slate-400
+                      text-mossy
                       hover:text-indigo-400
                       transition
                     "
@@ -126,84 +138,11 @@ const ContactMe = ({ data }) => {
           </ul>
         </div>
 
-        {/* Contact Form */}
-        <div className="bg-[#15151c] border border-white/5 rounded-2xl p-8">
-          <h4 className="text-xl font-semibold mb-6 text-white">
-            {contactMeData?.title2 || "Send a Message"}
-          </h4>
-
-          <form className="space-y-4">
-            {[
-              { name: "name", label: "Name", type: "text" },
-              { name: "email", label: "Email", type: "email" },
-              { name: "contactNumber", label: "Contact Number", type: "text" },
-              { name: "subject", label: "Subject", type: "text" },
-            ].map((field) => (
-              <div key={field.name}>
-                <label className="text-sm text-slate-400">
-                  {field.label}
-                </label>
-                <input
-                  type={field.type}
-                  name={field.name}
-                  value={getData[field.name]}
-                  onChange={handleValidation}
-                  className="
-                    mt-1 w-full
-                    rounded-lg
-                    bg-white/5
-                    border border-white/10
-                    px-4 py-2
-                    text-slate-200
-                    focus:outline-none
-                    focus:border-indigo-400
-                  "
-                />
-              </div>
-            ))}
-
-            <div>
-              <label className="text-sm text-slate-400">
-                Message
-              </label>
-              <textarea
-                name="message"
-                rows={4}
-                value={getData.message}
-                onChange={handleValidation}
-                className="
-                  mt-1 w-full
-                  rounded-lg
-                  bg-white/5
-                  border border-white/10
-                  px-4 py-2
-                  text-slate-200
-                  focus:outline-none
-                  focus:border-indigo-400
-                "
-              />
-            </div>
-
-            <button
-              type="submit"
-              className="
-                w-full
-                bg-indigo-500
-                hover:bg-indigo-600
-                transition
-                rounded-lg
-                py-3
-                font-medium
-              "
-            >
-              Send Message
-            </button>
-          </form>
-        </div>
+       
+      
       </div>
 
-      {/* Email CTA */}
-      {/* <EmailContact/> */}
+     
     </section>
   );
 };

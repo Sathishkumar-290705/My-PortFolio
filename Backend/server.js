@@ -11,15 +11,14 @@ const router = require('./Routes/index_routes');
 const app = express();
 
 
-dotenv.config({silent:true});
+dotenv.config({silent:true});// silent:true  it does not throw error 
 
 const PORT = process.env.PORT || 5000;
+const allowed = process.env.ALLOWED ;
 
-
-const allowed = ['http://localhost:3000'];
 
 app.use(cors({
-  origin: "*"
+  origin: allowed
 }));
 
 app.use(express.json());

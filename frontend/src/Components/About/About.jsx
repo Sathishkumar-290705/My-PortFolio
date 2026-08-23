@@ -1,10 +1,21 @@
 import styles from "./About.module.css";
 import profile from '../../Assets/sathish_profile_image_2.jpg';
+import { useEffect, useState } from "react";
 // import profileImg from "../../assets/about-profile.jpg"; // replace with your image
 
-const About = () => {
+const About = ({ data }) => {
+
+  const [aboutData,setaAboutData] = useState()
+
+  const aboutdata = data[0]?.aboutMe;
+  
+  useEffect(()=>{
+    setaAboutData(aboutdata);
+    
+  }, [data]);
+
   return (
-    <div className={styles.container}>
+    <div className={styles.container} id="About">
       <section className={styles.about}>
         {/* Left Image */}
         <div className={styles.imageSection}>
@@ -14,30 +25,14 @@ const About = () => {
         {/* Right Content */}
         <div className={styles.content}>
           <h1 className={styles.heading}>
-            SathishKumar is  <span>a</span>
+            {aboutData && aboutData?.title}
           </h1>
 
-          <p>
-            With over 15 years of experience designing{" "}
-            <strong>award-winning products</strong>, I focus on AI-powered
-            experiences that make complex data feel simple, reliable and human.
-            I work on enterprise-grade, developer-facing platforms, with safety
-            and governance built in from the first sketch to the production
-            rollout.
-          </p>
-
-          <p>
-            Since 2016, I’ve been combining Big Data and ML with{" "}
-            <strong>AI experiments</strong>: framing problems, shaping AI
-            behavior, and keeping models accountable through evaluation and
-            feedback loops. My work lives at the intersection of UX, strategy
-            and systems thinking, helping teams turn abstract models into clear,
-            everyday decisions.
-          </p>
-
-          <p className={styles.tagline}>
-            Speed for the start, care for what truly scales. Let’s connect!
-          </p>
+          {aboutData && aboutData?.content.map((item,index)=>(
+          
+            <p className={styles.para} key={index}>{item}</p>
+    
+          )) }
 
           <div className={styles.actions}>
             <button className={styles.primaryBtn}>Resume</button>

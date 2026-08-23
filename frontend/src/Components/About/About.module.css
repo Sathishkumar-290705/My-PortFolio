@@ -1,25 +1,29 @@
 .container {
-  background-color: #f7f3eb;
+  background-color: #f2ede4;
   min-height: 100vh;
-  padding: 80px 190px;
+  /* width: 100vw; */
+  padding: 80px 0px;
   font-family: "Inter", sans-serif;
 }
 
 /* MAIN LAYOUT */
 .about {
   display: flex;
+  width: 85%;
+  margin: 0 auto;
+  flex-direction: row-reverse;
   align-items: center;
   gap: 100px;
+  padding: 0 12px;
 }
 
 /* IMAGE */
 .imageSection {
-  flex: 1;
-}
+  width: 420px;
 
+}
 .imageSection img {
-  width: 100%;
-  max-width: 420px;
+  width: 420px;
   height: auto;
   border-radius: 18px;
   object-fit: cover;
@@ -43,10 +47,11 @@
 }
 
 .content p {
-  font-size: 18px;
-  line-height: 1.7;
+  font-size: 16px;
+  line-height: 1.5;
   color: #554937;
   margin-bottom: 24px;
+  text-align: justify;
 }
 
 .content strong {
@@ -69,19 +74,18 @@
 }
 
 .primaryBtn {
-  background: #000000;
-  color: #ffffff;
-  border: none;
+   background: transparent;
+  color: #342815;
   padding: 14px 28px;
   border-radius: 30px;
   font-size: 14px;
   cursor: pointer;
+  border: 1px solid #342815;
 }
 
 .secondaryBtn {
-  background: transparent;
-  color: #342815;
-  border: 1px solid #342815;
+  background: #252320;
+  color: #ffffff;
   padding: 14px 28px;
   border-radius: 30px;
   font-size: 14px;

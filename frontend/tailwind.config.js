@@ -17,7 +17,7 @@ module.exports = {
       },
       colors:{
         //universal color code (My way )
-        // 'text':'#000000',
+        'text':'#000000',
         'm_text':"hsl(0 0% 20%)",
         'prim':'#ffffff',
         'm_prim':'hsl(0 0% 80%)',
@@ -31,7 +31,9 @@ module.exports = {
 
         "ivo": "#f7f3eb",
         'tan':"#f0e7da",
-        "Mossy": "#342815",
+        'tan2':"#b8aa97",
+        "mossy": "#342815",
+        "mossy2": "#4c3a1e",
 
 
 

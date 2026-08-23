@@ -1,12 +1,11 @@
 [
     {
-        "_id": "693fc2e01f4d53caf0a3fb39",
         "home": {
-            "name": "Sathish Kumar R",
-            "role1": " Machine Learning ",
-            "role2":"Full Stack Developer",
-            "description": "I develop intelligent, AI-powered solutions by leveraging my growing expertise in machine learning, creating smarter and more efficient digital applications. I am passionate about building reliable, user-friendly web applications with thoughtful design.",
-            "contactme": "https://wa.me/918056663585"
+            "name": "Sathishkumar R",
+            "role1": "Machine Learning",
+            "role2":"Full Stack",
+            "combo_quote":"Machine Learning & Scalable Web Applications",
+            "description": "I develop intelligent, AI-powered solutions by leveraging my growing expertise in machine learning, creating smarter and more efficient digital applications. I am passionate about building reliable, user-friendly web applications with thoughtful design."
         },
         "links": [
             {
@@ -24,14 +23,22 @@
             {
                 "name": "Facebook",
                 "url": "https://www.facebook.com/profile.php?id=100094046093102"
+            },
+            {
+                "name": "Whatsapp",
+                "url": "https://wa.me/918056663585"
+            },
+            {
+                "name": "Email",
+                "url": "https://mail.google.com/mail/u/0/#inbox?compose=new"
+            },
+            {
+                "name":"Resume",
+                "url":""
             }
         ],
-        "resume": {
-            "name": "Resume",
-            "url": ""
-        },
         "aboutMe": {
-            "title": "know more about me ",
+            "title": " About Me  ",
             "content": [
                 "I am a passionate Machine Learning Engineer with experience in developing intelligent systems using Large Language Models (LLMs), Natural Language Processing, and Computer Vision with OpenCV. I specialize in designing data-driven, scalable AI solutions that address real-world challenges with efficiency, reliability, and precision.",
                 "I build responsive, user-centric full web applications using modern frameworks such as React and Angular, delivering high-performance front-end interfaces and robust back-end integrations that ensure seamless user experiences across devices.",
@@ -98,9 +105,7 @@
                 "_id": 5,
                 "title": "DevOps and Tools",
                 "items": [
-                    "Git",
-                    "Github",
-                    "Github Desktop",
+                    "Git/Github",
                     "Postman",
                     "Docker",
                     "VS Code",
@@ -239,7 +244,7 @@
             }
         ],
         "contactMe": {
-            "title1": "Get in Touch",
+            "title1": "Contact Information",
             "title2": "Send Me a Message",
             "content": "I’m open for freelance projects, internships, and part-time opportunities right now. If you’re planning a project or need help taking an existing one further, feel free to get in touch.",
             "about": [
@@ -266,6 +271,57 @@
                 "Contact": "Contact Number",
                 "Subject": "Subject"
             }
-        }
+        },
+        
+      "professional":{
+        "Experience" : [
+            {
+                "role": "Frontend Developer ",
+                "company": "webOps,Velammal Engineering College,chennai",
+                "duration": "March 2025 – Current",
+                "description":
+                "Transforming complex 360° capture workflows into intuitive, end-to-end product experiences for the GoCapture app."
+            }
+            
+        ] ,
+        "Learning Path" : [
+            {
+                "role": "Bachelor of Technology in Artificial intelligence and data Science",
+                "company": "Velammal Engineering college, chennai",
+                "duration": "September 2023 – Current",
+                "description":
+                "Contributed to the development of the official college website by designing responsive UI components and integrating frontend with backend services using the MERN stack."
+            }
+        ]
+    },
+    "mycore":{
+        "title":"What I Do",
+        "content":"",
+        "whatsapp_link":"",
+        "service":[
+            {
+                "serviceTitle":"ML Engineer",
+                "content":"",
+                "stack":[
+                   "LLM", "YOLO" , "NLP"
+                ]
+            },
+            {
+                "serviceTitle":"Full Stack Developer",
+                "content":"",
+                "stack":[
+                  "Java" ,"JavaScript","Node.js" , "React"
+                ]
+            },
+            {
+                "serviceTitle":"UI/UX Designing",
+                "content":"",
+                "stack":[
+                   "Figma", "CSS","Tailwind"
+                ]
+            }
+        ]
     }
+}
+    
 ]

@@ -1,57 +1,86 @@
+import { Briefcase, GraduationCap } from "lucide-react";
 import styles from "./Experience.module.css";
+import { useEffect, useState } from "react";
 
-const experiences = [
-  {
-    role: "Product Designer",
-    company: "Multivista",
-    duration: "July 2023 – Current",
+const experiences = {
+  Experience : [
+     {
+    role: "Frontend Developer",
+    company: "Velammal Engineering College,chennai",
+    duration: "March 2025 – Current",
     description:
       "Transforming complex 360° capture workflows into intuitive, end-to-end product experiences for the GoCapture app.",
-  },
-  {
-    role: "UX Instructor",
-    company: "Tamwood Career College",
-    duration: "June 2023 – December 2024",
-    description:
-      "Mentored over 50 aspiring designers through hands-on UX instruction, elevating portfolio quality and improving job placement outcomes.",
-  },
-  {
-    role: "UX Designer",
-    company: "Langara College",
-    duration: "January 2023 – April 2023",
-    description:
-      "Led the UX and visual design of an online showcase platform, increasing student portfolio engagement.",
-  },
-  {
-    role: "UX Designer",
-    company: "eOrigami Softwares",
-    duration: "August 2020 – December 2021",
-    description:
-      "Designed user-centered interfaces for enterprise applications, improving usability and workflow efficiency.",
-  },
-];
+  }
 
-const Experience = () => {
+  ] , 
+  "Learning Path" : [
+     {
+    role: "Bachelor of Technology in Artificial intelligence and data Science",
+    company: "Velammal Engineering college, chennai",
+    duration: "September 2023 – Current",
+    description:
+      "Transforming complex 360° capture workflows into intuitive, end-to-end product experiences for the GoCapture app.",
+  }
+  ]
+}
+
+const Icons = {
+  Experience : Briefcase , 
+  "Learning Path" : GraduationCap
+}
+
+const Experience = ({ data }) => {
+
+  const[professionalData,setProfessionalData] = useState();
+
+  useEffect(()=>{
+    if(data){
+       setProfessionalData(data[0]?.professional);
+       console.log("sathish",professionalData);
+       
+    }
+  },[data])
   return (
-    <section className={styles.container}>
-      <h2 className={styles.heading}>Work experience</h2>
-
+    <section className={styles.container} id="Experience">
+   
+        
+     
       <div className={styles.list}>
-        {experiences.map((item, index) => (
-          <div key={index} className={styles.item}>
+        {professionalData && Object.entries(professionalData)?.map(([key, value],index) => {
+           
+           const Icon = Icons[key]
+          return (
+
+            <div>
+          <h1 className={styles.listheading}> <Icon  className="w-8 h-8" /> {key}</h1>
+          <div className={styles.listcontainer}>
+          { value && value.map((items,value)=>(
+             <div>
+        <div key={index} className={styles.item}>
             <div className={styles.left}>
               <h3>
-                {item.role} <span>@ {item.company}</span>
+                {items.role} &nbsp; <span>@ {items.company}</span>
               </h3>
-              <p>{item.description}</p>
+              <p>{items.description}</p>
             </div>
 
-            <div className={styles.right}>{item.duration}</div>
+            <div className={styles.right}>{items.duration}</div>
           </div>
-        ))}
+            </div>
+           ))}
+          </div>
+           </div>
+          )
+
+       })}
       </div>
     </section>
   );
 };
 
 export default Experience;
+
+
+
+
+

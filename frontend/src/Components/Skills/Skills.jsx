@@ -1,67 +1,81 @@
-import styles from "./Skills.module.css";
+import { useEffect, useState } from "react";
 
-const Skill = () => {
+const Skills = ({ data }) => {
+  const [skills, setSkills] = useState([]);
+
+  useEffect(() => {
+    setSkills(data[0]?.skills || []);
+  }, [data]);
+
   return (
-    <section className={styles.skillsetSection}>
-      <h2 className={styles.heading}>Skillset</h2>
+    <section
+      id="Skills"
+      className="bg-[#f7f3eb] text-[#342815] py-28 px-6"
+    >
+      {/* Section Header */}
+      <div className="max-w-6xl mx-auto mb-20">
+        <p className="uppercase tracking-widest text-sm text-[#b8aa97] mb-3">
+          Expertise
+        </p>
+        <h2 className="text-5xl md:text-6xl leading-tight text-center">
+          Skill Domains
+        </h2>
+      </div>
 
-      <p className={styles.description}>
-        I always strive to bring together the proper techniques and methods to
-        achieve the best possible outcome by working collaboratively.
-        Here is the spread of my core skills:
-      </p>
+      {/* Skills Grid */}
+      <div className="max-w-screen-xl mx-auto flex flex-wrap justify-center gap-14">
+        {skills.map((domain, index) => (
+          <article
+            key={index}
+            className="
+              bg-[#efe9df]
+              rounded-3xl
+              p-10
+              w-[380px]
+              border
+              border-[#b8aa97]/40
+              transition
+              hover:-translate-y-1
+              hover:shadow-[0_20px_40px_-20px_rgba(52,40,21,0.35)]
+            "
+          >
+            {/* Domain Title */}
+            <h3 className="text-2xl font-semibold mb-6">
+              {domain.title}
+            </h3>
 
-      <div className={styles.grid}>
-        {/* Column 1 */}
-        <div className={styles.column}>
-          <h4>FACILITATION</h4>
-          <ul>
-            <li>Research-to-Release Facilitation</li>
-            <li>AI Behavior Review Workshops</li>
-            <li>Technical Co-Design (PM + Eng)</li>
-            <li>Constraint-driven Discovery</li>
-            <li>Model–UX Alignment Rituals</li>
-          </ul>
-        </div>
+            {/* Skills Pills */}
+            <div className="flex flex-col gap-4 ">
+              {domain.items.map((skill, i) => (
+                <div>
 
-        {/* Column 2 */}
-        <div className={styles.column}>
-          <h4>UX DESIGN</h4>
-          <ul>
-            <li>Quant + Qual Research Ops</li>
-            <li>Latency-aware UX Flows</li>
-            <li>AI-augmented Prototyping</li>
-            <li>Token-aware UX Flows</li>
-            <li>Trust-by-Design Systems</li>
-          </ul>
-        </div>
-
-        {/* Column 3 */}
-        <div className={styles.column}>
-          <h4>UI DESIGN</h4>
-          <ul>
-            <li>Design APIs & Component Ops</li>
-            <li>LLM-based Microcopy</li>
-            <li>Confidence-aware UI</li>
-            <li>Guardrail Patterns</li>
-            <li>Multimodal UI Systems</li>
-          </ul>
-        </div>
-
-        {/* Column 4 */}
-        <div className={styles.column}>
-          <h4>PRODUCT + AI</h4>
-          <ul>
-            <li>RAG-based Interface Design</li>
-            <li>Prompt Chains with State</li>
-            <li>Human-in-the-loop Design</li>
-            <li>Fine-tuning Feedback</li>
-            <li>Model Evaluation</li>
-          </ul>
-        </div>
+                <span> ➤ </span>
+                <span
+                  key={i}
+                  className="
+                  px-4 py-1.5
+                  text-sm
+                  rounded-full
+                  border
+                  border-[#b8aa97]/40
+                  text-text
+                  hover:text-prim 
+                  transition
+                  w-fit
+                  
+                  hover:bg-[#342815]
+                  "
+                  >
+                  {skill}
+                </span>
+              </div>
+              ))}
+            </div>
+          </article>
+        ))}
       </div>
     </section>
   );
 };
 
-export default Skill;
+export default Skills;

@@ -1,97 +1,108 @@
-import { ExternalLink } from "lucide-react";
+import { ExternalLink, ArrowUpRight } from "lucide-react";
 import { useEffect, useState } from "react";
 
 const Projects = ({ data }) => {
-  const [projects, setProjects] = useState([]);
+  const [projects, setProjects] = useState();
 
   useEffect(() => {
-    const project = data[0]?.projects || [];
-    setProjects(project);
+    setProjects(data[0]?.projects || []);
   }, [data]);
 
   return (
     <section
-      id="projects"
-      className="max-w-screen mx-auto py-24 px-6 text-slate-100 bg-[#0f0f14]"
+      id="Projects"
+      className="bg-[#f7f3eb] text-[#342815] py-28 px-6"
     >
-      {/* Section Title */}
-      <h2 className="text-4xl font-semibold mb-12 text-center">
-        Featured <span className="text-indigo-400">Projects</span>
-      </h2>
+      {/* Section Header */}
+      <div className="max-w-6xl mx-auto mb-20">
+        <p className="uppercase tracking-widest text-sm text-[#b8aa97] mb-3">
+          Selected Work
+        </p>
+        <h2 className="text-5xl md:text-6xl  leading-tight  text-center ">
+         Key Projects 
+        </h2>
+      </div>
 
       {/* Projects Grid */}
-      <div className="flex flex-row flex-wrap  gap-10 justify-center">
-        {projects.map(
-          ({ _id, title, description, technologies, url }) => (
-            <div
-              key={_id}
-              className="
-                bg-[#15151c]
-                border border-white/5
-                rounded-2xl
-                p-6
-                w-96
-                transition
-                hover:border-indigo-400/40
-                hover:shadow-[0_0_30px_-10px_rgba(99,102,241,0.25)]
-                flex flex-col
-              "
-            >
-              {/* Title */}
-              <h4 className="text-xl font-semibold text-white mb-3">
-                {title}
-              </h4>
+      <div className="max-w-screen justify-center mx-auto flex flex-wrap gap-14">
+        {projects && projects.map(({ _id, title, description, technologies, url }) => (
+          <article
+            key={_id}
+            className="
+              bg-[#efe9df]
+              rounded-3xl
+              p-10
+              flex
+              flex-col
+              w-[380px]
+              border
+              border-[#b8aa97]/40
+              transition
+              hover:-translate-y-1
+              hover:shadow-[0_20px_40px_-20px_rgba(52,40,21,0.35)]
+            "
+          >
+            {/* Title */}
+            <h3 className="text-2xl font-semibold mb-4">
+              {title}
+            </h3>
 
-              {/* Description */}
-              <p className="text-slate-400 mb-5 leading-relaxed flex-1">
-                {description}
-              </p>
+            {/* Description */}
+            <p className="text-[#4c3a1e] leading-relaxed mb-8 flex-1">
+              {description}
+            </p>
 
-              {/* Technologies */}
-              <div className="flex flex-wrap gap-2 h-20 mb-6">
-                {technologies.map((tech) => (
-                  <span
-                    key={tech}
-                    className="
-                      px-3 py-1
-                      text-sm
-                   
-                      h-fit
-                      rounded-full
-                      bg-indigo-400/10
-                      border border-indigo-400/20
-                      text-indigo-300
-                    "
-                  >
-                    {tech}
-                  </span>
-                ))}
-              </div>
-
-              {/* Action */}
-              {url && (
-                <a
-                  href={url}
-                  target="_blank"
-                  rel="noopener noreferrer"
+            {/* Tech Stack */}
+            <div className="flex flex-wrap gap-2 mb-8">
+              {technologies.map((tech) => (
+                <span
+                  key={tech}
                   className="
-                    mt-auto
-                    inline-flex
-                    items-start
-                    gap-2
-                    text-indigo-400
-                    hover:text-indigo-300
-                    transition
+                    px-4 py-1.5
                     text-sm
-                    font-medium
+                    rounded-full
+                    bg-[#252320]
+                    border
+                    border-[#b8aa97]/40
+                    text-prim
                   "
                 >
-                  View Project <ExternalLink size={16} />
-                </a>
-              )}
+                  {tech}
+                </span>
+              ))}
             </div>
-          )
-        )}
+
+            {/* Link */}
+            { (
+              <a
+                href={url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="
+                  group
+                  inline-flex
+                  items-center
+                  gap-2
+                  w-fit
+                  text-sm
+                  font-medium
+                  text-[#342815]
+                  hover:text-[#4c3a1e]
+                "
+              >
+                View Project
+                <ArrowUpRight
+                  size={16}
+                  className="
+                    transition
+                    group-hover:translate-x-1
+                    group-hover:-translate-y-1
+                  "
+                />
+              </a>
+            )}
+          </article>
+        ))}
       </div>
     </section>
   );

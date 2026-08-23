@@ -1,78 +1,91 @@
-.skillsetSection {
-  background-color: #f7f3eb;
-  padding: 6rem 1.5rem;
-  max-width: 1200px;
-  margin: 0 auto;
-  text-align: center;
+/* Whole horizontal section */
+.skillsSection {
+  position: relative;
+  background: #f7f3eb;
+  padding-top: 7rem;
+  
 }
 
-/* Heading */
-.heading {
+/* Sticky viewport */
+.sticky {
+   display: flex;
+  overflow-x: auto;
+   scrollbar-width: none; 
+  overflow-y: hidden;
+  height: 30rem;
+  padding-bottom: 2rem  ;
+  scroll-snap-type: x mandatory;
+}
+
+.sticky::-webkit-scrollbar{
+  display: none;
+}
+
+/* Title */
+.title {
   font-size: 3rem;
-  font-weight: 700;
   color: #342815;
-  margin-bottom: 1.5rem;
+  text-align: center;
+  margin-bottom: 4rem;
+  white-space: nowrap;
 }
 
-/* Description */
-.description {
-  max-width: 760px;
-  margin: 0 auto 5rem;
-  font-size: 1.05rem;
-  line-height: 1.8;
-  color: #554937;
+/* Horizontal track */
+.track {
+  display: flex;
+  gap: 1rem;
+  padding-right: 10rem;
+  margin-top: 10rem;
+  margin-left: 8rem;
+  will-change: transform;
 }
 
-/* Grid */
-.grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 3rem;
-  text-align: left;
+/* Each domain */
+.domain {
+  min-width: 40vw;
+  padding: 0 4rem;
+  border-left: 2px solid #d6c9b6;
 }
 
-/* Column */
-.column h4 {
-  font-size: 0.95rem;
-  font-weight: 600;
-  letter-spacing: 1px;
+.domain h3 {
+  font-size: 2rem;
   color: #342815;
-  margin-bottom: 1.5rem;
+  margin-bottom: 2rem;
 }
 
-/* List */
-.column ul {
+.domain ul {
   list-style: none;
   padding: 0;
-  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.2rem;
 }
 
-.column li {
-  font-size: 0.95rem;
-  color: #554937;
-  margin-bottom: 0.85rem;
-  line-height: 1.6;
+.domain li {
+  padding: 0.6rem 1.4rem;
+  font-size: 0.9rem;
+  background: rgb(37, 35, 32);
+  border-radius: 999px;
+  color: #ffffff;
+  opacity: 0;
+  animation: reveal 1.2s ease forwards;
 }
 
-/* Hover subtlety */
-.column li:hover {
-  color: #342815;
+.domain li:nth-child(odd) {
+  animation-delay: 0.3s;
 }
 
-/* Responsive */
-@media (max-width: 1024px) {
-  .grid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 3rem;
+.domain li:nth-child(even) {
+  animation-delay: 0.5s;
+}
+
+@keyframes reveal {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
   }
-}
-
-@media (max-width: 640px) {
-  .grid {
-    grid-template-columns: 1fr;
-  }
-
-  .heading {
-    font-size: 2.4rem;
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }

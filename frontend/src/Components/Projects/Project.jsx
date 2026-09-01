@@ -24,7 +24,7 @@ const Projects = ({ data }) => {
       </div>
 
       {/* Projects Grid */}
-      <div className="max-w-screen justify-center mx-auto flex flex-wrap gap-14">
+      <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
         {projects && projects.map(({ _id, title, description, technologies, url }) => (
           <article
             key={_id}
@@ -34,7 +34,7 @@ const Projects = ({ data }) => {
               p-10
               flex
               flex-col
-              w-[380px]
+              w-full min-w-0
               border
               border-[#b8aa97]/40
               transition

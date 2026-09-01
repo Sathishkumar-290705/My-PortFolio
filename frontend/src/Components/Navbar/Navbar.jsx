@@ -1,9 +1,11 @@
-import { useEffect, useRef } from "react";
+import { Menu, X } from "lucide-react";
+import { useEffect, useRef, useState } from "react";
 import styles from "./Navbar.module.css";
 
 const Navbar = () => {
 
   const navbarRef = useRef(null)
+  const [menuOpen, setMenuOpen] = useState(false);
 
   useEffect(()=>{
     const handleNavbar = ()=>{
@@ -21,6 +23,12 @@ const Navbar = () => {
       window.removeEventListener("scroll",handleNavbar)
     )
   },[])
+
+  useEffect(() => {
+    const closeMenu = () => setMenuOpen(false);
+    window.addEventListener("resize", closeMenu);
+    return () => window.removeEventListener("resize", closeMenu);
+  }, []);
 
  
 
@@ -44,6 +52,31 @@ const Navbar = () => {
         <div className={`${styles.cvButton}`}>
            <button > Download CV </button>
         </div>
+        <button
+          type="button"
+          className={styles.menuToggle}
+          aria-label={menuOpen ? "Close navigation menu" : "Open navigation menu"}
+          aria-expanded={menuOpen}
+          onClick={() => setMenuOpen((open) => !open)}
+        >
+          {menuOpen ? <X size={22} /> : <Menu size={22} />}
+        </button>
+        </div>
+        <div className={`${styles.mobileMenu} ${menuOpen ? styles.mobileMenuOpen : ""}`}>
+          <ul>
+            {[
+              ["Home", "#Home"],
+              ["About Me", "#About"],
+              ["Skills", "#Skills"],
+              ["Experience", "#Experience"],
+              ["Projects", "#Projects"],
+              ["Services", "#Services"],
+              ["Contact", "#Contact"],
+            ].map(([label, href]) => (
+              <li key={href}><a href={href} onClick={() => setMenuOpen(false)}>{label}</a></li>
+            ))}
+          </ul>
+          <button className={styles.mobileCv}>Download CV</button>
         </div>
       </nav>
     </div>

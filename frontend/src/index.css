@@ -2,6 +2,34 @@
 @tailwind components;
 @tailwind utilities;
 
+ :root {
+  --background-primary: #f7f3eb;
+  --background-secondary: #efe9df;
+  --surface: #ffffff;
+  --text-primary: #342815;
+  --text-secondary: #6d6254;
+  --border: #b8aa97;
+  --accent: #9c7032;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+section[id] {
+  scroll-margin-top: 7rem;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+img,
+svg {
+  max-width: 100%;
+}
 
 
 /* h1{
@@ -23,11 +51,79 @@ h4{
 
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  background: var(--background-primary);
+  color: var(--text-primary);
+  font-family: "Poppins", "Trebuchet MS", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+}
+
+@media (max-width: 1023px) {
+  #Projects > div:last-child,
+  #Skills > div:last-child {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1.5rem;
+  }
+
+  #Projects article,
+  #Skills article {
+    width: 100%;
+    min-width: 0;
+  }
+
+  #Contact {
+    min-height: auto;
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  #Contact > div,
+  #Contact > div:last-child {
+    width: 100%;
+    margin-top: 0;
+  }
+
+  #Contact .w-80 {
+    width: 100%;
+    min-height: 5rem;
+  }
+}
+
+@media (max-width: 767px) {
+  #Contact > div:last-child > div {
+    padding: 1.25rem;
+  }
+
+  #Contact .text-6xl {
+    font-size: clamp(2.25rem, 10vw, 3.75rem);
+  }
+}
+
+@media (max-width: 767px) {
+  #Projects > div:last-child,
+  #Skills > div:last-child {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  #Projects,
+  #Skills,
+  #Contact {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  #Projects h2,
+  #Skills h2,
+  #Contact .text-6xl {
+    font-size: clamp(2.25rem, 10vw, 3.75rem);
+    overflow-wrap: anywhere;
+  }
 }
 
 code {

@@ -1,7 +1,8 @@
 .wrapper {
   min-height: 100vh;
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-between;
+  gap: clamp(2rem, 8vw, 8rem);
   background: #efe9df; /* ivo */
   color: #f2ede4
 ;      /* mossy */
@@ -12,7 +13,7 @@
   position: sticky;
   top: 0;
   flex: 1;
-  padding: 120px 100px;
+  padding: clamp(5rem, 10vw, 8rem) 0 clamp(5rem, 10vw, 8rem) clamp(1rem, 8vw, 8rem);
   height: fit-content;
 }
 
@@ -29,7 +30,7 @@
 }
 
 .heading {
-  font-size: 48px;
+  font-size: clamp(2.25rem, 5vw, 3rem);
   line-height: 1.15;
   margin-bottom: 24px;
   margin-top: 10px;
@@ -63,15 +64,16 @@
 /* RIGHT – SCROLL */
 .right {
   flex: 1;
-  padding: 140px 90px;
+  padding: clamp(5rem, 10vw, 8rem) clamp(1rem, 8vw, 8rem) clamp(5rem, 10vw, 8rem) 0;
   display: flex;
  
   flex-direction: column;
-  gap: 140px;
+  gap: clamp(3rem, 8vw, 7rem);
 }
 
 /* SERVICE TILE */
 .tile {
+  min-width: 0;
   padding-bottom: 60px;
   border-bottom: 1px solid rgba(52, 40, 21, 0.15);
 }
@@ -117,6 +119,14 @@
   font-size: 16px;
   line-height: 1.7;
   color: #4c3a1e;
+}
+
+@media (max-width: 800px) {
+  .wrapper { display: block; min-height: auto; }
+  .left { position: static; padding: 5rem 1rem 2rem; }
+  .right { padding: 2rem 1rem 5rem; gap: 3rem; }
+  .subtext, .tile p { max-width: none; }
+  .tile h3 { font-size: 1.6rem; }
 }
 
 /* TAGS */

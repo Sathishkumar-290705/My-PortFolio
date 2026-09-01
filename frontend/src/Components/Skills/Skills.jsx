@@ -23,7 +23,7 @@ const Skills = ({ data }) => {
       </div>
 
       {/* Skills Grid */}
-      <div className="max-w-screen-xl mx-auto flex flex-wrap justify-center gap-14">
+      <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
         {skills.map((domain, index) => (
           <article
             key={index}
@@ -31,7 +31,7 @@ const Skills = ({ data }) => {
               bg-[#efe9df]
               rounded-3xl
               p-10
-              w-[380px]
+              w-full min-w-0
               border
               border-[#b8aa97]/40
               transition

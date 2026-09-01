@@ -59,52 +59,39 @@ const ContactMe = ({ data }) => {
   return (
     <section
       id="Contact"
-      className="max-w-screen  py-24 px-6 text-slate-100 flex  justify-between min-h-[850px]"
+      className="flex min-h-[850px] max-w-screen justify-between px-6 py-24 text-[#1f1f1f]"
     >
-      {/* Title */}
-      <div className="w-[600px] h-auto  ">
-      <h2 className="text-4xl font-semibold  text-tan">
-        {/* Let’s <span className="text-mossy">Connect</span> */}
-      </h2>
+      <div className="h-auto w-[600px]">
       <EmailContact/>
       </div>
 
-      <div className="w-[800px] gap-12 mt-auto">
-        {/* Contact Info */}
-        <div className=" border border-white/5 rounded-2xl p-8 flex flex-col justify-between">
+      <div className="mt-auto w-[800px] gap-12">
+        <div className="flex flex-col justify-between rounded-2xl border border-[#6E6A61]/20 bg-[#F7F2E8] p-8">
           <div>
-            <h4 className="text-2xl font-bold mb-4 text-[#35332f]">
+            <h4 className="mb-4 text-2xl font-bold text-[#1f1f1f]">
               {contactMeData && contactMeData?.title1 }
             </h4>
 
-            <p className="text-text leading-relaxed mb-8">
+            <p className="mb-8 leading-relaxed text-[#6E6A61]">
               {contactMeData && contactMeData?.content}
             </p>
 
-            <div className=" flex flex-row flex-wrap gap-4 items-start ">
+            <div className="flex flex-row flex-wrap items-start gap-4">
               {contactMeData && contactMeData?.about?.map((item, index) => {
                 const Icon = Icons[item.label];
                 return (
                   <div
                     key={index}
-                    className="
-                      flex  w-80  h-20 items-center gap-4
-                      bg-[#efe9df]
-                      border border-white/10
-                      rounded-xl
-                      p-4
-                      hover:border-indigo-400/40
-                      transition
-                    "
+                    className="flex h-20 w-80 items-center gap-4 rounded-xl border border-[#6E6A61]/20 bg-[#EDE6D6] p-4 transition hover:border-[#ffe9c2]"
                   >
                     {Icon && (
-                      <Icon className="text-mossy" size={20} />
+                      <Icon className="text-[#1f1f1f]" size={20} />
                     )}
                     <div className="">
-                      <p className="text-sm text-mossy">
+                      <p className="text-sm text-[#6E6A61]">
                         {item.label}
                       </p>
-                      <p className="font-medium text-text">
+                      <p className="font-medium text-[#1f1f1f]">
                         {item.value}
                       </p>
                     </div>
@@ -114,8 +101,7 @@ const ContactMe = ({ data }) => {
             </div>
           </div>
 
-          {/* Social Links */}
-          <ul className="flex gap-16 mt-10 ml-4">
+          <ul className="ml-4 mt-10 flex gap-16">
             {linkData && linkData?.map((item, index) => {
               const Icon = linkIcons[item.name];
               return (
@@ -124,11 +110,7 @@ const ContactMe = ({ data }) => {
                     href={item.url}
                     target="_blank"
                     rel="noreferrer"
-                    className="
-                      text-mossy
-                      hover:text-indigo-400
-                      transition
-                    "
+                    className="text-[#1f1f1f] transition hover:text-[#1f1f1f]"
                   >
                     {Icon && <Icon size={22} />}
                   </a>

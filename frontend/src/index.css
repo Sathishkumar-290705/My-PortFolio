@@ -2,14 +2,14 @@
 @tailwind components;
 @tailwind utilities;
 
- :root {
-  --background-primary: #f7f3eb;
-  --background-secondary: #efe9df;
-  --surface: #ffffff;
-  --text-primary: #342815;
-  --text-secondary: #6d6254;
-  --border: #b8aa97;
-  --accent: #9c7032;
+:root {
+  --background-primary: #fff;
+  --surface: #F7F2E8;
+  --text-primary: #1f1f1f;
+  --text-secondary: #6E6A61;
+  --border: #6E6A61;
+  --accent: #ffe9c2;
+  --accent-strong: #f8dca4;
 }
 
 html {
@@ -31,24 +31,6 @@ svg {
   max-width: 100%;
 }
 
-
-/* h1{
-  @apply text-h1 font-inter ;
-} */
-
-/* h3{
-  @apply text-h3 font-inter  ;
-} */
-
-
-/* h2{
-  @apply text-h2 font-inter text-center ;
-} */
-/* 
-h4{
-  @apply text-h4 font-inter ;
-} */
-
 body {
   margin: 0;
   background: var(--background-primary);
@@ -58,97 +40,42 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+button,
+a {
+  transition: all 0.2s ease;
+}
+
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
 }
 
-@media (max-width: 1023px) {
-  #Projects > div:last-child,
-  #Skills > div:last-child {
-    display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 1.5rem;
-  }
-
-  #Projects article,
-  #Skills article {
-    width: 100%;
-    min-width: 0;
-  }
-
-  #Contact {
-    min-height: auto;
-    flex-direction: column;
-    gap: 2rem;
-  }
-
-  #Contact > div,
-  #Contact > div:last-child {
-    width: 100%;
-    margin-top: 0;
-  }
-
-  #Contact .w-80 {
-    width: 100%;
-    min-height: 5rem;
-  }
-}
-
-@media (max-width: 767px) {
-  #Contact > div:last-child > div {
-    padding: 1.25rem;
-  }
-
-  #Contact .text-6xl {
-    font-size: clamp(2.25rem, 10vw, 3.75rem);
-  }
-}
-
-@media (max-width: 767px) {
-  #Projects > div:last-child,
-  #Skills > div:last-child {
-    grid-template-columns: 1fr;
-    gap: 1rem;
-  }
-
-  #Projects,
-  #Skills,
-  #Contact {
-    padding-left: 1rem;
-    padding-right: 1rem;
-  }
-
-  #Projects h2,
-  #Skills h2,
-  #Contact .text-6xl {
-    font-size: clamp(2.25rem, 10vw, 3.75rem);
-    overflow-wrap: anywhere;
-  }
-}
-
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
 }
-
 
 @layer components {
-  .nav-item{
-    @apply no-underline py-1 sl:px-4 st:px-2 text-base group-hover:text-text2
+  .nav-item {
+    @apply no-underline py-1 sl:px-4 st:px-2 text-base group-hover:text-text2;
   }
 
-  .nav-item:hover{
-    @apply bg-coal_gray rounded-full transition-all duration-300 ease-in-out text-prim
-  }
-  .nav-icon{
-    @apply nav-link-hover:text-text2 st:gap-2
-  }
-  .icon-text{
-    @apply st:text-sm
+  .nav-item:hover {
+    @apply rounded-full transition-all duration-300 ease-in-out;
   }
 
-  .nav-link{
-    @apply items-center
+  .nav-icon {
+    @apply nav-link-hover:text-text2 st:gap-2;
   }
-  
+
+  .icon-text {
+    @apply st:text-sm;
+  }
+
+  .nav-link {
+    @apply items-center;
+  }
+
+  #About , #Experience , #Services{
+    @apply bg-ivory
+  }
+
 }

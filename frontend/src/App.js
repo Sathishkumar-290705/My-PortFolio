@@ -36,13 +36,13 @@ const App = () => {
   }
 
   return (
-    <div className=" bg-ivo ">
+    <div className=" ">
       <Navbar />
-      <main className="flex-1  ">
+      <main className="flex-1">
         <Home data={data} />
-        <About  data={data} />
+        <About data={data} />
         <Skills data={data} />
-        <Experience  data={data} />
+        <Experience data={data} />
         <Projects data={data} />
         <Services data={data} />
         <ContactMe data={data} />

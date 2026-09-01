@@ -1,5 +1,5 @@
 .container {
-  background: #252320;
+  
   width: 100%;
   padding: clamp(5rem, 10vw, 8rem) clamp(1rem, 8vw, 8rem);
   font-family: "Inter", sans-serif;
@@ -8,7 +8,7 @@
 .listcontainer{
   display: flex;
   flex-direction: column;
-  border-left: 1px solid #b8aa97;
+  border-left: 1px solid #6E6A61;
   margin-left: 1rem;
   padding-left: clamp(1.25rem, 4vw, 3rem);
 }
@@ -17,12 +17,11 @@
 
 .listheading{
   font-size: 2rem;
-    color: #f2ede4;
+    color: #1f1f1f;
     display: flex ;
     align-items: center;
     gap: 1rem;
     margin: 0 0 1.5rem;
-  /* font-weight: 600; */
   text-align: center;
 }
 
@@ -64,25 +63,25 @@
 .left h3 {
   font-size: 20px;
   font-weight: 700;
-  color: #f2ede4;
+  color: #1f1f1f;
   margin-bottom: 10px;
 }
 
 .left h3 span {
-  color: #d3b98f;
+  color: #1f1f1f;
   font-weight: 500;
 }
 
 .left p {
   font-size: 16px;
   line-height: 1.6;
-  color: #b8aa97;
+  color: #6E6A61;
 }
 
 /* RIGHT DATE */
 .right {
   font-size: 15px;
-  color: #b8aa97;
+  color: #6E6A61;
   white-space: nowrap;
   margin-top: 4px;
 }

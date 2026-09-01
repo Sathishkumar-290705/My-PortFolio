@@ -17,15 +17,22 @@ module.exports = {
       },
       colors:{
         //universal color code (My way )
-        'text':'#000000',
-        'm_text':"hsl(0 0% 20%)",
-        'prim':'#ffffff',
-        'm_prim':'hsl(0 0% 80%)',
-        "off_prim" : "#bcbcb4ff", 
-        'gray':'hsl(0 0% 40%)',
+        'text':'#000',
+        'softText':"#111111",
+        'offText':'#1A1A1A',
+        'charCoal':'#212121',
+        'tinted':'#0B0B0B',
+        
+        'prim':'#fff',
+        'smoke' : '#f7f7f7',
+        "offPrim" : "#bcbcb4ff", 
+        
+        'gray':'#cccccc',
+        'darkGrey':"#333333",
+        'midGray':'#666666',
 
 
-
+        'ivory':'#f5f5f0',
 
 
 
@@ -39,15 +46,15 @@ module.exports = {
 
         
 
-        // only use on this project color palate 
-        'pale_sand' : "#D8C9AE", //Main background color
-        'muted_pale' : '#bbae96ff' , // section container #b3a793ff . #baae99ff . #c3b8a4ff
-        'softened' : "#2F2F2F" , //  Inner container 
-        'soft_coal' : "#333333", // heading text 
-        'muted_soft' : "#4A4A4A", // sub heading text
-        "coal_gray" : "#575757", // meta text 
-        "text1" : "#575757", // text for light background 
-        "text2" : "#DEDEDE", // text for dark background
+        // // only use on this project color palate 
+        // 'pale_sand' : "#D8C9AE", //Main background color
+        // 'muted_pale' : '#bbae96ff' , // section container #b3a793ff . #baae99ff . #c3b8a4ff
+        // 'softened' : "#2F2F2F" , //  Inner container 
+        // 'soft_coal' : "#333333", // heading text 
+        // 'muted_soft' : "#4A4A4A", // sub heading text
+        // "coal_gray" : "#575757", // meta text 
+        // "text1" : "#575757", // text for light background 
+        // "text2" : "#DEDEDE", // text for dark background
     
   
       },

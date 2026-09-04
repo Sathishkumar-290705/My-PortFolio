@@ -8,6 +8,7 @@ module.exports = {
         'poppi':['Poppins', 'sans-serif','system-ui'],
         'roboto':['Roboto', 'sans-serif'],
         'inter':['Inter', 'sans-serif'],
+        'trebuchet':['Trebuchet MS', 'sans-serif'],
       },
       fontSize:{
         // 'h1':['4rem',{lineHeight:'1.1',fontWeight:'700'}] ,
@@ -18,9 +19,9 @@ module.exports = {
       colors:{
         //universal color code (My way )
         'text':'#000',
-        'softText':"#111111",
-        'offText':'#1A1A1A',
-        'charCoal':'#212121',
+        'softText':"#111111", // small content 
+        'offText':'#1A1A1A', // sub headings and heading 
+        'charCoal':'#212121', 
         'tinted':'#0B0B0B',
         
         'prim':'#fff',

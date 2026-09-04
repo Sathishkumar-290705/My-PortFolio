@@ -1,36 +1,31 @@
-/* Whole horizontal section */
 .skillsSection {
   position: relative;
- 
   padding-top: 7rem;
-  
+  background: #ffffff;
 }
 
-/* Sticky viewport */
 .sticky {
-   display: flex;
+  display: flex;
   overflow-x: auto;
-   scrollbar-width: none; 
+  scrollbar-width: none;
   overflow-y: hidden;
   height: 30rem;
-  padding-bottom: 2rem  ;
+  padding-bottom: 2rem;
   scroll-snap-type: x mandatory;
 }
 
-.sticky::-webkit-scrollbar{
+.sticky::-webkit-scrollbar {
   display: none;
 }
 
-/* Title */
 .title {
   font-size: 3rem;
-  color: #342815;
+  color: #1a1a1a;
   text-align: center;
   margin-bottom: 4rem;
   white-space: nowrap;
 }
 
-/* Horizontal track */
 .track {
   display: flex;
   gap: 1rem;
@@ -40,16 +35,15 @@
   will-change: transform;
 }
 
-/* Each domain */
 .domain {
   min-width: 40vw;
   padding: 0 4rem;
-  border-left: 2px solid #d6c9b6;
+  border-left: 2px solid #e0e0e0;
 }
 
 .domain h3 {
   font-size: 2rem;
-  color: #342815;
+  color: #1a1a1a;
   margin-bottom: 2rem;
 }
 
@@ -64,9 +58,10 @@
 .domain li {
   padding: 0.6rem 1.4rem;
   font-size: 0.9rem;
-  background: rgb(37, 35, 32);
+  background: #f0f0f0;
   border-radius: 999px;
-  color: #ffffff;
+  color: #1a1a1a;
+  border: 1px solid #e0e0e0;
   opacity: 0;
   animation: reveal 1.2s ease forwards;
 }

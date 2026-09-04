@@ -1,6 +1,6 @@
 import React from 'react'
 
-const EmailContact = () => {
+const EmailContact = ({ email }) => {
   return<div className="mt-12 flex flex-col gap-4 pl-12">
         <p className="w-full text-6xl font-black leading-snug text-[#1f1f1f]">
          Get in Touch 
@@ -11,9 +11,9 @@ const EmailContact = () => {
             href="https://mail.google.com/mail/u/0/#inbox?compose=new"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-[#1f1f1f] underline decoration-[#6E6A61] underline-offset-8 transition hover:text-[#1f1f1f] hover:decoration-[#ffe9c2]"
+            className=" email_contact text-[#1f1f1f] underline decoration-gray underline-offset-8 transition hover:text-[#1f1f1f] hover:decoration-charCoal"
           >
-            sathishkumar290705@gmail.com
+            {email}
           </a>
         </h3>
       </div>

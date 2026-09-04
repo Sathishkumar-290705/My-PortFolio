@@ -9,8 +9,7 @@ const ProjectCard = ({ project, onOpen }) => (
     <button
       type="button"
       onClick={() => onOpen(project)}
-      className="mt-auto inline-flex w-fit items-center gap-2 rounded-full bg-[#ffe9c2] px-4 py-2.5 text-sm font-semibold text-[#1f1f1f] shadow-[0_10px_18px_rgba(255,233,194,0.45)] hover:bg-[#f8dca4]"
-    >
+      className="mt-auto inline-flex w-fit items-center gap-2 rounded-full bg-[#fff] hover:bg-offPrim px-4 py-2.5 text-sm font-semibold text-[#1f1f1f] border shadow-[0_10px_18px_rgba(0,0,0,0.25)]" >
       View Project
       <ArrowUpRight size={16} />
     </button>
@@ -18,31 +17,39 @@ const ProjectCard = ({ project, onOpen }) => (
 );
 
 const ProjectModal = ({ project, onClose }) => {
+
+
   if (!project) return null;
 
   return (
     <div
-      className="fixed inset-0 z-50 flex items-center justify-center  px-4 py-6 backdrop-blur-sm"
+      className="fixed inset-0 z-50 flex items-center justify-center  px-4 py-6  "
       onClick={onClose}
       aria-modal="true"
-      role="dialog"
-    >
+      role="dialog" >
+
       <div
-        className="relative w-full max-w-2xl rounded-[28px] border border-[#6E6A61]/25  p-6 shadow-[0_28px_60px_rgba(31,31,31,0.18)] sm:p-8"
+        className="relative w-full max-w-2xl rounded-[28px] bg-prim border border-[#6E6A61]  p-6 
+        shadow-[0_28px_60px_rgba(31,31,31,0.18)] sm:p-8"
         onClick={(event) => event.stopPropagation()}
       >
+
         <button
           type="button"
           onClick={onClose}
-          className="absolute right-4 top-4 flex h-10 w-10 items-center justify-center rounded-full border border-[#6E6A61]/30 bg-[#EDE6D6] text-[#1f1f1f] hover:bg-[#ffe9c2]"
+          className=" absolute right-4 top-4 flex h-10 w-10 items-center justify-center rounded-full border 
+          border-[#6E6A61]/30 text-[#1f1f1f] hover:bg-[#ffe9c2]"
           aria-label="Close project details"
         >
+
           <X size={18} />
+
         </button>
 
         <div className="pr-12">
           <p className="mb-3 text-xs font-medium uppercase tracking-[0.22em] text-[#6E6A61]">Project</p>
           <h3 className="mb-4 text-3xl font-semibold text-[#1f1f1f]">{project.title}</h3>
+          
         </div>
 
         <p className="mb-6 text-base leading-relaxed text-[#1f1f1f]">{project.description}</p>
@@ -80,6 +87,8 @@ const ProjectModal = ({ project, onClose }) => {
             rel="noreferrer"
             className="inline-flex items-center justify-center rounded-full border border-[#6E6A61]/30 bg-[#EDE6D6] px-4 py-2.5 text-sm font-semibold text-[#1f1f1f] hover:bg-[#ffe9c2]"
           >
+
+
             Live Demo
           </a>
         </div>
@@ -108,20 +117,20 @@ const Projects = ({ data }) => {
   }, [selectedProject]);
 
   return (
-    <section id="Projects" className=" px-4 py-20 text-[#1f1f1f] sm:px-6 lg:px-8 lg:py-28">
+
+    <section id="Projects" className=" px-4 py-20 text-[#1f1f1f] sm:px-6 lg:px-8 lg:py-28 ">
       <div className="mx-auto max-w-7xl">
         <div className="mx-auto mb-12 max-w-3xl text-center lg:mb-16">
           <p className="mb-3 text-xs font-medium uppercase tracking-[0.28em] text-[#6E6A61]">Selected Work</p>
           <h2 className="text-4xl font-semibold leading-tight text-[#1f1f1f] sm:text-5xl lg:text-6xl">Key Projects</h2>
         </div>
 
-        <div className="grid grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-3 xl:gap-7">
+        <div className="grid grid-cols-3 gap-5 md:grid-cols-2 lg:grid-cols-3 xl:gap-7">
           {projects.map((project) => (
             <ProjectCard key={project._id || project.title} project={project} onOpen={setSelectedProject} />
           ))}
         </div>
       </div>
-
       <ProjectModal project={selectedProject} onClose={() => setSelectedProject(null)} />
     </section>
   );

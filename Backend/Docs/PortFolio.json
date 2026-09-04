@@ -1,327 +1,315 @@
 [
-    {
-        "home": {
-            "name": "Sathishkumar R",
-            "role1": "Machine Learning",
-            "role2":"Full Stack",
-            "combo_quote":"Machine Learning & Scalable Web Applications",
-            "description": "I develop intelligent, AI-powered solutions by leveraging my growing expertise in machine learning, creating smarter and more efficient digital applications. I am passionate about building reliable, user-friendly web applications with thoughtful design."
-        },
-        "links": [
-            {
-                "name": "Github",
-                "url": "https://github.com/Sathishkumar-290705"
-            },
-            {
-                "name": "Linkedin",
-                "url": "https://www.linkedin.com/in/sathishkumar290207/"
-            },
-            {
-                "name": "X",
-                "url": "https://x.com/Sathish290705"
-            },
-            {
-                "name": "Facebook",
-                "url": "https://www.facebook.com/profile.php?id=100094046093102"
-            },
-            {
-                "name": "Whatsapp",
-                "url": "https://wa.me/918056663585"
-            },
-            {
-                "name": "Email",
-                "url": "https://mail.google.com/mail/u/0/#inbox?compose=new"
-            },
-            {
-                "name":"Resume",
-                "url":""
-            }
-        ],
-        "aboutMe": {
-            "title": " About Me  ",
-            "content": [
-                "I am a passionate Machine Learning Engineer with experience in developing intelligent systems using Large Language Models (LLMs), Natural Language Processing, and Computer Vision with OpenCV. I specialize in designing data-driven, scalable AI solutions that address real-world challenges with efficiency, reliability, and precision.",
-                "I build responsive, user-centric full web applications using modern frameworks such as React and Angular, delivering high-performance front-end interfaces and robust back-end integrations that ensure seamless user experiences across devices.",
-                "I am currently pursuing a Bachelor of Engineering in Artificial Intelligence and Data Science at Velammal Engineering College, Chennai (2023 – 2027). My academic journey has strengthened my foundation in machine learning, AI fundamentals, and data-driven problem solving.",
-                "I am actively growing in the New-Generation AI domain, continuously enhancing my technical expertise and staying updated with modern AI and software development practices. My long-term goal is to build scalable and impactful systems that combine strong engineering principles with advanced machine learning technologies."
-                ]
-,
-            "about": {
-                "Name": "Sathish Kumar R",
-                "Email": "sathishkumar290705@gmail.com",
-                "Phone": "+91 8056663585",
-                "Role": "Machine Learning Developer",
-                "Location": "Chennai, Tamil Nadu, India",
-                "College": "Velammal Engineering College, Chennai",
-                "Academic Qualification": "B.Tech (AI & DS)",
-                "Availability": "Intern/Open to work"
-            }
-        },
-        "skills": [
-            {
-                "_id": 1,
-                "title": "Frontend",
-                "items": [
-                    "HTML",
-                    "CSS",
-                    "JavaScript",
-                    "TypeScript",
-                    "React JS",
-                    "Tailwind CSS"
-                ]
-            },
-            {
-                "_id": 2,
-                "title": "Backend",
-                "items": [
-                    "Flask",
-                    "Django",
-                    "Node JS",
-                    "Express Js"
-                ]
-            },
-            {
-                "_id": 3,
-                "title": "AI/ML",
-                "items": [
-                    "Machine Learning",
-                    "Deep Leaning",
-                    "Natural Language Processing",
-                    "Computer Vision",
-                    "Speech Technologies"
-                ]
-            },
-            {
-                "_id": 4,
-                "title": "Database",
-                "items": [
-                    "MongoDB",
-                    "MySQL",
-                    "Firebase",
-                    "OracleDB"
-                ]
-            },
-            {
-                "_id": 5,
-                "title": "DevOps and Tools",
-                "items": [
-                    "Git/Github",
-                    "Postman",
-                    "Docker",
-                    "VS Code",
-                    "Chrome DevTools"
-                ]
-            },
-            {
-                "_id": 6,
-                "title": "Soft Skills",
-                "items": [
-                    "Problem Solving",
-                    "Critical Thinking",
-                    "Time Management",
-                    "Collaboration",
-                    "Clean Code"
-                ]
-            },
-            {
-                "_id": 7,
-                "title": "Other Skills",
-                "items": [
-                    "UI Designing",
-                    "Testing",
-                    "Web Scrapping",
-                    "Data Cleaning"
-                ]
-            }
-        ],
-        "experience": {
-            "college":"Velammal Engineering College",
-            "education_place":"Chennai, TamilNadu, India",
-            "Academic_qualification":"Bachelors of Technology in Artificial Intelligence and data science",
-            "work_place":"Chennai, TamilNadu, India",
-            "working_time":"March 2025 - Present",
-            "education_time":"September 2023 - Present",
-            "working_role":"Frontend Developer",
-            "work": [   
-                 "I contributed to the successful launch of my college website by designing and implementing the frontend as a Frontend Developer, collaborating closely to integrate backend functionality, and leveraging the MERN stack to build a responsive and efficient web application."
-            ],
-            "learningPath": [
-                " Pursuing a Bachelor of Technology in Artificial Intelligence and Data Science at Velammal Engineering College, with a strong focus on emerging technologies and innovative solutions. Actively engaged in hackathons and collaborative projects. Gained hands-on experience in machine learning, data analytics, and full-stack development"
-            ]
-        },
-        "projects": [
-            {
-                "_id": 1,
-                "title": "Iris Classification",
-                "description": "A machine learning project that classifies iris flowers into three species using flower measurement data.",
-                "technologies": [
-                    "Python" , "Scikit-Learn", "Numpy" , "Decision Tree Classifier" 
-                ],
-                "url": ""
-            },
-            {
-                "_id": 2,
-                "title": "Task Tracker",
-                "description": "A simple To-Do List application that helps users organize daily tasks.Users can add and delete tasks easily for better productivity.",
-                "technologies": [
-                    "Angular",
-                    "Node.js",
-                    "Express.js",
-                    "MySQL"
-                ],
-                "url": ""   
-            },
-            {
-                "_id": 3,
-                "title": "Age Calculator",
-                "description": "A simple Age Calculator that computes your age based on your birth date.Enter your date of birth, and it instantly shows your exact age in years, months, and days.",
-                "technologies": [
-                    "React",
-                    "Node.js",
-                    "Express.js",
-                    "MongoDB"
-                ],
-                "url": ""
-            },
-            {
-                "_id": 4,
-                "title": "Chat Server",
-                "description": "A backend chat system that enables real-time communication between connected clients.",
-                "technologies": [
-                    "Socket.IO",
-                    "Python",
-                    "MySQL"
-                ],
-                "url": ""
-            },
-            {
-                "_id": 5,
-                "title": "Job recommendation system",
-                "description": "A Job Recommendation System is an application that suggests suitable job opportunities to users based on their criteria such as skills .",
-                "technologies": [
-                    "Html",
-                    "Python",
-                    "CSS"
-                ],
-                "url": ""
-            },
-            {
-                "_id": 6,
-                "title": "Learn mate AI ",
-                "description": "An AI-powered intelligent tutor system designed to support personalized learning.",
-                "technologies": [
-                    "React",
-                    "Express.js",
-                    "NLP",
-                    "scikit-learn"
-                ],
-                "url": ""
-            },
-            {
-                "_id": 7,
-                "title": "Personal Chatbot",
-                "description": "A personal AI chatbot designed to communicate in a user-defined style using custom training dataIt supports natural and adapts responses based on personalized inputs.",
-                "technologies": [
-                    "React",
-                    "Express.js",
-                    "Python",
-                    "NLP",
-                    "LLM"
-                ],
-                "url": ""
-            },
-            {
-                "_id": 8,
-                "title": "Personal TNPC trainer ",
-                "description": "A personal AI-based TNPC trainer designed to assist students in preparing for TNPC exam.",
-                "technologies": [
-                    "Angular",
-                    "Express.js",
-                    "NLP",
-                    "MongoDB"
-                ],
-                "url": ""
-            }
-        ],
-        "contactMe": {
-            "title1": "Contact Information",
-            "title2": "Send Me a Message",
-            "content": "I’m open for freelance projects, internships, and part-time opportunities right now. If you’re planning a project or need help taking an existing one further, feel free to get in touch.",
-            "about": [
-                {
-                    "label": "Email",
-                    "value": "sathishkumar290705@gmail.com"
-                },
-                {
-                    "label": "Phone",
-                    "value": "+91 8056663585"
-                },
-                {
-                    "label": "Location",
-                    "value": "Chennai, Tamil Nadu, India"
-                },
-                {
-                    "label": "Field",
-                    "value": "Machine Learning / Full stack "
-                }
-            ],
-            "message_lables": {
-                "Name": "Name",
-                "Email": "Email",
-                "Contact": "Contact Number",
-                "Subject": "Subject"
-            }
-        },
-        
-      "professional":{
-        "Experience" : [
-            {
-                "role": "Frontend Developer ",
-                "company": "webOps,Velammal Engineering College,chennai",
-                "duration": "March 2025 – Current",
-                "description":
-                "Transforming complex 360° capture workflows into intuitive, end-to-end product experiences for the GoCapture app."
-            }
-            
-        ] ,
-        "Learning Path" : [
-            {
-                "role": "Bachelor of Technology in Artificial intelligence and data Science",
-                "company": "Velammal Engineering college, chennai",
-                "duration": "September 2023 – Current",
-                "description":
-                "Contributed to the development of the official college website by designing responsive UI components and integrating frontend with backend services using the MERN stack."
-            }
-        ]
+  {
+    "home": {
+      "name": "Sathishkumar R",
+      "role1": "Machine Learning",
+      "role2": "Full Stack",
+      "combo_quote": "Machine Learning & Scalable Web Applications",
+      "description": "I develop intelligent, AI-powered solutions by leveraging my growing expertise in machine learning, creating smarter and more efficient digital applications. I am passionate about building reliable, user-friendly web applications with thoughtful design."
     },
-    "mycore":{
-        "title":"What I Do",
-        "content":"",
-        "whatsapp_link":"",
-        "service":[
-            {
-                "serviceTitle":"ML Engineer",
-                "content":"",
-                "stack":[
-                   "LLM", "YOLO" , "NLP"
-                ]
-            },
-            {
-                "serviceTitle":"Full Stack Developer",
-                "content":"",
-                "stack":[
-                  "Java" ,"JavaScript","Node.js" , "React"
-                ]
-            },
-            {
-                "serviceTitle":"UI/UX Designing",
-                "content":"",
-                "stack":[
-                   "Figma", "CSS","Tailwind"
-                ]
-            }
-        ]
-    }
-}
+    "links": [
+      {
+        "name": "Github",
+        "url": "https://github.com/Sathishkumar-290705"
+      },
+      {
+        "name": "Linkedin",
+        "url": "https://www.linkedin.com/in/sathishkumar290207/"
+      },
+      {
+        "name": "X",
+        "url": "https://x.com/Sathish290705"
+      },
+      {
+        "name": "Facebook",
+        "url": "https://www.facebook.com/profile.php?id=100094046093102"
+      },
+      {
+        "name": "Whatsapp",
+        "url": "https://wa.me/918056663585"
+      },
+      {
+        "name": "Email",
+        "url": "https://mail.google.com/mail/u/0/#inbox?compose=new"
+      },
+      {
+        "name": "Resume",
+        "url": ""
+      }
+    ],
+    "aboutMe": {
+      "title": "Know About me",
+      "content": [
+        "I am a passionate Machine Learning Engineer with experience in developing intelligent systems using Large Language Models (LLMs), Natural Language Processing, and Computer Vision with OpenCV. I specialize in designing data-driven, scalable AI solutions that address real-world challenges with efficiency, reliability, and precision.",
+        "I build responsive, user-centric full web applications using modern frameworks such as React and Angular, delivering high-performance front-end interfaces and robust back-end integrations that ensure seamless user experiences across devices.",
+        "I am currently pursuing a Bachelor of Engineering in Artificial Intelligence and Data Science at Velammal Engineering College, Chennai (2023 – 2027). My academic journey has strengthened my foundation in machine learning, AI fundamentals, and data-driven problem solving.",
+        "I am actively growing in the New-Generation AI domain, continuously enhancing my technical expertise and staying updated with modern AI and software development practices. My long-term goal is to build scalable and impactful systems that combine strong engineering principles with advanced machine learning technologies."
+      ],
+      "about": {
+        "Name": "Sathish Kumar R",
+        "Email": "sathishkumar290705@gmail.com",
+        "Phone": "+91 8056663585",
+        "Role": "Machine Learning Developer",
+        "Location": "Chennai, Tamil Nadu, India",
+        "College": "Velammal Engineering College, Chennai",
+        "Academic Qualification": "B.Tech (AI & DS)",
+        "Availability": "Intern/Open to work"
+      }
+    },
+    "skills": {
+      "title": "Skills",
+      "items": [
+        {
+          "_id": 1,
+          "title": "Frontend",
+          "items": [
+            "HTML",
+            "CSS",
+            "JavaScript",
+            "TypeScript",
+            "React JS",
+            "Tailwind CSS"
+          ]
+        },
+        {
+          "_id": 2,
+          "title": "Backend",
+          "items": ["Flask", "Django", "Node JS", "Express Js"]
+        },
+        {
+          "_id": 3,
+          "title": "AI/ML",
+          "items": [
+            "Machine Learning",
+            "Deep Leaning",
+            "Natural Language Processing",
+            "Computer Vision",
+            "Speech Technologies"
+          ]
+        },
+        {
+          "_id": 4,
+          "title": "Database",
+          "items": ["MongoDB", "MySQL", "Firebase", "OracleDB"]
+        },
+        {
+          "_id": 5,
+          "title": "DevOps and Tools",
+          "items": [
+            "Git/Github",
+            "Postman",
+            "Docker",
+            "VS Code",
+            "Chrome DevTools"
+          ]
+        },
+        {
+          "_id": 6,
+          "title": "Soft Skills",
+          "items": [
+            "Problem Solving",
+            "Critical Thinking",
+            "Time Management",
+            "Collaboration",
+            "Clean Code"
+          ]
+        },
+        {
+          "_id": 7,
+          "title": "Other Skills",
+          "items": ["UI Designing", "Testing", "Web Scrapping", "Data Cleaning"]
+        }
+      ]
+    },
     
+  "professional": {
+    "Experience": [
+      {
+        "role": "Frontend Developer",
+        "company": "Velammal Engineering College, Chennai",
+        "duration": "March 2025 – April 2026",
+        "description": "Contributed as a frontend developer to the successful deployment of my college's official website, designing responsive UI components and integrating the frontend with backend services using the MERN stack."
+      }
+    ],
+    "Learning Path": [
+      {
+        "role": "B.Tech - AI&DS",
+        "company": "Velammal Engineering College, Chennai",
+        "duration": "September 2023 – Current",
+        "description": "Pursuing a B.Tech in AI and Data Science with a strong focus on emerging technologies, hackathons, and full-stack development."
+      }
+    ]
+  },
+  "sectionIcons": {
+    "Experience": "Briefcase",
+    "Learning Path": "GraduationCap"
+  
+    },
+    "projects": [
+      {
+        "_id": 1,
+        "title": "Iris Classification",
+        "description": "A machine learning project that classifies iris flowers into three species using flower measurement data.",
+        "technologies": [
+          "Python",
+          "Scikit-Learn",
+          "Numpy",
+          "Decision Tree Classifier"
+        ],
+        "url": ""
+      },
+      {
+        "_id": 2,
+        "title": "Task Tracker",
+        "description": "A simple To-Do List application that helps users organize daily tasks.Users can add and delete tasks easily for better productivity.",
+        "technologies": ["Angular", "Node.js", "Express.js", "MySQL"],
+        "url": ""
+      },
+      {
+        "_id": 3,
+        "title": "Age Calculator",
+        "description": "A simple Age Calculator that computes your age based on your birth date.Enter your date of birth, and it instantly shows your exact age in years, months, and days.",
+        "technologies": ["React", "Node.js", "Express.js", "MongoDB"],
+        "url": ""
+      },
+      {
+        "_id": 4,
+        "title": "Chat Server",
+        "description": "A backend chat system that enables real-time communication between connected clients.",
+        "technologies": ["Socket.IO", "Python", "MySQL"],
+        "url": ""
+      },
+      {
+        "_id": 5,
+        "title": "Job recommendation system",
+        "description": "A Job Recommendation System is an application that suggests suitable job opportunities to users based on their criteria such as skills .",
+        "technologies": ["Html", "Python", "CSS"],
+        "url": ""
+      },
+      {
+        "_id": 6,
+        "title": "Learn mate AI ",
+        "description": "An AI-powered intelligent tutor system designed to support personalized learning.",
+        "technologies": ["React", "Express.js", "NLP", "scikit-learn"],
+        "url": ""
+      },
+      {
+        "_id": 7,
+        "title": "Personal Chatbot",
+        "description": "A personal AI chatbot designed to communicate in a user-defined style using custom training dataIt supports natural and adapts responses based on personalized inputs.",
+        "technologies": ["React", "Express.js", "Python", "NLP", "LLM"],
+        "url": ""
+      },
+      {
+        "_id": 8,
+        "title": "Personal TNPC trainer ",
+        "description": "A personal AI-based TNPC trainer designed to assist students in preparing for TNPC exam.",
+        "technologies": ["Angular", "Express.js", "NLP", "MongoDB"],
+        "url": ""
+      }
+    ],
+    "contactMe": {
+      "title1": "Contact Information",
+      "title2": "Send Me a Message",
+      "content": "I’m open for freelance projects, internships, and part-time opportunities right now. If you’re planning a project or need help taking an existing one further, feel free to get in touch.",
+      "about": [
+        {
+          "label": "Email",
+          "value": "sathishkumar290705@gmail.com"
+        },
+        {
+          "label": "Phone",
+          "value": "+91 8056663585"
+        },
+        {
+          "label": "Location",
+          "value": "Chennai, Tamil Nadu, India"
+        },
+        {
+          "label": "Field",
+          "value": "Machine Learning / Full stack "
+        }
+      ],
+      "message_lables": {
+        "Name": "Name",
+        "Email": "Email",
+        "Contact": "Contact Number",
+        "Subject": "Subject"
+      }
+    },
+
+    "professional": {
+      "Experience": [
+        {
+          "role": "Frontend Developer ",
+          "company": "webOps,Velammal Engineering College,chennai",
+          "duration": "March 2025 – Current",
+          "description": "Transforming complex 360° capture workflows into intuitive, end-to-end product experiences for the GoCapture app."
+        }
+      ],
+      "Learning Path": [
+        {
+          "role": "Bachelor of Technology in Artificial intelligence and data Science",
+          "company": "Velammal Engineering college, chennai",
+          "duration": "September 2023 – Current",
+          "description": "Contributed to the development of the official college website by designing responsive UI components and integrating frontend with backend services using the MERN stack."
+        }
+      ]
+    },
+    "mycore": {
+      "title": "What I Do",
+      "content": "",
+      "whatsapp_link": "",
+      "service": [
+        {
+          "serviceTitle": "ML Engineer",
+          "content": "",
+          "stack": ["LLM", "YOLO", "NLP"]
+        },
+        {
+          "serviceTitle": "Full Stack Developer",
+          "content": "",
+          "stack": ["Java", "JavaScript", "Node.js", "React"]
+        },
+        {
+          "serviceTitle": "UI/UX Designing",
+          "content": "",
+          "stack": ["Figma", "CSS", "Tailwind"]
+        }
+      ]
+    },
+   
+  "mycore": {
+    "left": {
+      "badge": "Services",
+      "heading": "Thoughtful design built with purpose",
+      "subtext": "Available for freelance — I help brands and products communicate clearly through intentional design, intelligent systems, and well-crafted applications.",
+      "ctaText": "Let's Talk"
+    },
+    "services": [
+      {
+        "_id": 1,
+        "icon": "Layout",
+        "title": "UI/UX Designing",
+        "desc": "From wireframes to high-fidelity mockups, I design intuitive interfaces guided by real user needs and clean visual hierarchy.",
+        "tags": ["Web Design", "Mobile Design", "Prototyping", "Design System"]
+      },
+      {
+        "_id": 2,
+        "icon": "Globe",
+        "title": "Model Building",
+        "desc": "Building and training machine learning models — from data preprocessing to deployment-ready pipelines tailored to your problem.",
+        "tags": ["Machine Learning", "Deep Learning", "Data Preprocessing", "Model Deployment"]
+      },
+      {
+        "_id": 3,
+        "icon": "Zap",
+        "title": "Build Applications",
+        "desc": "Full-stack application development using the MERN stack — responsive, scalable, and production-ready from day one.",
+        "tags": ["MERN Stack", "REST APIs", "Responsive UI", "Full-Stack Dev"]
+      }
+    ]
+  }
+}
+  
 ]

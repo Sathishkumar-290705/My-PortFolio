@@ -21,16 +21,15 @@
 .scrolled{
   top: 18px;
   width: min(90%, 1180px);
-  border-bottom: #9c7032 2px solid ;
   height: 4.5rem;
   padding: 0 30px;
-  border-radius: 20px;
-  background: #252320;
+  border-radius: 10px;
+  background: #1f1f1f;
   box-shadow: 0 12px 30px rgba(37, 35, 32, 0.16);
 }
 
 .scrolled .navLinks{
-  color: #ac916a;
+  color: #b8aa97;
 }
 
 .navicons{
@@ -43,11 +42,16 @@
 
 
 .cvButton{
-  color:aliceblue;
-  background-color:#57534d;
+  color:#F1F1F1;
+  background-color:#1A1A1A;
   padding: 12px  14px;
   border-radius: 10px;
   flex: 0 0 auto;
+}
+
+.scrolled .cvButton {
+  background-color: #F1F1F1;
+  color: #342815;
 }
 
 .cvButton button,
@@ -80,13 +84,16 @@
   margin-right: 30px;
   letter-spacing:0.1rem;
   display: flex;
-  color: #958060;
+  color: #1A1A1A;
   gap: 10px ;
   align-items: end;
   min-width: 0;
   flex: 0 0 auto;
 }
 
+.scrolled .logo{
+  color: #b8aa97;
+}
 .logo h2 {
   margin: 0;
   white-space: nowrap;
@@ -97,7 +104,7 @@
   display: flex;
   gap: clamp(0.75rem, 2.5vw, 2.5rem);
   list-style: none;
-  color: #958060;
+  color: #1A1A1A;
   font-size: 16px;
   font-weight: 500;
   cursor: pointer;

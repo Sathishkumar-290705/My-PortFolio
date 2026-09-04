@@ -35,7 +35,7 @@ body {
   margin: 0;
   background: var(--background-primary);
   color: var(--text-primary);
-  font-family: "Poppins", "Trebuchet MS", sans-serif;
+  font-family: "Inter", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -77,5 +77,10 @@ code {
   #About , #Experience , #Services{
     @apply bg-ivory
   }
+
+  .about_heading , .email_contact , .services_heading, .skill_heading{
+    @apply font-trebuchet
+  }
+
 
 }

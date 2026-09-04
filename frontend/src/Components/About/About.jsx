@@ -24,8 +24,9 @@ const About = ({ data }) => {
 
         {/* Right Content */}
         <div className={styles.content}>
-          <h1 className={styles.heading}>
-            {aboutData && aboutData?.title}
+          <h1 className={`${styles.heading} about_heading`}>
+            {/* {aboutData && aboutData?.title }  */}
+            "Who I Am"
           </h1>
 
           {aboutData && aboutData?.content.map((item,index)=>(

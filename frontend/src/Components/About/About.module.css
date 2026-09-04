@@ -37,8 +37,9 @@
 .heading {
   font-size: clamp(2.5rem, 5vw, 3.25rem);
   font-weight: 500;
-  color: #1f1f1f;
+  color: #1a1a1a;
   margin-bottom: 30px;
+  font-family: "Trebuchet MS", sans-serif;
 }
 
 .heading span {
@@ -48,7 +49,7 @@
 .content p {
   font-size: 16px;
   line-height: 1.5;
-  color: #6E6A61;
+  color: #111;
   margin-bottom: 24px;
   text-align: justify;
 }
@@ -83,8 +84,8 @@
 }
 
 .secondaryBtn {
-  background: #ffe9c2;
-  color: #1f1f1f;
+  background: #1f1f1f;
+  color: #F1F1F1;
   padding: 14px 28px;
   border-radius: 30px;
   font-size: 14px;

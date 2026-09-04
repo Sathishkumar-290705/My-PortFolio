@@ -39,7 +39,7 @@ const Home = ({ data }) => {
 
         <h1 className={styles.title}>
           <div className={styles.line}> </div>
-          {homedata?.name}, {`${homedata?.role1} | ${homedata?.role2}`}
+          {homedata?.name} , {`${homedata?.role1} | ${homedata?.role2}`}
         </h1>
         <h2 className={styles.subtitle}> Building Intelligent ML Systems That Scale </h2>
        
@@ -54,7 +54,7 @@ const Home = ({ data }) => {
           </div> */}
           <div className={styles.buttonContainer}>
             <button className={styles.chatButton}>Let's Chat</button>
-            <button className={styles.knowMoreButton}>Know More</button>
+            <button className={styles.knowMoreButton}>Know More </button>
           </div>
         </div>
 

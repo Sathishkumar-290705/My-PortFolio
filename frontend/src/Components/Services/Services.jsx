@@ -1,74 +1,66 @@
-import { Layout, Globe, Zap, Plus } from "lucide-react";
+import { Layout, Globe, Zap } from "lucide-react";
 import styles from "./Services.module.css";
 import { useEffect, useState } from "react";
 
-const Services = ({data}) => {
+const iconMap = {
+  Layout: <Layout />,
+  Globe: <Globe />,
+  Zap: <Zap />,
+};
 
-  const [serviceData,setServiceData] = useState();
+const Services = ({ data }) => {
+  const [serviceData, setServiceData] = useState(null);
 
-  useEffect(()=>{
-    if(data){
-     setServiceData(data[0]?.mycore);
-     console.log("mycore",serviceData);
+  useEffect(() => {
+    if (data) {
+      setServiceData(data[0]?.mycore); 
+      console.log("sathish", data[0]?.mycore);
     }
-  },[data])
+  }, [data]);
+
+  if (!serviceData) return null;
+
+  const { left, services } = serviceData;
+  const headingLines = left.heading.split("\n");
+
   return (
     <section className={styles.wrapper} id="Services">
-      {/* LEFT – STICKY */}
       <div className={styles.left}>
-        <span className={styles.badge}>Services</span>
+        <span className={styles.badge}>{left.badge}</span>
 
-        <h2 className={styles.heading}>
-          Thoughtful design <br />
-          built with purpose
+        <h2 className={`${styles.heading} services_heading`}>
+          {headingLines.map((line, i) => (
+            <span key={i}>
+              {line}
+              {i < headingLines.length - 1 && <br />}
+            </span>
+          ))}
         </h2>
 
-        <p className={styles.subtext}>
-          I help brands and products communicate clearly through
-          intentional design and well-crafted digital experiences.
-        </p>
+        <p className={styles.subtext}>{left.subtext}</p>
 
-        <button className={styles.cta}>
-          Let’s Talk →
-        </button>
+        <button className={styles.cta}>{left.ctaText} →</button>
       </div>
 
-    
-        <div className={styles.right}>
-        <ServiceTile
-          icon={<Layout />}
-          title="UI/UX Design"
-          desc="From wireframes to high-fidelity mockups, I design intuitive user interfaces guided by real user needs."
-          tags={["Web Design", "Mobile Design", "Prototyping", "Design System"]}
-      
-        />
-
-        <ServiceTile
-          icon={<Globe  />}
-          title="Website Design"
-          desc="Crafting visual identities that speak with clarity and confidence through cohesive web experiences."
-          tags={["Visual Identity", "Logo Design", "Brand Guidelines", "Typography"]}
-       
-          
-        />
-
-        <ServiceTile
-          icon={<Zap />}
-          title="Framer Website"
-          desc="High-performing Framer websites — responsive, animated, and easy to manage without code."
-          tags={["Landing Page", "Multipage Website", "Website Migration"]}
-      
-        />
+      <div className={styles.right}>
+        {Array.isArray(services) &&
+          services.map((service) => (
+            <ServiceTile
+              key={service._id}
+              icon={iconMap[service.icon]}
+              title={service.title}
+              desc={service.desc}
+              tags={service.tags}
+            />
+          ))}
       </div>
     </section>
   );
 };
 
-const ServiceTile = ({ icon, title, desc, tags ,color2 }) => {
-
-
+const ServiceTile = ({ icon, title, desc, tags }) => {
   return (
-    <article className={styles.tile} >
+    <article className={styles.tile}>
       <div className={styles.tileHeader}>
         <div className={`${styles.iconWrap} bg-[#4a9a6e]`}>{icon}</div>
       </div>
@@ -77,9 +69,8 @@ const ServiceTile = ({ icon, title, desc, tags ,color2 }) => {
       <p>{desc}</p>
 
       <div className={styles.tags}>
-        {tags.map(tag => (
-          <span key={tag}>{tag}</span>
-        ))}
+        {Array.isArray(tags) &&
+          tags.map((tag) => <span key={tag}>{tag}</span>)}
       </div>
     </article>
   );
